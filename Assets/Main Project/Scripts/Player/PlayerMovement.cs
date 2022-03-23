@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float velocity;
+    [Header("CharacterController")]
+    [SerializeField]
+    private CharacterController controller;
+
+    [Header("Velocidade")]
+    [SerializeField]
+    private float velocidade;
+    [SerializeField]
+    private float corrida;
+
+    [Header("Gravidade")]
+    [SerializeField]
+    private float gravidade = -9.81f;
+
+    private Vector3 movimentoInput;
+    private Vector3 velocity;
+    private bool run;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +30,40 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        float mouseX = Input.GetAxis("Mouse X");
+        movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
-        Vector3 direction = new Vector3(x, 0, y) * velocity;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            run = true;
+        }
+        else
+        {
+            run = false;
+        }
 
-        transform.Translate(direction * Time.deltaTime);
+        Movimento();
+    }
+
+    public void Movimento()
+    {
+        Vector3 MoveVector = transform.TransformDirection(movimentoInput);
+
+        if (controller.isGrounded)
+        {
+            velocity.y = -1f;
+        }
+        else
+        {
+            velocity.y -= gravidade * -2f * Time.deltaTime;
+        }
+        if (run)
+        {
+            controller.Move(MoveVector * corrida * Time.deltaTime);
+        }
+        else
+        {
+            controller.Move(MoveVector * velocidade * Time.deltaTime);
+        }
+        controller.Move(velocity * Time.deltaTime);
     }
 }
