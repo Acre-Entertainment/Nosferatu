@@ -9,7 +9,7 @@ public class PressEnterToEvent : MonoBehaviour
     public UnityEvent eventToHappen;
     void update()
     {
-        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             eventToHappen.Invoke();
         }

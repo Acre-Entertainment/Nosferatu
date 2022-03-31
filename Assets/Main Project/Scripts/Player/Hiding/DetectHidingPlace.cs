@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class DetectHidingPlace : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isInContactWithHidingPlace;
+    void OnTriggerEnter(Collider other)
     {
-        
+        if(other.tag == "Cama" || other.tag == "Mesa" || other.tag == "Cortina" || other.tag == "Barril")
+        {
+            isInContactWithHidingPlace = true;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if(other.tag == "Cama" || other.tag == "Mesa" || other.tag == "Cortina" || other.tag == "Barril")
+        {
+            isInContactWithHidingPlace = false;
+        }
     }
 }
