@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EmpurrarObjetos : MonoBehaviour
 {
-    [Header("Força")]
+    [Header("Forca")]
     [SerializeField]
-    private float força;
+    private float forca;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,7 @@ public class EmpurrarObjetos : MonoBehaviour
             forceDirection.y = 0;
             forceDirection.Normalize();
 
-            rigidbody.AddForceAtPosition(forceDirection * força, transform.position, ForceMode.Impulse);
+            rigidbody.AddForceAtPosition(forceDirection * forca, transform.position, ForceMode.Impulse);
         }
     }
 }
