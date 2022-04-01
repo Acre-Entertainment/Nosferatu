@@ -22,6 +22,7 @@ public class Desativador : MonoBehaviour
     {
         if (other.CompareTag("Player") && objetoBool == true)
         {
+            FindObjectOfType<AudioManager>().Play("Ativador");
             objeto.SetActive(true);
             objetoBool = false;
         }
