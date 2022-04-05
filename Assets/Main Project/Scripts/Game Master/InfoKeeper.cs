@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InfoKeeper : MonoBehaviour
+{
+//Guarda variaveis para serem usadas por outros scripts.
+
+//Puzzle de Livros
+    public bool hasInvestigatedPuzzle_Bookcase_3;
+    public bool hasBookFromPuzzle_Bookcase_1;
+    public bool hasBookFromPuzzle_Bookcase_2;
+    public bool hasInsertedOneBooks;
+    public bool hasInsertedTwoBooks;
+}
