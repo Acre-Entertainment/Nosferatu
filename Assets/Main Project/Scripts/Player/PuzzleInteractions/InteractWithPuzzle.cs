@@ -34,6 +34,9 @@ public class InteractWithPuzzle : MonoBehaviour
             case "Puzzle_Bookstand_3":
                 callAction.Puzzle_Bookstand_3();
                 break;
+            case "Puzzle_Bookstand_Door":
+                callAction.Puzzle_Bookstand_Door();
+                break;
             
         }
 
