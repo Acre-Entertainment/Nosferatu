@@ -127,6 +127,19 @@ public class CallAction : MonoBehaviour
             textBoxManager.turnOnDialogueBox();
             return;
         }
+        if(infoKeeper.hasInsertedBook1 == true || infoKeeper.hasInsertedBook2 == true)
+        {
+            textBoxManager.followUpText[0] = "* Uma bela estante de livros. Aida está com um espaço vazio.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasInsertedBook1 == false && infoKeeper.hasInsertedBook2 == false)
+        {
+            textBoxManager.followUpText[0] = "* Uma bela estante de livros. Está repleta de livros vermelhos.";
+            textBoxManager.followUpText[1] = "* Dois espaços vazios entre os livros chamam sua atenção.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
         textBoxManager.followUpText[0] = "ERROR";
         textBoxManager.turnOnDialogueBox();
     }
