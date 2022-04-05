@@ -10,14 +10,16 @@ public class Hide : MonoBehaviour
     public GameObject playerDetectArea;
     private DetectHidingPlace detectHidingPlace;
     public UnityEvent onHide;
+    private InfoKeeper infoKeeper;
     void Start()
     {
         detectHidingPlace = playerDetectArea.GetComponent<DetectHidingPlace>();
+        infoKeeper= gameObject.GetComponent<InfoKeeper>();
     }
     void Update()
     {
         //pode mudar o botão pra se esconder aki
-        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) && infoKeeper.gameIsBlockingInteraction == false)
         {
             checkIfHidingPlaceNearby();
         }

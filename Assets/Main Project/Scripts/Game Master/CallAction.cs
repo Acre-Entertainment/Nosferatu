@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CallAction : MonoBehaviour
 {
@@ -9,12 +10,15 @@ public class CallAction : MonoBehaviour
     private InventoryManager inventoryManager;
     private InfoKeeper infoKeeper;
     private TextBoxManager textBoxManager;
+    [HideInInspector] UnityEvent pendingEventCallInTextManager;
+    public UnityEvent BookcaseDoorOpens;
     void Start()
     {
         inventoryManager = gameObject.GetComponent<InventoryManager>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         textBoxManager = gameObject.GetComponent<TextBoxManager>();
     }
+//BOOKSTAND_PUZZLE---------------------------------------------------------------------------------------------------------------------------------------
     //estande de livros 1. Precisa colokar o livro dentro na estande de livro 3
     public void Puzzle_Bookstand_1()
     {
@@ -127,6 +131,14 @@ public class CallAction : MonoBehaviour
     }
     public void Puzzle_Bookstand_Door()
     {
-
+        if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == true && infoKeeper.hasBookFromPuzzle_Bookcase_2 == true)
+        {
+            textBoxManager.followUpText[0] = "* Você empurra a porta.";
+            textBoxManager.followUpText[1] = "* Ela abre!";
+            textBoxManager.whenIsEventCalled = 1;
+            textBoxManager.pendingEvent = BookcaseDoorOpens;
+            textBoxManager.callnextText();
+            return;
+        }
     }
 }

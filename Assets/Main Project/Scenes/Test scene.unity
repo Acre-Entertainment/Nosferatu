@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 13696295}
   m_Layer: 0
   m_Name: Estande de busca 1
-  m_TagString: Untagged
+  m_TagString: Puzzle_Bookstand_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 47551653}
   m_Layer: 0
   m_Name: Porta final
-  m_TagString: Untagged
+  m_TagString: Puzzle_Bookstand_Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2650,7 +2650,7 @@ GameObject:
   - component: {fileID: 354750617}
   m_Layer: 0
   m_Name: Estande de busca 2
-  m_TagString: Untagged
+  m_TagString: Puzzle_Bookstand_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27248,7 +27248,7 @@ GameObject:
   - component: {fileID: 718336710}
   m_Layer: 0
   m_Name: "Estande de ativa\xE7\xE3o"
-  m_TagString: Untagged
+  m_TagString: Puzzle_Bookstand_3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34010,6 +34010,8 @@ GameObject:
   - component: {fileID: 1197366311}
   - component: {fileID: 1197366310}
   - component: {fileID: 1197366312}
+  - component: {fileID: 1197366313}
+  - component: {fileID: 1197366314}
   m_Layer: 0
   m_Name: GAME_MASTER
   m_TagString: Untagged
@@ -34029,6 +34031,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de73692230632044299c3500fac70820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BookcaseDoorOpens:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 47551651}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1197366311
 Transform:
   m_ObjectHideFlags: 0
@@ -34056,13 +34073,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryItems: []
+--- !u!114 &1197366313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197366309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e828986b6b7712f4b80865b38e93d867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1918954030}
+  textObject: {fileID: 1436664402}
+  followUpText: []
+  currentTextNumber: 0
+  whenIsEventCalled: -1
+  pendingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1197366314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197366309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3071d4e93ac8d64087ff12f0f3d410a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameIsBlockingInteraction: 0
+  hasInvestigatedPuzzle_Bookcase_3: 0
+  hasBookFromPuzzle_Bookcase_1: 0
+  hasBookFromPuzzle_Bookcase_2: 0
+  hasInsertedBook1: 0
+  hasInsertedBook2: 0
 --- !u!43 &1200309563
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16974
+  m_Name: pb_Mesh16980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

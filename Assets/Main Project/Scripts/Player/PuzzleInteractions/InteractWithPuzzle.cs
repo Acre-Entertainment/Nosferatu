@@ -7,15 +7,17 @@ public class InteractWithPuzzle : MonoBehaviour
     public GameObject playerDetectArea;
     private DetectedInteractableObjectTag detectedInteractableObjectTag;
     private CallAction callAction;
+    private InfoKeeper infoKeeper;
     void Start()
     {
         detectedInteractableObjectTag = playerDetectArea.GetComponent<DetectedInteractableObjectTag>();
         callAction = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<CallAction>();
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
     void Update()
     {
         //mude aki o botão de interação
-        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) && detectedInteractableObjectTag.tagOfNearbyInteractableObject != "")
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) && detectedInteractableObjectTag.tagOfNearbyInteractableObject != "" && infoKeeper.gameIsBlockingInteraction == false)
         {
             SortThroughObjects();
         }
@@ -37,7 +39,6 @@ public class InteractWithPuzzle : MonoBehaviour
             case "Puzzle_Bookstand_Door":
                 callAction.Puzzle_Bookstand_Door();
                 break;
-            
         }
 
     }
