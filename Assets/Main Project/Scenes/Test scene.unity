@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 13696297}
   - component: {fileID: 13696296}
   - component: {fileID: 13696295}
+  - component: {fileID: 13696299}
   m_Layer: 0
   m_Name: Estande de busca 1
   m_TagString: Puzzle_Bookstand_1
@@ -436,6 +437,22 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &13696299
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13696293}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &47551651
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +466,7 @@ GameObject:
   - component: {fileID: 47551655}
   - component: {fileID: 47551654}
   - component: {fileID: 47551653}
+  - component: {fileID: 47551657}
   m_Layer: 0
   m_Name: Porta final
   m_TagString: Puzzle_Bookstand_Door
@@ -749,6 +767,22 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &47551657
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47551651}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!43 &49003206
 Mesh:
   m_ObjectHideFlags: 0
@@ -1490,7 +1524,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16960
+  m_Name: pb_Mesh16968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2648,6 +2682,7 @@ GameObject:
   - component: {fileID: 354750619}
   - component: {fileID: 354750618}
   - component: {fileID: 354750617}
+  - component: {fileID: 354750621}
   m_Layer: 0
   m_Name: Estande de busca 2
   m_TagString: Puzzle_Bookstand_2
@@ -2948,6 +2983,22 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &354750621
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354750615}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!43 &359916089
 Mesh:
   m_ObjectHideFlags: 0
@@ -27246,6 +27297,7 @@ GameObject:
   - component: {fileID: 718336712}
   - component: {fileID: 718336711}
   - component: {fileID: 718336710}
+  - component: {fileID: 718336714}
   m_Layer: 0
   m_Name: "Estande de ativa\xE7\xE3o"
   m_TagString: Puzzle_Bookstand_3
@@ -27546,6 +27598,22 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!54 &718336714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718336708}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!43 &724563059
 Mesh:
   m_ObjectHideFlags: 0
@@ -34014,7 +34082,7 @@ GameObject:
   - component: {fileID: 1197366314}
   m_Layer: 0
   m_Name: GAME_MASTER
-  m_TagString: Untagged
+  m_TagString: GameMaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39850,7 +39918,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17086
+  m_Name: pb_Mesh17092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

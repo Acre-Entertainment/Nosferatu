@@ -22,8 +22,8 @@ public class TextBoxManager : MonoBehaviour
     void Start()
     {
         text = textObject.GetComponent<Text>();
-        infoKeeper= gameObject.GetComponent<InfoKeeper>();
-        callAction.gameObject.GetComponent<CallAction>();
+        infoKeeper = gameObject.GetComponent<InfoKeeper>();
+        callAction = gameObject.GetComponent<CallAction>();
     }
     void Update()
     {

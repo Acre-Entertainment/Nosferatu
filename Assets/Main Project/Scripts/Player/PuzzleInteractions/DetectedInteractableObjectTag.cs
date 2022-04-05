@@ -8,7 +8,12 @@ public class DetectedInteractableObjectTag : MonoBehaviour
     public string tagOfNearbyInteractableObject;
     void OnTriggerEnter(Collider other)
     {
+        if(other.tag == "Player")
+        {
+            return;
+        }
         tagOfNearbyInteractableObject = other.tag;
+        
     }
     void OnTriggerExit(Collider other)
     {
