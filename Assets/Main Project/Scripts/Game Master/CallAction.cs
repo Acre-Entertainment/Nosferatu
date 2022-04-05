@@ -25,7 +25,7 @@ public class CallAction : MonoBehaviour
         if(infoKeeper.hasInvestigatedPuzzle_Bookcase_3 == false || infoKeeper.hasBookFromPuzzle_Bookcase_1 == true)
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados estão dentros.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             return;
         }
         if(infoKeeper.hasBookFromPuzzle_Bookcase_2 == false)
@@ -33,7 +33,7 @@ public class CallAction : MonoBehaviour
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é semelhante aos livros vermelhors anteriores. Você decide pega-lo.";
             textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_1 = true;
             return;
         }
@@ -42,7 +42,7 @@ public class CallAction : MonoBehaviour
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é outro livro vermelho.";
             textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_1 = true;
             return;
         }
@@ -54,7 +54,7 @@ public class CallAction : MonoBehaviour
         if(infoKeeper.hasInvestigatedPuzzle_Bookcase_3 == false || infoKeeper.hasBookFromPuzzle_Bookcase_2 == true)
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados estão dentros.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             return;
         }
         if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == false)
@@ -62,7 +62,7 @@ public class CallAction : MonoBehaviour
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é semelhante aos livros vermelhors anteriores. Você decide pega-lo.";
             textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_2 = true;
             return;
         }
@@ -71,12 +71,12 @@ public class CallAction : MonoBehaviour
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é outro livro vermelho.";
             textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_2 = true;
             return;
         }
         textBoxManager.followUpText[0] = "ERROR";
-        textBoxManager.callnextText();
+        textBoxManager.turnOnDialogueBox();
     }
     //estande de livros 3. Tem que inserir os dois livros para continuar.
     public void Puzzle_Bookstand_3()
@@ -85,7 +85,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Está repleta de livros vermelhos.";
             textBoxManager.followUpText[1] = "* Dois espaços vazios entre os livros chamam sua atenção.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasInvestigatedPuzzle_Bookcase_3 = true;
             return;
         }
@@ -93,7 +93,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Você preenche um dos espaços vazios com um livro vermelho.";
             textBoxManager.followUpText[1] = "* Você escuta um barulho na distancia.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasInsertedBook1 = true;
             return;
         }
@@ -101,7 +101,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Você preenche um dos espaços vazios com um livro vermelho.";
             textBoxManager.followUpText[1] = "* Você escuta um barulho na distancia.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasInsertedBook2 = true;
             return;
         }
@@ -109,7 +109,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Você preenche o último espaço vazio com um livro vermelho.";
             textBoxManager.followUpText[1] = "* Você escuta outro barulho na distancia.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasInsertedBook1 = true;
             return;
         }
@@ -117,17 +117,18 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Você preenche o último espaço vazio com um livro vermelho.";
             textBoxManager.followUpText[1] = "* Você escuta outro barulho na distancia.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             infoKeeper.hasInsertedBook2 = true;
             return;
         }
         if(infoKeeper.hasBookFromPuzzle_Bookcase_2 == true && infoKeeper.hasInsertedBook1 == true && infoKeeper.hasInsertedBook2 == true)
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Está completamente repleta de livros vermelhos.";
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
+            return;
         }
         textBoxManager.followUpText[0] = "ERROR";
-        textBoxManager.callnextText();
+        textBoxManager.turnOnDialogueBox();
     }
     public void Puzzle_Bookstand_Door()
     {
@@ -137,8 +138,10 @@ public class CallAction : MonoBehaviour
             textBoxManager.followUpText[1] = "* Ela abre!";
             textBoxManager.whenIsEventCalled = 1;
             textBoxManager.pendingEvent = BookcaseDoorOpens;
-            textBoxManager.callnextText();
+            textBoxManager.turnOnDialogueBox();
             return;
         }
+        textBoxManager.followUpText[0] = "* Você empurra a porta, mas ela se recusa a abrir.";
+        textBoxManager.turnOnDialogueBox();
     }
 }

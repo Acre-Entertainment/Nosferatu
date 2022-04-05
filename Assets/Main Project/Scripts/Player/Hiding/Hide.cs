@@ -14,7 +14,7 @@ public class Hide : MonoBehaviour
     void Start()
     {
         detectHidingPlace = playerDetectArea.GetComponent<DetectHidingPlace>();
-        infoKeeper= gameObject.GetComponent<InfoKeeper>();
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
     void Update()
     {

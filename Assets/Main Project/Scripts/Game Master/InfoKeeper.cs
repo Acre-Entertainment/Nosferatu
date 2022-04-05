@@ -7,7 +7,7 @@ public class InfoKeeper : MonoBehaviour
 //Guarda variaveis para serem usadas por outros scripts.
 
 //tecnico
-    public bool gameIsBlockingInteraction;
+    public bool gameIsBlockingInteraction = false;
 
 //Puzzle de Livros
     public bool hasInvestigatedPuzzle_Bookcase_3;

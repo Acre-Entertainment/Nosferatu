@@ -14,16 +14,23 @@ public class TextBoxManager : MonoBehaviour
     public GameObject textObject;
     private Text text;
     private InfoKeeper infoKeeper;
-    public string[] followUpText = new string[100];
-    public int currentTextNumber;
+    public string[] followUpText;
+    public int currentTextNumber = -1;
     [HideInInspector]public int whenIsEventCalled = -1; //definide quando o evento sera chamado
     [HideInInspector]public UnityEvent pendingEvent; //Defino o evento que sera chamado
     private CallAction callAction;
+    private int x;
     void Start()
     {
         text = textObject.GetComponent<Text>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
+        followUpText = new string[10];
+        foreach(string y in followUpText)
+        {
+            followUpText[x] = "";
+            x++;
+        }
     }
     void Update()
     {
@@ -41,8 +48,8 @@ public class TextBoxManager : MonoBehaviour
         //se tiver no dialogue para chamar um UnityEvent, o chama e reseta o counter de chamar eventos
         if(whenIsEventCalled == currentTextNumber)
         {
-            pendingEvent.Invoke();
             whenIsEventCalled = -1;
+            pendingEvent.Invoke();
         }
         //se não tiver dialogo, encerra
         if(followUpText[currentTextNumber] == "")
@@ -64,5 +71,10 @@ public class TextBoxManager : MonoBehaviour
             }
         }
         
+    }
+    public void turnOnDialogueBox()
+    {
+        textBox.SetActive(true);
+        infoKeeper.gameIsBlockingInteraction = true;
     }
 }
