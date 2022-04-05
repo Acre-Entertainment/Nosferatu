@@ -10,6 +10,6 @@ public class InfoKeeper : MonoBehaviour
     public bool hasInvestigatedPuzzle_Bookcase_3;
     public bool hasBookFromPuzzle_Bookcase_1;
     public bool hasBookFromPuzzle_Bookcase_2;
-    public bool hasInsertedOneBooks;
-    public bool hasInsertedTwoBooks;
+    public bool hasInsertedBook1;
+    public bool hasInsertedBook2;
 }
