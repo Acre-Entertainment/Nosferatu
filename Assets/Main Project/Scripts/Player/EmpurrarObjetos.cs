@@ -16,7 +16,7 @@ public class EmpurrarObjetos : MonoBehaviour
     void Update()
     {
         //Se o objeto for filho do player e o botão for apertado, ele não é mais filho do player
-        if (Input.GetKeyDown(KeyCode.U) && isChild)
+        if (Input.GetKeyDown(KeyCode.Return) && isChild)
         {
             isChild = false;
             this.transform.SetParent(null);
@@ -27,7 +27,7 @@ public class EmpurrarObjetos : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Se o objeto entrar em colisão com o player e se o botão for apertado, ele se torna filho do player
-        if (other.CompareTag("Detected Area") && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Detected Area") && Input.GetKeyDown(KeyCode.Space))
         {
             isChild = true;
             this.transform.SetParent(other.transform);
