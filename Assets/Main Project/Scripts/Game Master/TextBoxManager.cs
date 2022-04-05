@@ -10,7 +10,7 @@ public class TextBoxManager : MonoBehaviour
     public GameObject textBox;
     public GameObject textObject;
     private Text text;
-    public string[] followUpText = new string[100];
+    public string[] followUpText = new string[50];
     public int currentTextNumber;
     void Start()
     {
