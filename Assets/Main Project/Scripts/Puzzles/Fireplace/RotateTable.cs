@@ -16,19 +16,19 @@ public class RotateTable : MonoBehaviour
         {
             case 1:
                 gameObject.transform.position = new Vector3(18, 2, -43);
-                gameObject.transform.eulerAngles = new Vector3(0, 90, 0);
+                gameObject.transform.eulerAngles = new Vector3(-90, 90, 0);
                 break;
             case 2:
-                gameObject.transform.position = new Vector3(16, 2, -42);
-                gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+                gameObject.transform.position = new Vector3(15, 2, -40);
+                gameObject.transform.eulerAngles = new Vector3(-90, 180, 0);
                 break;
             case 3:
-                gameObject.transform.position = new Vector3(18, 2, -39);
-                gameObject.transform.eulerAngles = new Vector3(0, 270, 0);
+                gameObject.transform.position = new Vector3(18, 2, -37);
+                gameObject.transform.eulerAngles = new Vector3(-90, 270, 0);
                 break;
             case 4:
-                gameObject.transform.position = new Vector3(20, 2, -41);
-                gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+                gameObject.transform.position = new Vector3(21, 2, -40);
+                gameObject.transform.eulerAngles = new Vector3(-90, 0, 0);
                 break;
         }
         infoKeeper.tableRotation++;
