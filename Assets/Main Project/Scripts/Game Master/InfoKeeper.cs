@@ -17,6 +17,10 @@ public class InfoKeeper : MonoBehaviour
     public bool hasInsertedBook2;
 //Puzzle da Lareira
     public bool hasPickedUpDeskClue1;
+    public bool DeskClue1HasBeenPickedSecond;
     public bool hasPickedUpDeskClue2;
-    public bool hasFinishedFireplaceNumberCrack;
+      public bool DeskClue2HasBeenPickedSecond;
+    public bool hasPickedChestKey;
+    public bool hasBookFromFireplacePuzzle;
+    public bool hasPlacedFireplaceBookInBookstand;
 }

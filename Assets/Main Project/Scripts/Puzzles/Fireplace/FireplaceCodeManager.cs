@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FireplaceCodeManager : MonoBehaviour
 {
+    //IGNORE THIS SCRIPT
     //Script para o codigo da lareira
     public int code1, code2, code3, code4;
     public int correctCode1, correctCode2, correctCode3, correctCode4;
@@ -117,11 +118,11 @@ public class FireplaceCodeManager : MonoBehaviour
     {
         if(code1 == correctCode1 && code2 == correctCode2 && code3 == correctCode3 && code4 == correctCode4)
         {
-            callAction.Puzzle_Fireplace_Success();
+            //callAction.Puzzle_Fireplace_Success();
         }
         else
         {
-            callAction.Puzzle_Fireplace_Failure();
+            //callAction.Puzzle_Fireplace_Failure();
         }
     }
 }

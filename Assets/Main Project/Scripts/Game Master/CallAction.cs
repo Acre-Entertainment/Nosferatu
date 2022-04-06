@@ -11,9 +11,9 @@ public class CallAction : MonoBehaviour
     private InfoKeeper infoKeeper;
     private TextBoxManager textBoxManager;
     public UnityEvent BookcaseDoorOpens;
-    public UnityEvent StartFireplaceNumberCrack;
-    public UnityEvent onFireplaceNumberWin;
-    public UnityEvent onFireplaceNumberLose;
+    //public UnityEvent StartFireplaceNumberCrack;
+    //public UnityEvent onFireplaceNumberWin;
+    //public UnityEvent onFireplaceNumberLose;
     void Start()
     {
         inventoryManager = gameObject.GetComponent<InventoryManager>();
@@ -160,60 +160,156 @@ public class CallAction : MonoBehaviour
         textBoxManager.turnOnDialogueBox();
     }
 //FIREPLACE_PUZZLE-------------------------------------------------------------------------------------------------------------------------
+    //estande 1
     public void Puzzle_Fireplace_Desk_1()
     {
-        if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == false)
+        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == false)
         {
-            
+            textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
+            textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPickedUpDeskClue1 = true;
+            return;
         }
+        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == true)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
+            textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPickedUpDeskClue1 = true;
+            infoKeeper.DeskClue1HasBeenPickedSecond = true;
+            return;
+        }
+        if(infoKeeper.DeskClue1HasBeenPickedSecond == true)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
+            textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.DeskClue1HasBeenPickedSecond == false)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
+            textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        textBoxManager.followUpText[0] = "ERROR";
+        textBoxManager.turnOnDialogueBox();
     }
+    //estande 2
     public void Puzzle_Fireplace_Desk_2()
     {
-
+        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasBookFromPuzzle_Bookcase_1 == false)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
+            textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPickedUpDeskClue2 = true;
+            return;
+        }
+        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasBookFromPuzzle_Bookcase_1 == true)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
+            textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPickedUpDeskClue2 = true;
+            infoKeeper.DeskClue2HasBeenPickedSecond = true;
+            return;
+        }
+        if(infoKeeper.DeskClue2HasBeenPickedSecond == true)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
+            textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.DeskClue2HasBeenPickedSecond == false)
+        {
+            textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
+            textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        textBoxManager.followUpText[0] = "ERROR";
+        textBoxManager.turnOnDialogueBox();
     }
+    //lareira
     public void Puzzle_Fireplace()
     {
-        if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == false)
+        if(infoKeeper.hasPickedUpDeskClue1 == false || infoKeeper.hasPickedUpDeskClue2 == false)
         {
-            textBoxManager.followUpText[0] = "* É uma lareira ornamental. Detalhes metálicos o enfeita.";
+            textBoxManager.followUpText[0] = "Uma lareira ornamental. Está apagada, porém ainda tem lenha dentro.";
             textBoxManager.turnOnDialogueBox();
             return;
         }
-        if(infoKeeper.hasFinishedFireplaceNumberCrack == false)
+        if(infoKeeper.hasPickedChestKey == false)
         {
-            textBoxManager.followUpText[0] = "* É uma lareira ornamental. Detalhes metálicos o enfeita.";
-            textBoxManager.followUpText[1] = "* Entre os detalhes você percebe números.";
-            textBoxManager.whenIsEventCalled = 2;
-            textBoxManager.pendingEvent = StartFireplaceNumberCrack;
+            textBoxManager.followUpText[0] = "Entre as peças de lenha há uma chave!";
             textBoxManager.turnOnDialogueBox();
             return;
         }
-    }
-    public void Puzzle_Fireplace_Success()
-    {
-        onFireplaceNumberWin.Invoke();
-        textBoxManager.followUpText[0] = "* Ao inserir a senha, um compartimento secreto abriu. Dentro contém uma chave";
-        textBoxManager.followUpText[1] = "* Você obteve a Chave da Lareira.";
+        if(infoKeeper.hasPickedChestKey == true)
+        {
+            textBoxManager.followUpText[0] = "Uma lareira ornamental sem nenhuma chave.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        textBoxManager.followUpText[0] = "ERROR";
         textBoxManager.turnOnDialogueBox();
-        infoKeeper.hasFinishedFireplaceNumberCrack = true;
-        infoKeeper.gameIsBlockingInteraction = false;
-        return;
     }
-    public void Puzzle_Fireplace_Failure()
-    {
-        onFireplaceNumberLose.Invoke();
-        textBoxManager.followUpText[0] = "* Ao inserir a senha, nada aconteceu.";
-        textBoxManager.turnOnDialogueBox();
-        infoKeeper.gameIsBlockingInteraction = false;
-        return;
-    }
+    //estande de livro
     public void Puzzle_Fireplace_Bookstand()
     {
-
+        if(infoKeeper.hasBookFromFireplacePuzzle == false)
+        {
+            textBoxManager.followUpText[0] = "Uma bela estande de livros amarelos. Parece estar faltando um.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasBookFromFireplacePuzzle == true && infoKeeper.hasPlacedFireplaceBookInBookstand == false)
+        {
+            textBoxManager.followUpText[0] = "Aha! O livro cabe perfeitamente!";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPlacedFireplaceBookInBookstand = true;
+            return;
+        }
+        if(infoKeeper.hasPlacedFireplaceBookInBookstand == true)
+        {
+            textBoxManager.followUpText[0] = "Uma estante completa de livros amarelos.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        textBoxManager.followUpText[0] = "ERROR";
+        textBoxManager.turnOnDialogueBox();
     }
+    //bau
     public void Puzzle_Fireplace_Chest()
     {
-
+        if(infoKeeper.hasPickedChestKey == false)
+        {
+            textBoxManager.followUpText[0] = "Uma baú velho.";
+            textBoxManager.followUpText[1] = "Hmph. Por mais que eu tente, eu não consigo abir.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasBookFromFireplacePuzzle == false)
+        {
+            textBoxManager.followUpText[0] = "A chave que eu peguei da lareira cabe perfeitamente!";
+            textBoxManager.followUpText[1] = "Dentro tem um livro amarelo!";
+            textBoxManager.followUpText[2] = "Livro Amarelo adquirido!";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasBookFromFireplacePuzzle = true;
+            return;
+        }
+        if(infoKeeper.hasBookFromFireplacePuzzle == true)
+        {
+            textBoxManager.followUpText[0] = "Nada mais para pegar aqui.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        textBoxManager.followUpText[0] = "ERROR";
+        textBoxManager.turnOnDialogueBox();
     }
     public void Puzzle_Fireplace_Table()
     {
