@@ -164,7 +164,7 @@ public class CallAction : MonoBehaviour
     //estande 1
     public void Puzzle_Fireplace_Desk_1()
     {
-        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == false)
+        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasPickedUpDeskClue2 == false)
         {
             textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
             textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
@@ -172,7 +172,7 @@ public class CallAction : MonoBehaviour
             infoKeeper.hasPickedUpDeskClue1 = true;
             return;
         }
-        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == true)
+        if(infoKeeper.hasPickedUpDeskClue1 == false && infoKeeper.hasPickedUpDeskClue2 == true)
         {
             textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
             textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
@@ -201,7 +201,7 @@ public class CallAction : MonoBehaviour
     //estande 2
     public void Puzzle_Fireplace_Desk_2()
     {
-        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasBookFromPuzzle_Bookcase_1 == false)
+        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasPickedUpDeskClue1 == false)
         {
             textBoxManager.followUpText[0] = "Em cima da escrivania há um papel com algo escrito.";
             textBoxManager.followUpText[1] = "Na madeira que se concentra o fogo...";
@@ -209,7 +209,7 @@ public class CallAction : MonoBehaviour
             infoKeeper.hasPickedUpDeskClue2 = true;
             return;
         }
-        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasBookFromPuzzle_Bookcase_1 == true)
+        if(infoKeeper.hasPickedUpDeskClue2 == false && infoKeeper.hasPickedUpDeskClue1 == true)
         {
             textBoxManager.followUpText[0] = "Em cima da escrivania há outro papel com algo escrito.";
             textBoxManager.followUpText[1] = "...Escondida a chave está para a tumba alcançar.";
