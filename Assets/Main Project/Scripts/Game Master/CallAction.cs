@@ -160,7 +160,10 @@ public class CallAction : MonoBehaviour
 //FIREPLACE_PUZZLE-------------------------------------------------------------------------------------------------------------------------
     public void Puzzle_Fireplace_Desk_1()
     {
-
+        if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == false)
+        {
+            
+        }
     }
     public void Puzzle_Fireplace_Desk_2()
     {
