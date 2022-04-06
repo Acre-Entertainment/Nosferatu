@@ -10,8 +10,10 @@ public class CallAction : MonoBehaviour
     private InventoryManager inventoryManager;
     private InfoKeeper infoKeeper;
     private TextBoxManager textBoxManager;
-    [HideInInspector] UnityEvent pendingEventCallInTextManager;
     public UnityEvent BookcaseDoorOpens;
+    public UnityEvent StartFireplaceNumberCrack;
+    public UnityEvent onFireplaceNumberWin;
+    public UnityEvent onFireplaceNumberLose;
     void Start()
     {
         inventoryManager = gameObject.GetComponent<InventoryManager>();
@@ -61,7 +63,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é semelhante aos livros vermelhors anteriores. Você decide pega-lo.";
-            textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
+            textBoxManager.followUpText[2] = "* Você obteve um Livro Vermelho.";
             textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_2 = true;
             return;
@@ -70,7 +72,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "* Uma bela estante de livros. Alguns livros empoeirados de várias cores estão dentros.";
             textBoxManager.followUpText[1] = "* Um dos livros chama sua atenção. Ele é outro livro vermelho.";
-            textBoxManager.followUpText[2] = "* Você obteve um livro vermelho.";
+            textBoxManager.followUpText[2] = "* Você obteve um Livro Vermelho.";
             textBoxManager.turnOnDialogueBox();
             infoKeeper.hasBookFromPuzzle_Bookcase_2 = true;
             return;
@@ -171,7 +173,36 @@ public class CallAction : MonoBehaviour
     }
     public void Puzzle_Fireplace()
     {
-
+        if(infoKeeper.hasBookFromPuzzle_Bookcase_1 == false && infoKeeper.hasBookFromPuzzle_Bookcase_2 == false)
+        {
+            textBoxManager.followUpText[0] = "* É uma lareira ornamental. Detalhes metálicos o enfeita.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasFinishedFireplaceNumberCrack == false)
+        {
+            textBoxManager.followUpText[0] = "* É uma lareira ornamental. Detalhes metálicos o enfeita.";
+            textBoxManager.followUpText[1] = "* Entre os detalhes você percebe números.";
+            textBoxManager.whenIsEventCalled = 2;
+            textBoxManager.pendingEvent = StartFireplaceNumberCrack;
+            textBoxManager.turnOnDialogueBox();
+        }
+    }
+    public void Puzzle_Fireplace_Success()
+    {
+        onFireplaceNumberWin.Invoke();
+        textBoxManager.followUpText[0] = "* Ao inserir a senha, um compartimento secreto abriu. Dentro contém uma chave";
+        textBoxManager.followUpText[1] = "* Você obteve a Chave da Lareira.";
+        textBoxManager.turnOnDialogueBox();
+        infoKeeper.hasFinishedFireplaceNumberCrack = true;
+        infoKeeper.gameIsBlockingInteraction = false;
+    }
+    public void Puzzle_Fireplace_Failure()
+    {
+        onFireplaceNumberLose.Invoke();
+        textBoxManager.followUpText[0] = "* Ao inserir a senha, nada aconteceu.";
+        textBoxManager.turnOnDialogueBox();
+        infoKeeper.gameIsBlockingInteraction = false;
     }
     public void Puzzle_Fireplace_Bookstand()
     {
