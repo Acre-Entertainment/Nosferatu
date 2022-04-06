@@ -29,4 +29,7 @@ public class InfoKeeper : MonoBehaviour
     public bool chair2RightPlace;
     public bool chair3RightPlace;
     public bool hasOpenedFireplaceDoor;
+    public bool hasInvestigatedSkeleton;
+    public bool hasGottenFirstSkeletonChest;
+    public bool hasGottenSecondSkeletonChest;
 }

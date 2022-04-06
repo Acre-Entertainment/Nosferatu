@@ -66,7 +66,18 @@ public class InteractWithPuzzle : MonoBehaviour
             case "Puzzle_Fireplace_Door":
                 callAction.Puzzle_Bookstand_Door();
                 break;
-            
+            case "Puzzle_Basement_Entrance":
+                callAction.Puzzle_Basement_Entrance();
+                break;
+            case "Puzzle_Basement_Skeleton":
+                callAction.Puzzle_Basement_Skeleton();
+                break;
+            case "Puzzle_Basement_Chest_1":
+                callAction.Puzzle_Basement_Chest_1();
+                break;
+            case "Puzzle_Basement_Chest_2":
+                callAction.Puzzle_Basement_Chest_2();
+                break;
         }
 
     }

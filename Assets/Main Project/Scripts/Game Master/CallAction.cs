@@ -14,13 +14,14 @@ public class CallAction : MonoBehaviour
 
     public UnityEvent rotateTable;
     public UnityEvent FireplaceDoorOpens;
+    public UnityEvent onBasementEnter;
     void Start()
     {
         inventoryManager = gameObject.GetComponent<InventoryManager>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         textBoxManager = gameObject.GetComponent<TextBoxManager>();
     }
-//BOOKSTAND_PUZZLE---------------------------------------------------------------------------------------------------------------------------------------
+//BOOKSTAND_PUZZLE----------------------------------------------------------------------------------------------------------------------------------------------------------------
     //estande de livros 1. Precisa colokar o livro dentro na estande de livro 3
     public void Puzzle_Bookstand_1()
     {
@@ -159,7 +160,7 @@ public class CallAction : MonoBehaviour
         textBoxManager.followUpText[0] = "* Você empurra a porta, mas ela se recusa a abrir.";
         textBoxManager.turnOnDialogueBox();
     }
-//FIREPLACE_PUZZLE-------------------------------------------------------------------------------------------------------------------------
+//FIREPLACE_PUZZLE--------------------------------------------------------------------------------------------------------------------------------------------------------------
     //estande 1
     public void Puzzle_Fireplace_Desk_1()
     {
@@ -312,6 +313,7 @@ public class CallAction : MonoBehaviour
         textBoxManager.followUpText[0] = "ERROR";
         textBoxManager.turnOnDialogueBox();
     }
+    //mesa rotatoria
     public void Puzzle_Fireplace_Table()
     {
         if(infoKeeper.hasPlacedFireplaceBookInBookstand == false)
@@ -364,6 +366,7 @@ public class CallAction : MonoBehaviour
         textBoxManager.turnOnDialogueBox();
         return;
     }
+    //porta
     public void Puzzle_Fireplace_Door()
     {
         if(infoKeeper.tableRotation != 4)
@@ -380,6 +383,86 @@ public class CallAction : MonoBehaviour
             textBoxManager.pendingEvent = FireplaceDoorOpens;
             textBoxManager.turnOnDialogueBox();
             infoKeeper.hasOpenedFireplaceDoor = true;
+            return;
+        }
+    }
+//BASEMENT PUZZLE--------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public void Puzzle_Basement_Entrance()
+    {
+        if(infoKeeper.hasGottenSecondSkeletonChest == false)
+        {
+            textBoxManager.followUpText[0] = "Esse alçapão deve me levar para mais dentro do castelo.";
+            textBoxManager.followUpText[1] = "E é claro que ele está trancado!";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        onBasementEnter.Invoke();
+    }
+    public void Puzzle_Basement_Skeleton()
+    {
+        if(infoKeeper.hasInvestigatedSkeleton == false)
+        {
+            textBoxManager.followUpText[0] = "Oh... Uma caveira.";
+            textBoxManager.followUpText[1] = "Tem um chave aqui, e uma anotação.";
+            //na versão final adicionaria a anotação no inventario. Por agora sera assim.
+            textBoxManager.followUpText[2] = "A anotação lê:";
+            textBoxManager.followUpText[3] = "Não sei quem construiu esse lugar, mas certamente é muito paranoico!";
+            textBoxManager.followUpText[4] = "O único jeito que eu encontrei de abrir esse porão foi abrindo o baú no quarto do outro lado do castelo.";
+            textBoxManager.followUpText[5] = "Lá tem uma caixa, ela deve ser colocada no baú da sala estreita ao lado do corredor de entrada, só assim para destravar a tranca do porão...";
+            textBoxManager.followUpText[6] = "Se alguém achar essa anotação, me encontre, pois eu estou com a chave do baú do quarto.";
+            textBoxManager.followUpText[7] = "...";
+            infoKeeper.hasInvestigatedSkeleton = true;
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasInvestigatedSkeleton == true)
+        {
+            //releria a anotação temporariamente. Mudaria depois
+
+        }
+    }
+    public void Puzzle_Basement_Chest_1()
+    {
+        if(infoKeeper.hasInvestigatedSkeleton == false)
+        {
+            textBoxManager.followUpText[0] = "Dentro do baú tem apenas uma caixa.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasGottenFirstSkeletonChest == false)
+        {
+            textBoxManager.followUpText[0] = "Dentro do baú tem a caixa mencionada na anotação.";
+            textBoxManager.followUpText[1] = "Caixa obtida.";
+            infoKeeper.hasGottenFirstSkeletonChest = true;
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasGottenFirstSkeletonChest == true)
+        {
+            textBoxManager.followUpText[0] = "Um baú vazio.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+    }
+    public void Puzzle_Basement_Chest_2()
+    {
+        if(infoKeeper.hasGottenFirstSkeletonChest == false)
+        {
+            textBoxManager.followUpText[0] = "Um baú vazio.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasGottenSecondSkeletonChest == false)
+        {
+            textBoxManager.followUpText[0] = "Eu coloquei a caixa dentro do baú, de acordo com a instrução.";
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasGottenSecondSkeletonChest = true;
+            return;
+        }
+        if(infoKeeper.hasGottenSecondSkeletonChest == true)
+        {
+            textBoxManager.followUpText[0] = "Um baú não vazio.";
+            textBoxManager.turnOnDialogueBox();
             return;
         }
     }
