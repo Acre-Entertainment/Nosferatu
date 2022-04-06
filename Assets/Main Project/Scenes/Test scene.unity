@@ -25171,7 +25171,7 @@ GameObject:
   - component: {fileID: 446090800}
   m_Layer: 0
   m_Name: Caveira
-  m_TagString: Untagged
+  m_TagString: Puzzle_Basement_Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28417,7 +28417,7 @@ GameObject:
   - component: {fileID: 766110541}
   m_Layer: 0
   m_Name: "Entrada para o por\xE3o"
-  m_TagString: Untagged
+  m_TagString: Puzzle_Basement_Entrance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34938,6 +34938,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onBasementEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1197366311
 Transform:
   m_ObjectHideFlags: 0
@@ -35016,6 +35019,9 @@ MonoBehaviour:
   chair2RightPlace: 0
   chair3RightPlace: 0
   hasOpenedFireplaceDoor: 0
+  hasInvestigatedSkeleton: 0
+  hasGottenFirstSkeletonChest: 0
+  hasGottenSecondSkeletonChest: 0
 --- !u!43 &1200309563
 Mesh:
   m_ObjectHideFlags: 0
@@ -37259,7 +37265,7 @@ GameObject:
   - component: {fileID: 1368993345}
   m_Layer: 0
   m_Name: "Ba\xFA 2"
-  m_TagString: Untagged
+  m_TagString: Puzzle_Basement_Chest_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42488,7 +42494,7 @@ GameObject:
   - component: {fileID: 2065641995}
   m_Layer: 0
   m_Name: "Ba\xFA 1"
-  m_TagString: Untagged
+  m_TagString: Puzzle_Basement_Chest_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
