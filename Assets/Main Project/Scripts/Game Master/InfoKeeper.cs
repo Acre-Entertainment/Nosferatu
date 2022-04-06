@@ -15,4 +15,7 @@ public class InfoKeeper : MonoBehaviour
     public bool hasBookFromPuzzle_Bookcase_2;
     public bool hasInsertedBook1;
     public bool hasInsertedBook2;
+//Puzzle da Lareira
+    public bool hasPickedUpDeskClue1;
+    public bool hasPickedUpDeskClue2;
 }

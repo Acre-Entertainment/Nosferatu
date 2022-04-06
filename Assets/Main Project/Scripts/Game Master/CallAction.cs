@@ -157,4 +157,45 @@ public class CallAction : MonoBehaviour
         textBoxManager.followUpText[0] = "* Você empurra a porta, mas ela se recusa a abrir.";
         textBoxManager.turnOnDialogueBox();
     }
+//FIREPLACE_PUZZLE-------------------------------------------------------------------------------------------------------------------------
+    public void Puzzle_Fireplace_Desk_1()
+    {
+
+    }
+    public void Puzzle_Fireplace_Desk_2()
+    {
+
+    }
+    public void Puzzle_Fireplace()
+    {
+
+    }
+    public void Puzzle_Fireplace_Bookstand()
+    {
+
+    }
+    public void Puzzle_Fireplace_Chest()
+    {
+
+    }
+    public void Puzzle_Fireplace_Table()
+    {
+
+    }
+    public void Puzzle_Fireplace_Chair_1()
+    {
+
+    }
+    public void Puzzle_Fireplace_Chair_2()
+    {
+
+    }
+    public void Puzzle_Fireplace_Chair_3()
+    {
+
+    }
+    public void Puzzle_Fireplace_Door()
+    {
+
+    }
 }

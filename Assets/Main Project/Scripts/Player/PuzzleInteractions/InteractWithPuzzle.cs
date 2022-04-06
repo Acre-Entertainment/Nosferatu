@@ -39,6 +39,34 @@ public class InteractWithPuzzle : MonoBehaviour
             case "Puzzle_Bookstand_Door":
                 callAction.Puzzle_Bookstand_Door();
                 break;
+            case "Puzzle_Fireplace_Desk_1":
+                callAction.Puzzle_Fireplace_Desk_1();
+                break;
+            case "Puzzle_Fireplace_Desk_2":
+                callAction.Puzzle_Fireplace_Desk_2();
+                break;
+            case "Puzzle_Fireplace_Bookstand":
+                callAction.Puzzle_Fireplace_Bookstand();
+                break;
+            case "Puzzle_Fireplace_Chest":
+                callAction.Puzzle_Fireplace_Chest();
+                break;
+            case "Puzzle_Fireplace_Table":
+                callAction.Puzzle_Fireplace_Table();
+                break;
+            case "Puzzle_Fireplace_Chair_1":
+                callAction.Puzzle_Fireplace_Chair_1();
+                break;
+            case "Puzzle_Fireplace_Chair_2":
+                callAction.Puzzle_Fireplace_Chair_2();
+                break;
+            case "Puzzle_Fireplace_Chair_3":
+                callAction.Puzzle_Fireplace_Chair_3();
+                break;
+            case "Puzzle_Fireplace_Door":
+                callAction.Puzzle_Bookstand_Door();
+                break;
+            
         }
 
     }
