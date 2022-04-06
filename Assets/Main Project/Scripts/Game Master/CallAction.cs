@@ -186,6 +186,7 @@ public class CallAction : MonoBehaviour
             textBoxManager.whenIsEventCalled = 2;
             textBoxManager.pendingEvent = StartFireplaceNumberCrack;
             textBoxManager.turnOnDialogueBox();
+            return;
         }
     }
     public void Puzzle_Fireplace_Success()
@@ -196,6 +197,7 @@ public class CallAction : MonoBehaviour
         textBoxManager.turnOnDialogueBox();
         infoKeeper.hasFinishedFireplaceNumberCrack = true;
         infoKeeper.gameIsBlockingInteraction = false;
+        return;
     }
     public void Puzzle_Fireplace_Failure()
     {
@@ -203,6 +205,7 @@ public class CallAction : MonoBehaviour
         textBoxManager.followUpText[0] = "* Ao inserir a senha, nada aconteceu.";
         textBoxManager.turnOnDialogueBox();
         infoKeeper.gameIsBlockingInteraction = false;
+        return;
     }
     public void Puzzle_Fireplace_Bookstand()
     {
