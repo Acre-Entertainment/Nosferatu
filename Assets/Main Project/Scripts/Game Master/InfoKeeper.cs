@@ -23,4 +23,10 @@ public class InfoKeeper : MonoBehaviour
     public bool hasPickedChestKey;
     public bool hasBookFromFireplacePuzzle;
     public bool hasPlacedFireplaceBookInBookstand;
+    public bool hasCheckedRotatingTable;
+    public int tableRotation = 1;
+    public bool chair1RightPlace;
+    public bool chair2RightPlace;
+    public bool chair3RightPlace;
+    public bool hasOpenedFireplaceDoor;
 }

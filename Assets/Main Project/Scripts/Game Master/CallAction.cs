@@ -11,9 +11,9 @@ public class CallAction : MonoBehaviour
     private InfoKeeper infoKeeper;
     private TextBoxManager textBoxManager;
     public UnityEvent BookcaseDoorOpens;
-    //public UnityEvent StartFireplaceNumberCrack;
-    //public UnityEvent onFireplaceNumberWin;
-    //public UnityEvent onFireplaceNumberLose;
+
+    public UnityEvent rotateTable;
+    public UnityEvent FireplaceDoorOpens;
     void Start()
     {
         inventoryManager = gameObject.GetComponent<InventoryManager>();
@@ -270,6 +270,7 @@ public class CallAction : MonoBehaviour
         if(infoKeeper.hasBookFromFireplacePuzzle == true && infoKeeper.hasPlacedFireplaceBookInBookstand == false)
         {
             textBoxManager.followUpText[0] = "Aha! O livro cabe perfeitamente!";
+            textBoxManager.followUpText[1] = "Eu ouvi um som na distancia. Algo deve ter acontecido.";
             textBoxManager.turnOnDialogueBox();
             infoKeeper.hasPlacedFireplaceBookInBookstand = true;
             return;
@@ -313,22 +314,73 @@ public class CallAction : MonoBehaviour
     }
     public void Puzzle_Fireplace_Table()
     {
-
+        if(infoKeeper.hasPlacedFireplaceBookInBookstand == false)
+        {
+            textBoxManager.followUpText[0] = "Uma simples mesa circular com três velas em cima. Estranhamente parece estar presa ao chão.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasPlacedFireplaceBookInBookstand == true && infoKeeper.hasCheckedRotatingTable == false)
+        {
+            textBoxManager.followUpText[0] = "Uma simples mesa circular com três velas em cima.";
+            textBoxManager.followUpText[1] = "Huh. Parece que ela poder rodada.";
+            textBoxManager.whenIsEventCalled = 2;
+            textBoxManager.pendingEvent = rotateTable;
+            infoKeeper.hasCheckedRotatingTable = true;
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasOpenedFireplaceDoor == true)
+        {
+            textBoxManager.followUpText[0] = "Uma rotatória mesa circular com três velas em cima.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.hasOpenedFireplaceDoor == false)
+        {
+            textBoxManager.followUpText[0] = "Eu giro a mesa.";
+            textBoxManager.whenIsEventCalled = 0;
+            textBoxManager.pendingEvent = rotateTable;
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
     }
+    //eu vejo com o Luigi para integrar as cadeiras que movem no puzzle depois.
     public void Puzzle_Fireplace_Chair_1()
     {
-
+        textBoxManager.followUpText[0] = "Essa cadeira parece estar presa no lugar.";
+        textBoxManager.turnOnDialogueBox();
+        return;
     }
     public void Puzzle_Fireplace_Chair_2()
     {
-
+        textBoxManager.followUpText[0] = "Essa cadeira parece estar presa no lugar.";
+        textBoxManager.turnOnDialogueBox();
+        return;
     }
     public void Puzzle_Fireplace_Chair_3()
     {
-
+        textBoxManager.followUpText[0] = "Essa cadeira parece estar presa no lugar.";
+        textBoxManager.turnOnDialogueBox();
+        return;
     }
     public void Puzzle_Fireplace_Door()
     {
-
+        if(infoKeeper.tableRotation != 4)
+        {
+            textBoxManager.followUpText[0] = "Essa porta se recusa a abrir.";
+            textBoxManager.turnOnDialogueBox();
+            return;
+        }
+        if(infoKeeper.tableRotation == 4 && infoKeeper.hasOpenedFireplaceDoor == false)
+        {
+            textBoxManager.followUpText[0] = "Eu empurro na porta.";
+            textBoxManager.followUpText[1] = "Ela abre!";
+            textBoxManager.whenIsEventCalled = 1;
+            textBoxManager.pendingEvent = FireplaceDoorOpens;
+            textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasOpenedFireplaceDoor = true;
+            return;
+        }
     }
 }
