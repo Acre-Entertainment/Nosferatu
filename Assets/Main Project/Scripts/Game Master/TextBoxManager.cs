@@ -20,6 +20,8 @@ public class TextBoxManager : MonoBehaviour
     [HideInInspector]public UnityEvent pendingEvent; //Defino o evento que sera chamado
     private CallAction callAction;
     private int x;
+    private bool isActive;
+    public GameObject playerDetectArea;
     void Start()
     {
         text = textObject.GetComponent<Text>();
@@ -32,49 +34,35 @@ public class TextBoxManager : MonoBehaviour
             x++;
         }
     }
-    void Update()
-    {
-        //checa se o jogador apertou o enter e se a caixa de dialogo está aberta. Se sim, vai para a proxima linha de dialogo.
-        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
-        {
-            if(textBox.activeInHierarchy == true)
-            {
-                callnextText();
-            }
-        }
-    }
     public void callnextText()
     {
-        //se tiver no dialogue para chamar um UnityEvent, o chama e reseta o counter de chamar eventos
+        currentTextNumber++;
         if(whenIsEventCalled == currentTextNumber)
         {
             whenIsEventCalled = -1;
             pendingEvent.Invoke();
         }
-        //se não tiver dialogo, encerra
         if(followUpText[currentTextNumber] == "")
         {
             textBox.SetActive(false);
-            infoKeeper.gameIsBlockingInteraction = false; //faz com que o jogado n ative coisas durante o dialogue
-            currentTextNumber = 0;
+            playerDetectArea.SetActive(true);
+            isActive = false;
+            infoKeeper.gameIsBlockingInteraction = false;
         }
-        //se tiver, chama o proxiomo dialogo.
         else
         {
-            text.text = followUpText[currentTextNumber]; //coloca o texto
-            followUpText[currentTextNumber] = ""; //reseta o espaço
-            currentTextNumber++; //vai pra proxima linha
-            if(textBox.activeInHierarchy == false)
-            {
-                textBox.SetActive(true);
-                infoKeeper.gameIsBlockingInteraction = true;
-            }
+            text.text = followUpText[currentTextNumber];
+            followUpText[currentTextNumber] = "";
         }
         
     }
     public void turnOnDialogueBox()
     {
         textBox.SetActive(true);
+        playerDetectArea.SetActive(false);
+        isActive = true;
         infoKeeper.gameIsBlockingInteraction = true;
+        currentTextNumber = -1;
+        callnextText();
     }
 }
