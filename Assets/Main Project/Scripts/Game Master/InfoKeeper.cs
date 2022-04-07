@@ -8,6 +8,16 @@ public class InfoKeeper : MonoBehaviour
 
 //tecnico
     public bool gameIsBlockingInteraction = false;
+    public int nosferatuRoom;
+    public void setNosferatuRoom(int room)
+    {
+        nosferatuRoom = room;
+    }
+    public int playerRoom = 1;
+    public void setPlayerRoom(int room)
+    {
+        playerRoom = room;
+    }
 
 //Puzzle de Livros
     public bool hasInvestigatedPuzzle_Bookcase_3;

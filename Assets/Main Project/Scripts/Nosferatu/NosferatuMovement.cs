@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NosferatuMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject startingDestination;
+    NavMeshAgent navMeshAgent;
     void Start()
     {
-        
+        navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+        if(startingDestination != null)
+        {
+            navMeshAgent.SetDestination(startingDestination.transform.position);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void setNewTarget(GameObject target)
     {
-        
+        navMeshAgent.SetDestination(target.transform.position);
     }
 }
