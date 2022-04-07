@@ -15,26 +15,26 @@ public class RotateTable : MonoBehaviour
         switch(infoKeeper.tableRotation)
         {
             case 1:
-                gameObject.transform.position = new Vector3(18, 2, -43);
-                gameObject.transform.eulerAngles = new Vector3(-90, 90, 0);
+                gameObject.transform.position = new Vector3(19.75f, 2, -41.25f);
+                gameObject.transform.Rotate(0, 90, 0, Space.World);
                 break;
             case 2:
-                gameObject.transform.position = new Vector3(15, 2, -40);
-                gameObject.transform.eulerAngles = new Vector3(-90, 180, 0);
+                gameObject.transform.position = new Vector3(17.5f, 2, -39);
+                gameObject.transform.Rotate(0, 90, 0, Space.World);
                 break;
             case 3:
-                gameObject.transform.position = new Vector3(18, 2, -37);
-                gameObject.transform.eulerAngles = new Vector3(-90, 270, 0);
+                gameObject.transform.position = new Vector3(19.75f, 2, -36.75f);
+                gameObject.transform.Rotate(0, 90, 0, Space.World);
                 break;
             case 4:
-                gameObject.transform.position = new Vector3(21, 2, -40);
-                gameObject.transform.eulerAngles = new Vector3(-90, 0, 0);
+                gameObject.transform.position = new Vector3(22, 2, -39);
+                gameObject.transform.Rotate(0, 90, 0, Space.World);
                 break;
         }
         infoKeeper.tableRotation++;
         if(infoKeeper.tableRotation == 5)
         {
-            infoKeeper.tableRotation = 0;
+            infoKeeper.tableRotation = 1;
         }
     }
 }

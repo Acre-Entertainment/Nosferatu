@@ -248,6 +248,7 @@ public class CallAction : MonoBehaviour
         {
             textBoxManager.followUpText[0] = "Entre as peças de lenha há uma chave!";
             textBoxManager.turnOnDialogueBox();
+            infoKeeper.hasPickedChestKey = true;
             return;
         }
         if(infoKeeper.hasPickedChestKey == true)
@@ -452,7 +453,7 @@ public class CallAction : MonoBehaviour
             textBoxManager.turnOnDialogueBox();
             return;
         }
-        if(infoKeeper.hasGottenSecondSkeletonChest == false)
+        if(infoKeeper.hasGottenSecondSkeletonChest == true)
         {
             textBoxManager.followUpText[0] = "Eu coloquei a caixa dentro do baú, de acordo com a instrução.";
             textBoxManager.turnOnDialogueBox();

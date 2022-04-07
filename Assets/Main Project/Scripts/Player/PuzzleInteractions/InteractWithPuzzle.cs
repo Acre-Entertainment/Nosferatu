@@ -42,6 +42,9 @@ public class InteractWithPuzzle : MonoBehaviour
             case "Puzzle_Fireplace_Desk_1":
                 callAction.Puzzle_Fireplace_Desk_1();
                 break;
+            case "Puzzle_Fireplace":
+                callAction.Puzzle_Fireplace();
+                break;
             case "Puzzle_Fireplace_Desk_2":
                 callAction.Puzzle_Fireplace_Desk_2();
                 break;
@@ -64,7 +67,7 @@ public class InteractWithPuzzle : MonoBehaviour
                 callAction.Puzzle_Fireplace_Chair_3();
                 break;
             case "Puzzle_Fireplace_Door":
-                callAction.Puzzle_Bookstand_Door();
+                callAction.Puzzle_Fireplace_Door();
                 break;
             case "Puzzle_Basement_Entrance":
                 callAction.Puzzle_Basement_Entrance();
