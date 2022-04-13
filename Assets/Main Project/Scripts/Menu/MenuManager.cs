@@ -15,7 +15,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Test scene");
     }
-
+       public void Menu()
+    {
+        SceneManager.LoadScene("02_Menu");
+    }
     public void Sair()
     {
         //UnityEditor.EditorApplication.isPlaying = false; //Comentar quando for Buildar
