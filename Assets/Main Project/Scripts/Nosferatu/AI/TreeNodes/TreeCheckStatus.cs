@@ -15,7 +15,7 @@ public class TreeCheckStatus : TreeNode
                 //TreeWanderingPlayerSight.run(ts);
                 break;
             case "STILL":
-                //TreeStillPlayerNear.run(ts);
+                TreeStillPlayerNear.run(ts);
                 break;
             case "NOT":
                 StillGoingSpawn.run(ts);

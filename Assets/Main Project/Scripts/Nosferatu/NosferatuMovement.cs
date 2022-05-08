@@ -7,8 +7,8 @@ public class NosferatuMovement : MonoBehaviour
 {
     public GameObject startingDestination;
     public GameObject currentTarget;
-    public List<GameObject> possibleRandomWanderingSpots;
     public bool stayStill;
+    public List<GameObject> possibleRandomWanderingSpots;
     NavMeshAgent navMeshAgent;
     void Start()
     {

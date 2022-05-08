@@ -4,15 +4,15 @@ using UnityEngine;
 
 public abstract class TreeStillPlayerNear : TreeNode
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void run(TreeStart ts)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(ts.nearZone.playerIsInside == true)
+        {
+            SetHunting.run(ts);
+        }
+        else
+        {
+            CanDespawn.run(ts);
+        }
     }
 }
