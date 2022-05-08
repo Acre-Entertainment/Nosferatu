@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TreeWait : TreeLeaf
+public class TreeWait : TreeLeaf
 {
-    public override IEnumerator run()
+    public static void run(TreeStart ts)
     {
-        yield return new WaitForSeconds(5);
+        
     }
 }

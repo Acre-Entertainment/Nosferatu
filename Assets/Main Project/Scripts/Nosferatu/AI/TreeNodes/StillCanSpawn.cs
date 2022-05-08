@@ -2,7 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class StillCanSpawn : TreeNode
+public class StillCanSpawn : TreeNode
 {
-
+    public static void run(TreeStart ts)
+    {
+        if(ts.timeUntilSpawn <= 0)
+        {
+            Spawn.run(ts);
+        }
+        else
+        {
+            TreeWait.run(ts);
+        }
+    }
 }

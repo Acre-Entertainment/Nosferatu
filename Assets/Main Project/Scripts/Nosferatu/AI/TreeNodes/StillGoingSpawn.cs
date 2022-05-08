@@ -4,17 +4,15 @@ using UnityEngine;
 
 public abstract class StillGoingSpawn : TreeNode
 {
-    TreeWait treeWait;
-    StillCanSpawn stillCanSpawn;
-    public override IEnumerator run()
+    public static void run(TreeStart ts)
     {
-        if(nosferatuStatus.isGoingToSpawn == true)
+        if(ts.isGoingToSpawn == true)
         {
-            yield return stillCanSpawn.run();
+            StillCanSpawn.run(ts);
         }
         else
         {
-            yield return treeWait.run();
+            TreeWait.run(ts);
         }
     }
 }

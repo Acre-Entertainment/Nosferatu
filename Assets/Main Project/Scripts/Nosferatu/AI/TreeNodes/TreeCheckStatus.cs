@@ -2,30 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TreeCheckStatus : TreeNode
+public class TreeCheckStatus : TreeNode
 {
-    TreeHuntingPlayerSight treeHuntingPlayerSight;
-    TreeWanderingPlayerSight treeWanderingPlayerSight;
-    TreeStillPlayerNear treeStillPlayerNear;
-    StillGoingSpawn stillGoingSpawn;
-    public override IEnumerator run()
+    public static void run(TreeStart ts)
     {
-        switch(nosferatuStatus.status)
+        switch(ts.status)
         {
             case "HUNTING":
-                yield return treeHuntingPlayerSight.run();
+                //TreeHuntingPlayerSight.run(ts);
                 break;
             case "WANDERING":
-                yield return treeWanderingPlayerSight.run();
+                //TreeWanderingPlayerSight.run(ts);
                 break;
             case "STILL":
-                yield return treeStillPlayerNear.run();
+                //TreeStillPlayerNear.run(ts);
                 break;
             case "NOT":
-                yield return stillGoingSpawn.run();
+                StillGoingSpawn.run(ts);
                 break;
             default:
-                yield return stillGoingSpawn.run();
+                StillGoingSpawn.run(ts);
                 break;
         }
     }

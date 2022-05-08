@@ -2,11 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeStart : TreeBase
+public class TreeStart : MonoBehaviour
 {
-    TreeCheckStatus treeCheckStatus;
+    public NearZone nearZone;
+    public string status = "NOT";
+    //o Nosferatu pode estar HUNTING WANDERING STILL NOT
+    public bool isGoingToSpawn;
+    public float timeUntilSpawn;
+    public bool isGoingToDespawn;
+    public float timeUntilDespawn;
     void Update()
     {
-        StartCoroutine(treeCheckStatus.run());
+        if(isGoingToSpawn == true)
+        {
+            timeUntilSpawn = timeUntilSpawn - 1 * Time.deltaTime;
+        }
+        if(isGoingToDespawn == true)
+        {
+            timeUntilDespawn = timeUntilDespawn - 1 * Time.deltaTime;
+        }
+
+        TreeCheckStatus.run(this);
     }
 }

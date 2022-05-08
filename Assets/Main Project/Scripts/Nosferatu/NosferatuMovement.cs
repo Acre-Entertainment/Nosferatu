@@ -8,15 +8,11 @@ public class NosferatuMovement : MonoBehaviour
     public GameObject startingDestination;
     public GameObject currentTarget;
     public List<GameObject> possibleRandomWanderingSpots;
-    public GameObject[] startingPossibleRandomWanderingSpots;
+    public bool stayStill;
     NavMeshAgent navMeshAgent;
     void Start()
     {
         navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
-        foreach(GameObject go in startingPossibleRandomWanderingSpots)
-        {
-            possibleRandomWanderingSpots.Add(go);
-        }
         if(startingDestination != null)
         {
             currentTarget = startingDestination;
