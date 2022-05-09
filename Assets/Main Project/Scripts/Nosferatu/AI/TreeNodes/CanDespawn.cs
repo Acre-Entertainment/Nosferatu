@@ -6,7 +6,7 @@ public class CanDespawn : MonoBehaviour
 {
     public static void run(TreeStart ts)
     {
-        if(ts.timeUntilDespawn >= 0 && ts.isGoingToDespawn == true)
+        if(ts.timeUntilDespawn <= 0 && ts.isGoingToDespawn == true)
         {
             Despawn.run(ts);
         }
