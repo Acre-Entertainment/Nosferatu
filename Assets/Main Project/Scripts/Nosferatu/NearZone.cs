@@ -16,6 +16,17 @@ public class NearZone : MonoBehaviour
             playerIsInside = true;
         }
     }
+    void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            playerIsInside = true;
+        }
+        else
+        {
+            playerIsInside = false;
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         if(other.tag == "Player")
