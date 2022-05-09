@@ -5,6 +5,7 @@ using UnityEngine;
 public class SightZone : MonoBehaviour
 {
     public GameObject player;
+    public GameObject lastKnowPlayerLocation;
     public float nosferatuSightRange = 20;
     public bool nosferatuHasLineOfSight;
     public GameObject hittingthing;
@@ -23,6 +24,7 @@ public class SightZone : MonoBehaviour
             if(hit.collider.gameObject.tag == "Player")
             {
                 nosferatuHasLineOfSight = true;
+                lastKnowPlayerLocation.transform.position = player.transform.position;
             }
             else
             {
