@@ -4,15 +4,15 @@ using UnityEngine;
 
 public abstract class TreeWanderingPlayerSight : TreeNode
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void run(TreeStart ts)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(ts.sightZone.nosferatuHasLineOfSight == true)
+        {
+            SetHunting.run(ts);
+        }
+        else
+        {
+            WanderingSwitchTargets.run(ts);
+        }
     }
 }

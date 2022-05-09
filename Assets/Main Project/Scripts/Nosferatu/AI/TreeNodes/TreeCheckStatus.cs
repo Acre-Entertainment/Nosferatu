@@ -12,7 +12,7 @@ public class TreeCheckStatus : TreeNode
                 //TreeHuntingPlayerSight.run(ts);
                 break;
             case "WANDERING":
-                //TreeWanderingPlayerSight.run(ts);
+                TreeWanderingPlayerSight.run(ts);
                 break;
             case "STILL":
                 TreeStillPlayerNear.run(ts);
