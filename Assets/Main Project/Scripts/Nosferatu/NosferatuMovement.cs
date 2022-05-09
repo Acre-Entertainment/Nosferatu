@@ -19,6 +19,13 @@ public class NosferatuMovement : MonoBehaviour
             navMeshAgent.SetDestination(currentTarget.transform.position);
         }
     }
+    void Update()
+    {
+        if(stayStill == true && currentTarget != gameObject)
+        {
+            currentTarget = gameObject;
+        }
+    }
     public void setNewTarget(GameObject target)
     {
         currentTarget = target;

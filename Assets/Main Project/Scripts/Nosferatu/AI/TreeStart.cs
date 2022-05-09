@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeStart : MonoBehaviour
 {
     public NearZone nearZone;
+    public SightZone sightZone;
     public string status = "NOT";
     //o Nosferatu pode estar HUNTING WANDERING STILL NOT
     public bool isGoingToSpawn;

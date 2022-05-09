@@ -5,42 +5,29 @@ using UnityEngine;
 public class SightZone : MonoBehaviour
 {
     public GameObject player;
-    public bool playerIsInside;
+    public float nosferatuSightRange = 20;
     public bool nosferatuHasLineOfSight;
-    void OnEnable()
-    {
-        playerIsInside = false;
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            playerIsInside = true;
-        }
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            playerIsInside = true;
-        }
-        else
-        {
-            playerIsInside = false;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            playerIsInside = false;
-        }
-    }
+    public GameObject hittingthing;
+    Ray ray;
+    RaycastHit hit;
+    Vector3 origin, target, direction;
     void Update()
     {
-        if(playerIsInside == true)
+        origin = gameObject.transform.position;
+        target = player.transform.position;
+        direction = origin - target;
+        ray = new Ray(origin, direction);
+        if(Physics.Raycast(ray, out hit))
         {
-
+            hittingthing = hit.collider.gameObject;
+            if(hit.collider.gameObject.tag == "Player")
+            {
+                nosferatuHasLineOfSight = true;
+            }
+            else
+            {
+                nosferatuHasLineOfSight = false;
+            }
         }
     }
 
