@@ -27,10 +27,12 @@ public class TextBoxManager : MonoBehaviour
         text = textObject.GetComponent<Text>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
-        followUpText = new string[10];
         foreach(string y in followUpText)
         {
-            followUpText[x] = "";
+            if(followUpText[x] == null)
+            {
+                followUpText[x] = "";
+            }
             x++;
         }
     }

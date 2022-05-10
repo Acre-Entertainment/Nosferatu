@@ -6,10 +6,10 @@ public class DetectNearbyObjects : MonoBehaviour
 {
     //detecta gameObje
     public GameObject detectedGameObject;
-    public string ignoreTag;
+    public string interactTag;
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == ignoreTag)
+        if(other.tag != interactTag)
         {
             return;
         }
@@ -22,7 +22,7 @@ public class DetectNearbyObjects : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        if(other.tag == ignoreTag)
+        if(other.tag != interactTag)
         {
             return;
         }
