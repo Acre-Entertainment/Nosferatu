@@ -47,7 +47,7 @@ public class TextBoxManager : MonoBehaviour
         if(followUpText[currentTextNumber] == "")
         {
             textBox.SetActive(false);
-            //playerDetectArea.SetActive(true);
+            Time.timeScale = 1;
             isActive = false;
             infoKeeper.gameIsBlockingInteraction = false;
         }
@@ -61,7 +61,7 @@ public class TextBoxManager : MonoBehaviour
     public void turnOnDialogueBox()
     {
         textBox.SetActive(true);
-        //playerDetectArea.SetActive(false);
+        Time.timeScale = 0;
         isActive = true;
         infoKeeper.gameIsBlockingInteraction = true;
         currentTextNumber = -1;
