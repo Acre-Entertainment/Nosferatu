@@ -8,10 +8,12 @@ public class InteractWithObject : MonoBehaviour
     public GameObject playerDetectArea;
     private DetectNearbyObjects detectNearbyObjects;
     private InfoKeeper infoKeeper;
+    private TextBoxManager textBoxManager;
     void Start()
     {
         detectNearbyObjects = playerDetectArea.GetComponent<DetectNearbyObjects>();
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+        textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
     }
 
     void Update()
@@ -19,7 +21,20 @@ public class InteractWithObject : MonoBehaviour
         //mude aki o botão de interação
         if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) && detectNearbyObjects.detectedGameObject != null && infoKeeper.gameIsBlockingInteraction == false)
         {
-            detectNearbyObjects.detectedGameObject.GetComponent<ObjectEvent>().onInteraction.Invoke();
+            ObjectEvent objectEvent = detectNearbyObjects.detectedGameObject.GetComponent<ObjectEvent>();
+            objectEvent.onInteraction.Invoke();
+            if(objectEvent.callDialogueBox == true)
+            {
+                int x = 0;
+                foreach(string y in objectEvent.dialogueLines)
+                {
+                    textBoxManager.followUpText[x] = y;
+                    x++;
+                }
+                textBoxManager.pendingEvent = objectEvent.onEventDialogue;
+                textBoxManager.whenIsEventCalled = objectEvent.whenEventIsCalled;
+                textBoxManager.turnOnDialogueBox();
+            }
         }
     }
 }
