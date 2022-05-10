@@ -2,26 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeCheckStatus : TreeNode
+public class AICheckStatus : AINode
 {
-    public static void run(TreeStart ts)
+    public AINode hunting;
+    public AINode wandering;
+    public AINode still;
+    public AINode not;
+    public override void run()
     {
-        switch(ts.status)
+        switch(nosferatuData.status)
         {
             case "HUNTING":
-                TreeHuntingPlayerSight.run(ts);
+                hunting.run();
                 break;
             case "WANDERING":
-                TreeWanderingPlayerSight.run(ts);
+                wandering.run();
                 break;
             case "STILL":
-                TreeStillPlayerNear.run(ts);
+                still.run();
                 break;
             case "NOT":
-                StillGoingSpawn.run(ts);
+                not.run();
                 break;
             default:
-                StillGoingSpawn.run(ts);
+                not.run();
                 break;
         }
     }

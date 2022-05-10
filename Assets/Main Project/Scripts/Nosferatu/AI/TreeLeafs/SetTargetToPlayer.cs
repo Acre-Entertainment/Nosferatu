@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetStill : TreeLeaf
+public class SetTargetToPlayer : TreeLeaf
 {
     public static void run(TreeStart ts)
     {
-        ts.status = "STILL";
-        ts.resetTimers();
+        ts.nosferatuMovement.setNewTarget(ts.player);
     }
 }

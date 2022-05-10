@@ -6,6 +6,12 @@ public class Spawn : TreeLeaf
 {
     public static void run(TreeStart ts)
     {
-        
+        int randy = Random.Range(1, ts.spawnLocations.Count + 1);
+        GameObject randomSpawn = ts.spawnLocations[randy];
+        ts.Nosferatu.SetActive(true);
+        ts.Nosferatu.transform.position = randomSpawn.transform.position;
+        ts.nosferatuMovement.setRandomTarget();
+        ts.status = "WANDERING";
+        ts.resetTimers();
     }
 }

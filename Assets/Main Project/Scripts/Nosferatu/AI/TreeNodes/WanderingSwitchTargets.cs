@@ -6,9 +6,9 @@ public class WanderingSwitchTargets : TreeNode
 {
     public static void run(TreeStart ts)
     {
-        if(ts.timeBetweenSwitchingWanderingTargets <= 0)
+        if(ts.timeUntillNextWanderingSwitch <= 0)
         {
-
+            WanderingTimeIsUp.run(ts);
         }
         else
         {

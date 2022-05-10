@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TreeHuntingPlayerSight : TreeNode
+public class HuntingPlayerTarget : TreeNode
 {
     public static void run(TreeStart ts)
     {
-        if(ts.sightZone.nosferatuHasLineOfSight == true)
+        if(ts.nosferatuMovement.currentTarget == ts.player)
         {
-            HuntingPlayerTarget.run(ts);
+            TreeWait.run(ts);
         }
         else
         {
-
+            SetTargetToPlayer.run(ts);
         }
     }
 }

@@ -6,6 +6,7 @@ public class Despawn : MonoBehaviour
 {
     public static void run(TreeStart ts)
     {
-        
+        ts.Nosferatu.SetActive(false);
+        ts.resetTimers();
     }
 }

@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeStart : MonoBehaviour
+public class NosferatuData : MonoBehaviour
 {
     public GameObject Nosferatu;
-    public GameObject player;
     public NearZone nearZone;
     public SightZone sightZone;
     public NosferatuMovement nosferatuMovement;
     public string status = "NOT";
-    //o Nosferatu pode estar HUNTING WANDERING STILL NOT
     public List<GameObject> spawnLocations = new List<GameObject>();
     public bool isGoingToSpawn;
     public float timeToSpawn;
@@ -22,7 +20,6 @@ public class TreeStart : MonoBehaviour
     public float timeUntillNextWanderingSwitch;
     public float timeToSwitchFromWanderingToStill;
     public float timeUntilSwitchFromWanderingToStill;
-    public float timeToStopHunting;
     void Update()
     {
         if(isGoingToSpawn == true)
@@ -38,8 +35,6 @@ public class TreeStart : MonoBehaviour
             timeUntillNextWanderingSwitch = timeUntillNextWanderingSwitch - 1 * Time.deltaTime;
             timeToSwitchFromWanderingToStill = timeToSwitchFromWanderingToStill - 1 * Time.deltaTime;
         }
-
-        TreeCheckStatus.run(this);
     }
     public void resetTimers()
     {
