@@ -21,4 +21,10 @@ public class Hide : MonoBehaviour
             player.SetActive(false);
         }
     }
+    public void Unhide()
+    {
+        noHidingText.SetActive(false);
+        hidingText.SetActive(false);
+        player.SetActive(true);
+    }
 }

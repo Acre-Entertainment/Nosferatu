@@ -6,6 +6,7 @@ public class InfoKeeper : MonoBehaviour
 {
 //Guarda variaveis para serem usadas por outros scripts.
 
+
 //tecnico
     public bool gameIsBlockingInteraction = false;
     public int nosferatuRoom;
@@ -18,6 +19,8 @@ public class InfoKeeper : MonoBehaviour
     {
         playerRoom = room;
     }
+//tutorial
+    public bool tutorialHasPlayedRat;
 
 
 

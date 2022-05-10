@@ -11,6 +11,10 @@ public class ObjectEventTriggerPlayerEntry : MonoBehaviour
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
     private TextBoxManager textBoxManager;
+    void Start()
+    {
+        textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
+    }
     void OnTriggerEnter(Collider taggedObject)
     {
         if(taggedObject.tag == "Player")
