@@ -7,7 +7,7 @@ public class PressEnterToEvent : MonoBehaviour
 {
     //aperte enter e o evento sera chamado
     public UnityEvent eventToHappen;
-    void update()
+    void Update()
     {
         if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
