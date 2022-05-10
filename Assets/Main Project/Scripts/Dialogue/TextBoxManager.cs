@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class TextBoxManager : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class TextBoxManager : MonoBehaviour
     //A contagem começa no 0
     //geralmente, esse script sera chamado pelo CallAction no GameMaster
     public GameObject textBox;
-    public GameObject textObject;
-    private Text text;
+    public TextMeshProUGUI text;
     private InfoKeeper infoKeeper;
     public string[] followUpText;
     public int currentTextNumber = -1;
@@ -24,7 +24,6 @@ public class TextBoxManager : MonoBehaviour
     public GameObject playerDetectArea;
     void Start()
     {
-        text = textObject.GetComponent<Text>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
         foreach(string y in followUpText)
