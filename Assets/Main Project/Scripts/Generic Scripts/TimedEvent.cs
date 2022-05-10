@@ -10,7 +10,11 @@ public class TimedEvent : MonoBehaviour
     public float timeUntilEvent;
     void OnEnable()
     {
-
+        StartCoroutine(waitAndEvent());
+    }
+    void OnDisable()
+    {
+        StopCoroutine(waitAndEvent());
     }
     IEnumerator waitAndEvent()
     {
