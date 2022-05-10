@@ -17,7 +17,7 @@ public class TextBoxManager : MonoBehaviour
     public string[] followUpText;
     public int currentTextNumber = -1;
     [HideInInspector]public int whenIsEventCalled = -1; //definide quando o evento sera chamado
-    [HideInInspector]public UnityEvent pendingEvent; //Defino o evento que sera chamado
+    public UnityEvent pendingEvent; //Defino o evento que sera chamado
     private CallAction callAction;
     private int x;
     private bool isActive;
@@ -27,10 +27,12 @@ public class TextBoxManager : MonoBehaviour
         text = textObject.GetComponent<Text>();
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
-        followUpText = new string[10];
         foreach(string y in followUpText)
         {
-            followUpText[x] = "";
+            if(followUpText[x] == null)
+            {
+                followUpText[x] = "";
+            }
             x++;
         }
     }
@@ -45,7 +47,7 @@ public class TextBoxManager : MonoBehaviour
         if(followUpText[currentTextNumber] == "")
         {
             textBox.SetActive(false);
-            playerDetectArea.SetActive(true);
+            Time.timeScale = 1;
             isActive = false;
             infoKeeper.gameIsBlockingInteraction = false;
         }
@@ -59,7 +61,7 @@ public class TextBoxManager : MonoBehaviour
     public void turnOnDialogueBox()
     {
         textBox.SetActive(true);
-        playerDetectArea.SetActive(false);
+        Time.timeScale = 0;
         isActive = true;
         infoKeeper.gameIsBlockingInteraction = true;
         currentTextNumber = -1;
