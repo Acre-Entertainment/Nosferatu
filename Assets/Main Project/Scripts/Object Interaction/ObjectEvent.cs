@@ -9,6 +9,6 @@ public class ObjectEvent : MonoBehaviour
     public UnityEvent onInteraction;
     public bool callDialogueBox;
     public string[] dialogueLines;
-    //public int whenEventIsCalled;
-    //public UnityEvent onEventDialogue;
+    public int whenEventIsCalled;
+    public UnityEvent onEventDialogue;
 }
