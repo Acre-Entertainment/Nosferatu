@@ -31,8 +31,6 @@ public class InteractWithObject : MonoBehaviour
                     textBoxManager.followUpText[x] = y;
                     x++;
                 }
-                textBoxManager.pendingEvent = objectEvent.onEventDialogue;
-                textBoxManager.whenIsEventCalled = objectEvent.whenEventIsCalled;
                 textBoxManager.turnOnDialogueBox();
             }
         }

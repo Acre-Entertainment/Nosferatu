@@ -21,6 +21,7 @@ public class InfoKeeper : MonoBehaviour
     }
 //tutorial
     public bool tutorialHasPlayedRat;
+    public bool tutorialHasCheckedDesk;
 
 
 
