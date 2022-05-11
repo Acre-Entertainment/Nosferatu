@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     public void MainGame()
     {
         //mudei temporariamente
-        SceneManager.LoadScene("Test scene");
+        SceneManager.LoadScene("Main Game");
     }
 
     public void TestScene()
