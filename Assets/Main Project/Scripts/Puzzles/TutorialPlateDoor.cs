@@ -20,7 +20,7 @@ public class TutorialPlateDoor : ObjectEvent
             puzzleIsSolved = true;
             replace();
         }
-        if(tutorialWallPlatePuzzle.plate2Position != 2 || tutorialWallPlatePuzzle.plate3Position != 2 || tutorialWallPlatePuzzle.plate4Position != 2 && puzzleIsSolved == true)
+        if((tutorialWallPlatePuzzle.plate2Position != 2 || tutorialWallPlatePuzzle.plate3Position != 2 || tutorialWallPlatePuzzle.plate4Position != 2) && puzzleIsSolved == true)
         {
             puzzleIsSolved = false;
             replace();
