@@ -9,6 +9,7 @@ public class InfoKeeper : MonoBehaviour
 
 //tecnico
     public bool gameIsBlockingInteraction = false;
+    public bool playerIsHiding;
     public int nosferatuRoom;
     public void setNosferatuRoom(int room)
     {
