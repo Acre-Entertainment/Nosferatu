@@ -285,7 +285,6 @@ GameObject:
   - component: {fileID: 551833624}
   - component: {fileID: 551833623}
   - component: {fileID: 551833622}
-  - component: {fileID: 551833621}
   - component: {fileID: 551833620}
   - component: {fileID: 551833619}
   m_Layer: 0
@@ -324,58 +323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDetectArea: {fileID: 1812908217}
---- !u!114 &551833621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551833618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f484ee7f7dfe224c93be6c494954f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDetectArea: {fileID: 1812908217}
-  onHide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 551833618}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1922246239}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!143 &551833622
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1080,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectedGameObject: {fileID: 0}
-  ignoreTag: Player
+  interactTag: 
 --- !u!136 &1812908219
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1153,8 +1100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsBlockingInteraction: 0
+  playerIsHiding: 0
   nosferatuRoom: 0
   playerRoom: 1
+  tutorialHasPlayedRat: 0
+  tutorialHasCheckedDesk: 0
   hasInvestigatedPuzzle_Bookcase_3: 0
   hasBookFromPuzzle_Bookcase_1: 0
   hasBookFromPuzzle_Bookcase_2: 0

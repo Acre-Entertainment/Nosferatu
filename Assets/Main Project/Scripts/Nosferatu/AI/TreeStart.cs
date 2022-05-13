@@ -23,6 +23,10 @@ public class TreeStart : MonoBehaviour
     public float timeToSwitchFromWanderingToStill;
     public float timeUntilSwitchFromWanderingToStill;
     public float timeToStopHunting;
+    private InfoKeeper infoKeeper;
+    private void Start() {
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+    }
     void Update()
     {
         if(isGoingToSpawn == true)
