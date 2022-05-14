@@ -12,7 +12,7 @@ public abstract class TreeHuntingPlayerSight : TreeNode
         }
         else
         {
-
+            HuntingLastSeenLocation.run(ts);
         }
     }
 }

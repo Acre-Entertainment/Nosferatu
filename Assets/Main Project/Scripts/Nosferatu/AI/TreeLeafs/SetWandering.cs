@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Despawn : TreeLeaf
+public class SetWandering : TreeLeaf
 {
     public static void run(TreeStart ts)
     {
-        ts.Nosferatu.SetActive(false);
+        ts.status = "WANDERING";
         ts.resetTimers();
-        ts.status = "NOT";
     }
 }

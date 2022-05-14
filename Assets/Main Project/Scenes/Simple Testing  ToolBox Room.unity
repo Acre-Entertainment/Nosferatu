@@ -451,9 +451,69 @@ Transform:
   m_Children:
   - {fileID: 1022761575}
   - {fileID: 1651280179}
+  - {fileID: 783862448}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &783862447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783862448}
+  - component: {fileID: 783862450}
+  - component: {fileID: 783862449}
+  m_Layer: 0
+  m_Name: LastKnowPlayerLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783862448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783862447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 724497422}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783862449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783862447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34833f46d9c92e4098adf8b5fb7b1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTag: Nosferatu
+  treeStart: {fileID: 1651280180}
+--- !u!65 &783862450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783862447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1022761569
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +530,7 @@ GameObject:
   - component: {fileID: 1022761571}
   m_Layer: 0
   m_Name: Nosferatu
-  m_TagString: Player
+  m_TagString: Nosferatu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 551833618}
-  lastKnowPlayerLocation: {fileID: 0}
+  lastKnowPlayerLocation: {fileID: 783862447}
   nosferatuSightRange: 20
   nosferatuHasLineOfSight: 0
   hittingthing: {fileID: 0}
@@ -526,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba61f57c35b6094e874c19337304150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingDestination: {fileID: 0}
+  startingDestination: {fileID: 551833618}
   currentTarget: {fileID: 551833618}
   stayStill: 0
   possibleRandomWanderingSpots: []
@@ -816,10 +876,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nosferatu: {fileID: 1022761569}
   player: {fileID: 551833618}
+  lastSeenPlayerLocation: {fileID: 783862447}
+  nosferatuIsInLastSeenPlayerLocation: 0
   nearZone: {fileID: 2342233}
   sightZone: {fileID: 1022761570}
   nosferatuMovement: {fileID: 1022761572}
-  status: NOT
+  status: HUNTING
   spawnLocations: []
   isGoingToSpawn: 1
   timeToSpawn: 120
@@ -832,6 +894,7 @@ MonoBehaviour:
   timeToSwitchFromWanderingToStill: 120
   timeUntilSwitchFromWanderingToStill: 120
   timeToStopHunting: 0
+  infoKeeper: {fileID: 1882053730}
 --- !u!43 &1752973132
 Mesh:
   m_ObjectHideFlags: 0

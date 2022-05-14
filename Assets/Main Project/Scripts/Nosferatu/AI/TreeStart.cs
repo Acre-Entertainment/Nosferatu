@@ -6,6 +6,8 @@ public class TreeStart : MonoBehaviour
 {
     public GameObject Nosferatu;
     public GameObject player;
+    public GameObject lastSeenPlayerLocation;
+    public bool nosferatuIsInLastSeenPlayerLocation;
     public NearZone nearZone;
     public SightZone sightZone;
     public NosferatuMovement nosferatuMovement;
@@ -23,7 +25,7 @@ public class TreeStart : MonoBehaviour
     public float timeToSwitchFromWanderingToStill;
     public float timeUntilSwitchFromWanderingToStill;
     public float timeToStopHunting;
-    private InfoKeeper infoKeeper;
+    public InfoKeeper infoKeeper;
     private void Start() {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
