@@ -7,6 +7,7 @@ public class TutorialWallPlatePuzzle : MonoBehaviour
     public GameObject plate1, plate2, plate3, plate4, door1, door2;
     public int plate2Position, plate3Position, plate4Position;
     public float level1Height, level2Height, level3Height;
+    public bool preassurePlateIsPressed;
     private InfoKeeper infoKeeper;
     private void Start() {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
@@ -84,5 +85,9 @@ public class TutorialWallPlatePuzzle : MonoBehaviour
                 plate4.transform.localPosition = new Vector3(plate4.transform.localPosition.x, level1Height, plate4.transform.localPosition.z);
                 break;
         }
+    }
+    public void changePressurePlate(bool state)
+    {
+        preassurePlateIsPressed = state;
     }
 }
