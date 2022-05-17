@@ -20,11 +20,23 @@ public class InfoKeeper : MonoBehaviour
     {
         playerRoom = room;
     }
+
 //tutorial
     public bool tutorialHasPlayedRat;
     public bool tutorialHasCheckedDesk;
+    public bool tutorialIsOver;
 
 
+    public void ChangeBoolVariable(string variableName)
+    {
+        switch(variableName)
+        {
+            case "tutorialIsOver": tutorialIsOver = !tutorialIsOver; break;
+
+
+            default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
+        }
+    }
 
 
 
