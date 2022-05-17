@@ -23,6 +23,7 @@ public class InteractWithObject : MonoBehaviour
         {
             ObjectEvent objectEvent = detectNearbyObjects.detectedGameObject.GetComponent<ObjectEvent>();
             objectEvent.onInteraction.Invoke();
+            Debug.Log("Player interagiu com" + detectNearbyObjects.detectedGameObject.name);
             if(objectEvent.callDialogueBox == true)
             {
                 int x = 0;
