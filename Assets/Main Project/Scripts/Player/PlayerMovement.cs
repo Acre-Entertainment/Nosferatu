@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     private void Movimento()
     {
         Vector3 MoveVector = transform.TransformDirection(movimentoInput);
+        Vector3 MoveVectorWithRotation = Quaternion.AngleAxis(gameObject.transform.localEulerAngles.y, Vector3.down) * MoveVector;
 
         if (controller.isGrounded)
         {
@@ -72,13 +73,21 @@ public class PlayerMovement : MonoBehaviour
         }
         if (run)
         {
-            controller.Move(MoveVector * corrida * Time.deltaTime);
+            controller.Move(MoveVectorWithRotation * corrida * Time.deltaTime);
         }
         else
         {
-            controller.Move(MoveVector * velocidade * Time.deltaTime);
+            controller.Move(MoveVectorWithRotation * velocidade * Time.deltaTime);
         }
         controller.Move(velocity * Time.deltaTime);
+
+
+        float rotationAngle = Vector3.Angle(new Vector2(-1, 0), MoveVectorWithRotation);
+        if(MoveVectorWithRotation.z < 0)
+        {
+            rotationAngle = 360 - rotationAngle;
+        }
+        gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
     }
     public void setFutureDirection(int mov)
     {
