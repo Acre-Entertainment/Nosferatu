@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movimentoInput;
     private Vector3 velocity;
     private bool run;
-    private int currentDirection = 1;
+    public int currentDirection = 1;
     private int futureDirection = 1;
     public float cameraChangeControlDelay;
     void Start()
