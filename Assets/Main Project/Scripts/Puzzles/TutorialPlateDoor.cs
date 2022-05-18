@@ -19,6 +19,7 @@ public class TutorialPlateDoor : ObjectEvent
         if(tutorialWallPlatePuzzle.plate2Position == 2 && tutorialWallPlatePuzzle.plate3Position == 2 && tutorialWallPlatePuzzle.plate4Position == 2 && tutorialWallPlatePuzzle.preassurePlateIsPressed == true  && puzzleIsSolved == false)
         {
             puzzleIsSolved = true;
+            onPuzzleSolved.Invoke();
             //replace();
         }
         if((tutorialWallPlatePuzzle.plate2Position != 2 || tutorialWallPlatePuzzle.plate3Position != 2 || tutorialWallPlatePuzzle.plate4Position != 2 || tutorialWallPlatePuzzle == false) && puzzleIsSolved == true)
