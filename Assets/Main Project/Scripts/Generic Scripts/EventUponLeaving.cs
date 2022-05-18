@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EventUponLeavinf : MonoBehaviour
+public class EventUponLeaving : MonoBehaviour
 {
     //quando um gameObject com a tag sai na area, chama o evento. A area deve ter IsTrigger ativado e o objeto precisa de rigidbody.
     public UnityEvent eventToHappen;
