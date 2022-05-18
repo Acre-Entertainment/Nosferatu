@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float gravidade = -9.81f;
 
-    public float rotationSpeed;
+    public float rotationOffset;
 
     private Vector3 movimentoInput;
     private Vector3 velocity;
@@ -27,12 +27,8 @@ public class PlayerMovement : MonoBehaviour
     public int currentDirection = 1;
     private int futureDirection = 1;
     public float cameraChangeControlDelay;
-    void Start()
-    {
-       
-    }
 
-    // Update is called once per frame
+    private Vector3 blankVector = new Vector3(0,0,0);
     void Update()
     {
         //ve a direção de movimento e aplica de acordo
@@ -116,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
     private void Movimento()
     {
         Vector3 MoveVector = transform.TransformDirection(movimentoInput);
+        Vector3 MoveVectorWithRotation = Quaternion.AngleAxis(gameObject.transform.localEulerAngles.y, Vector3.down) * MoveVector;
 
         if (controller.isGrounded)
         {
@@ -127,15 +124,20 @@ public class PlayerMovement : MonoBehaviour
         }
         if (idle || walk || run)
         {
-            controller.Move(MoveVector * velocidade * Time.deltaTime);
+            controller.Move(MoveVectorWithRotation * velocidade * Time.deltaTime);
         }
         controller.Move(velocity * Time.deltaTime);
 
-        if(MoveVector != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(MoveVector, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        if(MoveVectorWithRotation != blankVector)
+        {
+            float rotationAngle = Vector3.Angle(new Vector2(-1, 0), MoveVectorWithRotation);
+            if(MoveVectorWithRotation.z < 0)
+            {
+                rotationAngle = 360 - rotationAngle;
+            }
+            rotationAngle += rotationOffset;
+            gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
         }
     }
     public void setFutureDirection(int mov)
