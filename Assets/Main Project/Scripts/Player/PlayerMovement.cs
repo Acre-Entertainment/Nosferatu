@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float gravidade = -9.81f;
 
     public float rotationOffset;
+    public float rotationOffsetSprint;
 
     private Vector3 movimentoInput;
     private Vector3 velocity;
@@ -50,10 +51,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (walk)
-            {
+            //if (walk)
+            //{
                 run = true;
-            }
+            //}
         }
         else
         {
@@ -79,20 +80,22 @@ public class PlayerMovement : MonoBehaviour
             velocidade = 0;
         }
 
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) && !run)
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) && run)
+            if(run)
             {
                 velocidade += Time.deltaTime * acceleration;
                 idle = false;
                 walk = false;
                 run = true;
             }
-
-            velocidade += Time.deltaTime * acceleration;
-            idle = false;
-            walk = true;
-            run = false;
+            else
+            {
+                velocidade += Time.deltaTime * acceleration;
+                idle = false;
+                walk = true;
+                run = false;
+            }
         }
         else
         {
@@ -136,7 +139,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 rotationAngle = 360 - rotationAngle;
             }
-            rotationAngle += rotationOffset;
+            if(run == true)
+            {
+                rotationAngle += rotationOffsetSprint;
+            }
+            else
+            {
+                rotationAngle += rotationOffset;
+            }
             gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
         }
     }
