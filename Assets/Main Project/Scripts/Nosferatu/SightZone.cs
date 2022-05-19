@@ -16,8 +16,9 @@ public class SightZone : MonoBehaviour
     {
         origin = gameObject.transform.position;
         target = player.transform.position;
-        direction = origin - target;
+        direction = target - origin;
         ray = new Ray(origin, direction);
+
         if(Physics.Raycast(ray, out hit))
         {
             hittingthing = hit.collider.gameObject;
@@ -25,6 +26,7 @@ public class SightZone : MonoBehaviour
             {
                 nosferatuHasLineOfSight = true;
                 lastKnowPlayerLocation.transform.position = player.transform.position;
+                Debug.Log("Something");
             }
             else
             {

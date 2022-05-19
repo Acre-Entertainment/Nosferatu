@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public float velocidade = 0;
     public float acceleration;
     public float deceleration;
+    public float walkSpeedLimit;
+    public float runSpeedLimit;
+    public float carryingSpeedLimit;
 
     [Header("Gravidade")]
     [SerializeField]
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public bool walk;
     public bool run;
     public bool idle;
+    public bool isCarrying;
     public int currentDirection = 1;
     private int futureDirection = 1;
     public float cameraChangeControlDelay;
@@ -49,11 +53,11 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && isCarrying == false)
         {
             //if (walk)
             //{
-                run = true;
+            run = true;
             //}
         }
         else
@@ -63,16 +67,26 @@ public class PlayerMovement : MonoBehaviour
         
         if(!run)
         {
-           if(velocidade >= 3)
+            if(isCarrying == true)
             {
-                velocidade = 3;
+                if(velocidade >= carryingSpeedLimit)
+                {
+                    velocidade = carryingSpeedLimit;
+                }
+            }
+            else
+            {
+                if(velocidade >= walkSpeedLimit)
+                {
+                    velocidade = walkSpeedLimit;
+                }
             }
         }
         else if(run)
         {
-            if (velocidade >= 6)
+            if (velocidade >= runSpeedLimit)
             {
-                velocidade = 6;
+                velocidade = runSpeedLimit;
             }
         }
         if(velocidade <= 0)
@@ -132,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
 
-        if(MoveVectorWithRotation != blankVector)
+        if(MoveVectorWithRotation != blankVector && isCarrying == false)
         {
             float rotationAngle = Vector3.Angle(new Vector2(-1, 0), MoveVectorWithRotation);
             if(MoveVectorWithRotation.z < 0)
