@@ -29,29 +29,30 @@ public class PlayerMovement : MonoBehaviour
     public bool run;
     public bool idle;
     public bool isCarrying;
-    public int currentDirection = 1;
-    private int futureDirection = 1;
+    public float currentCameraDirection;
+    private float futureCameraDirection ;
     public float cameraChangeControlDelay;
 
     private Vector3 blankVector = new Vector3(0,0,0);
     void Update()
     {
         //ve a direção de movimento e aplica de acordo
-        switch(currentDirection)
-        {
-            case 1:
-                movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-                break;
-            case 2:
-                movimentoInput = new Vector3(Input.GetAxis("Vertical"), 0f, -Input.GetAxis("Horizontal"));
-                break;
-            case 3:
-                movimentoInput = new Vector3(-Input.GetAxis("Horizontal"), 0f, -Input.GetAxis("Vertical"));
-                break;
-            case 4:
-                movimentoInput = new Vector3(-Input.GetAxis("Vertical"), 0f, Input.GetAxis("Horizontal"));
-                break;
-        }
+        //switch(currentDirection)
+        //{
+        //    case 1:
+        //        movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        //        break;
+        //    case 2:
+        //        movimentoInput = new Vector3(Input.GetAxis("Vertical"), 0f, -Input.GetAxis("Horizontal"));
+        //        break;
+        //    case 3:
+        //        movimentoInput = new Vector3(-Input.GetAxis("Horizontal"), 0f, -Input.GetAxis("Vertical"));
+        //        break;
+        //    case 4:
+        //        movimentoInput = new Vector3(-Input.GetAxis("Vertical"), 0f, Input.GetAxis("Horizontal"));
+        //        break;
+        //}
+        movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
         if (Input.GetKey(KeyCode.LeftShift) && isCarrying == false)
         {
@@ -129,7 +130,8 @@ public class PlayerMovement : MonoBehaviour
     private void Movimento()
     {
         Vector3 MoveVector = transform.TransformDirection(movimentoInput);
-        Vector3 MoveVectorWithRotation = Quaternion.AngleAxis(gameObject.transform.localEulerAngles.y, Vector3.down) * MoveVector;
+        Vector3 MoveVectorWithCamera = Quaternion.AngleAxis(currentCameraDirection, Vector3.up) * MoveVector;
+        Vector3 MoveVectorWithRotation = Quaternion.AngleAxis(gameObject.transform.localEulerAngles.y, Vector3.down) * MoveVectorWithCamera;
 
         if (controller.isGrounded)
         {
@@ -164,15 +166,15 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
         }
     }
-    public void setFutureDirection(int mov)
+    public void setFutureDirection(float mov)
     {
         StopCoroutine(setCurrentDirection());
-        futureDirection = mov;
+        futureCameraDirection = mov;
         StartCoroutine(setCurrentDirection());
     }
     IEnumerator setCurrentDirection()
     {
         yield return new WaitForSeconds(cameraChangeControlDelay);
-        currentDirection = futureDirection;
+        currentCameraDirection = futureCameraDirection;
     }
 }
