@@ -30,36 +30,17 @@ public class PlayerMovement : MonoBehaviour
     public bool idle;
     public bool isCarrying;
     public float currentCameraDirection;
-    private float futureCameraDirection ;
-    public float cameraChangeControlDelay;
+    public float futureCameraDirection ;
+    public float cameraChangeSpeed;
 
     private Vector3 blankVector = new Vector3(0,0,0);
     void Update()
     {
-        //ve a direção de movimento e aplica de acordo
-        //switch(currentDirection)
-        //{
-        //    case 1:
-        //        movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        //        break;
-        //    case 2:
-        //        movimentoInput = new Vector3(Input.GetAxis("Vertical"), 0f, -Input.GetAxis("Horizontal"));
-        //        break;
-        //    case 3:
-        //        movimentoInput = new Vector3(-Input.GetAxis("Horizontal"), 0f, -Input.GetAxis("Vertical"));
-        //        break;
-        //    case 4:
-        //        movimentoInput = new Vector3(-Input.GetAxis("Vertical"), 0f, Input.GetAxis("Horizontal"));
-        //        break;
-        //}
         movimentoInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
         if (Input.GetKey(KeyCode.LeftShift) && isCarrying == false)
         {
-            //if (walk)
-            //{
             run = true;
-            //}
         }
         else
         {
@@ -125,6 +106,26 @@ public class PlayerMovement : MonoBehaviour
             velocidade -= Time.deltaTime * deceleration;
         }
 
+
+
+        if(futureCameraDirection != currentCameraDirection)
+        {
+            float cameraRotationAngle = futureCameraDirection - currentCameraDirection;
+            if(cameraRotationAngle < 1 && cameraRotationAngle > -1)
+            {
+                currentCameraDirection = futureCameraDirection;
+            }
+            else
+            {
+                if(cameraRotationAngle >  180){cameraRotationAngle -= 360;}
+                if(cameraRotationAngle < -180){cameraRotationAngle += 360;}
+                if(cameraRotationAngle < 0){currentCameraDirection -= cameraChangeSpeed * Time.deltaTime;}
+                if(cameraRotationAngle > 0){currentCameraDirection += cameraChangeSpeed * Time.deltaTime;}
+                if(currentCameraDirection > 360){currentCameraDirection -= 360;}
+                if(currentCameraDirection < 0){currentCameraDirection += 360;}
+            }
+        }
+
         Movimento();
     }
     private void Movimento()
@@ -163,18 +164,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 rotationAngle += rotationOffset;
             }
+            if(rotationAngle > 360){rotationAngle -= 360;}
+            if(rotationAngle < 0){rotationAngle += 360;}
             gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
         }
     }
     public void setFutureDirection(float mov)
     {
-        StopCoroutine(setCurrentDirection());
         futureCameraDirection = mov;
-        StartCoroutine(setCurrentDirection());
-    }
-    IEnumerator setCurrentDirection()
-    {
-        yield return new WaitForSeconds(cameraChangeControlDelay);
-        currentCameraDirection = futureCameraDirection;
     }
 }

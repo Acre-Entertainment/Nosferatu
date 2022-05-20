@@ -5,13 +5,10 @@ using UnityEngine.Events;
 
 public class TutorialPlateDoor : ObjectEvent
 {
-    //public UnityEvent onInteractionOther;
-    //UnityEvent onInteractionTemp;
-    //public bool callDialogueBoxOther;
-    //bool callDialogueBoxTemp;
-    //public string[] dialogueLinesOther;
-    //string[] dialogueLinesTemp;
+    public TextBoxManager textBoxManager;
     public UnityEvent onPuzzleSolved;
+    public bool callDialogueBoxOnPuzzleSolved;
+    public string[] dialogueLinesOnPuzzleSolved;
     public TutorialWallPlatePuzzle tutorialWallPlatePuzzle;
     bool puzzleIsSolved;
     public void checkPuzzle()
@@ -20,6 +17,16 @@ public class TutorialPlateDoor : ObjectEvent
         {
             puzzleIsSolved = true;
             onPuzzleSolved.Invoke();
+            if(callDialogueBoxOnPuzzleSolved == true)
+            {
+                int x = 0;
+                foreach(string y in dialogueLinesOnPuzzleSolved)
+                {
+                    textBoxManager.followUpText[x] = y;
+                    x++;
+                }
+                textBoxManager.turnOnDialogueBox();
+            }
             //replace();
         }
         if((tutorialWallPlatePuzzle.plate2Position != 2 || tutorialWallPlatePuzzle.plate3Position != 2 || tutorialWallPlatePuzzle.plate4Position != 2 || tutorialWallPlatePuzzle == false) && puzzleIsSolved == true)
