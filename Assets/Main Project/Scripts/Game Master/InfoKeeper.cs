@@ -22,6 +22,7 @@ public class InfoKeeper : MonoBehaviour
     }
 
 //tutorial
+    public int test;
     public bool tutorialIsOver;
     public bool puzzleMulherPuraIsOver;
     public bool puzzle2IsOver;
@@ -34,6 +35,8 @@ public class InfoKeeper : MonoBehaviour
 
     public bool hasMulherPuraNote;
     public bool hasBookA, hasBookB, hasBookC, hasBookX, hasBookY, hasBookZ;
+    public bool placedBookA_1, placedBookB_1, placedBookC_1, placedBookX_1, placedBookY_1, placedBookZ_1;
+    public bool placedBookA_2, placedBookB_2, placedBookC_2, placedBookX_2, placedBookY_2, placedBookZ_2;
 
     public void ChangeBoolVariable(string variableName)
     {
@@ -53,6 +56,18 @@ public class InfoKeeper : MonoBehaviour
             case "hasBookX": hasBookX = !hasBookX; break;
             case "hasBookY": hasBookY = !hasBookY; break;
             case "hasBookZ": hasBookZ = !hasBookZ; break;
+            case "placedBookA_1": placedBookA_1 = !placedBookA_1; break;
+            case "placedBookB_1": placedBookB_1 = !placedBookB_1; break;
+            case "placedBookC_1": placedBookC_1 = !placedBookC_1; break;
+            case "placedBookX_1": placedBookX_1 = !placedBookX_1; break;
+            case "placedBookY_1": placedBookY_1 = !placedBookY_1; break;
+            case "placedBookZ_1": placedBookZ_1 = !placedBookZ_1; break;
+            case "placedBookA_2": placedBookA_2 = !placedBookA_2; break;
+            case "placedBookB_2": placedBookB_2 = !placedBookB_2; break;
+            case "placedBookC_2": placedBookC_2 = !placedBookC_2; break;
+            case "placedBookX_2": placedBookX_2 = !placedBookX_2; break;
+            case "placedBookY_2": placedBookY_2 = !placedBookY_2; break;
+            case "placedBookZ_2": placedBookZ_2 = !placedBookZ_2; break;
 
             default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
         }
