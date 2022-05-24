@@ -50,6 +50,7 @@ public class InfoKeeper : MonoBehaviour
             case "puzzle5IsOver": puzzle5IsOver = !puzzle5IsOver; break;
 
             case "hasMulherPuraNote": hasMulherPuraNote = hasMulherPuraNote = true; break;
+            
             case "hasBookA": hasBookA = !hasBookA; break;
             case "hasBookB": hasBookB = !hasBookB; break;
             case "hasBookC": hasBookC = !hasBookC; break;
