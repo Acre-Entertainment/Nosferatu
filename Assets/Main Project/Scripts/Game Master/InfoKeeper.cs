@@ -38,6 +38,9 @@ public class InfoKeeper : MonoBehaviour
     public bool placedBookA_1, placedBookB_1, placedBookC_1, placedBookX_1, placedBookY_1, placedBookZ_1;
     public bool placedBookA_2, placedBookB_2, placedBookC_2, placedBookX_2, placedBookY_2, placedBookZ_2;
 
+    public int castInventory;
+    public int bookInventory;
+
     public void ChangeBoolVariable(string variableName)
     {
         switch(variableName)
