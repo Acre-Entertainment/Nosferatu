@@ -40,6 +40,9 @@ public class InfoKeeper : MonoBehaviour
 
     public int castInventory;
     public int bookInventory;
+    public bool hasMataBroom;
+    public bool hasMataBook;
+    public bool hasMataOpenedDoor;
 
     public void ChangeBoolVariable(string variableName)
     {
@@ -72,6 +75,10 @@ public class InfoKeeper : MonoBehaviour
             case "placedBookX_2": placedBookX_2 = !placedBookX_2; break;
             case "placedBookY_2": placedBookY_2 = !placedBookY_2; break;
             case "placedBookZ_2": placedBookZ_2 = !placedBookZ_2; break;
+
+            case "hasMataBroom": hasMataBroom = !hasMataBroom; break;
+            case "hasMataBook": hasMataBook = !hasMataBook; break;
+            case "hasMataOpenedDoor": hasMataOpenedDoor = !hasMataOpenedDoor; break;
 
             default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
         }
