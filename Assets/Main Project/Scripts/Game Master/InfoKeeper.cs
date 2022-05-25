@@ -41,9 +41,9 @@ public class InfoKeeper : MonoBehaviour
     public int castInventory;
     public int bookInventory;
 
-    public bool hasMataMetalBox;
-    public bool hasMataWoodBox;
-    public bool hasMataClayBox;
+    public bool hasMataMetalBox, metalBoxIn1, metalBoxIn2, metalBoxIn3;
+    public bool hasMataWoodBox, woodBoxIn1, woodBoxIn2, woodBoxIn3;
+    public bool hasMataClayBox, clayBoxIn1, clayBoxIn2, clayBoxIn3;
     public bool hasMataBroom;
     public bool hasMataBook;
     public bool hasMataOpenedDoor;
@@ -83,6 +83,15 @@ public class InfoKeeper : MonoBehaviour
             case "hasMataMetalBox": hasMataMetalBox = !hasMataMetalBox; break;
             case "hasMataWoodBox": hasMataWoodBox = !hasMataWoodBox; break;
             case "hasMataClayBox": hasMataClayBox = !hasMataClayBox; break;
+            case "metalBoxIn1": metalBoxIn1 = !metalBoxIn1; break;
+            case "metalBoxIn2": metalBoxIn2 = !metalBoxIn2; break;
+            case "metalBoxIn3": metalBoxIn3 = !metalBoxIn3; break;
+            case "woodBoxIn1": woodBoxIn1 = !woodBoxIn1; break;
+            case "woodBoxIn2": woodBoxIn2 = !woodBoxIn2; break;
+            case "woodBoxIn3": woodBoxIn3 = !woodBoxIn3; break;
+            case "clayBoxIn1": clayBoxIn1 = !clayBoxIn1; break;
+            case "clayBoxIn2": clayBoxIn2 = !clayBoxIn2; break;
+            case "clayBoxIn3": clayBoxIn3 = !clayBoxIn3; break;
 
             case "hasMataBroom": hasMataBroom = !hasMataBroom; break;
             case "hasMataBook": hasMataBook = !hasMataBook; break;
