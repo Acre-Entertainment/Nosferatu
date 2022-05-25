@@ -6,6 +6,7 @@ using TMPro;
 public class BoxPlaceUI : MonoBehaviour
 {
     InfoKeeper infoKeeper;
+    public BoxPuzzleIsDone boxPuzzleIsDone;
     [HideInInspector] public BoxPlace boxPlace;
     public GameObject metalButton, clayButton, woodButton, currentButton;
     public TextMeshProUGUI currentButtonText;
@@ -17,6 +18,14 @@ public class BoxPlaceUI : MonoBehaviour
     void OnEnable()
     {
         resetButtons();
+    }
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            gameObject.SetActive(false);
+            Time.timeScale = 1;
+            boxPuzzleIsDone.checkPuzzle();
+        }
     }
     public void pressedButton(int but)
     {
