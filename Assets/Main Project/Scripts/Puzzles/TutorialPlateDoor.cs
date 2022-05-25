@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class TutorialPlateDoor : ObjectEvent
 {
-    public TextBoxManager textBoxManager;
     public UnityEvent onPuzzleSolved;
     public bool callDialogueBoxOnPuzzleSolved;
     public string[] dialogueLinesOnPuzzleSolved;

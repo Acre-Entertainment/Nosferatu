@@ -11,4 +11,25 @@ public class ObjectEvent : MonoBehaviour
     public string[] dialogueLines;
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
+
+    protected TextBoxManager textBoxManager;
+    private void Start() {
+        textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
+    }
+    public void callEvent()
+    {
+        onInteraction.Invoke();
+        if(callDialogueBox == true)
+        {
+            int x = 0;
+            foreach(string y in dialogueLines)
+                {
+                    textBoxManager.followUpText[x] = y;
+                    x++;
+                }
+            textBoxManager.pendingEvent = onEventDialogue;
+            textBoxManager.whenIsEventCalled = whenEventIsCalled;
+            textBoxManager.turnOnDialogueBox();
+        }
+    }
 }
