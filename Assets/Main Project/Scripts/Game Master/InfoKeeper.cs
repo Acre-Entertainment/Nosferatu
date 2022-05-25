@@ -40,6 +40,10 @@ public class InfoKeeper : MonoBehaviour
 
     public int castInventory;
     public int bookInventory;
+
+    public bool hasMataMetalBox;
+    public bool hasMataWoodBox;
+    public bool hasMataClayBox;
     public bool hasMataBroom;
     public bool hasMataBook;
     public bool hasMataOpenedDoor;
@@ -75,6 +79,10 @@ public class InfoKeeper : MonoBehaviour
             case "placedBookX_2": placedBookX_2 = !placedBookX_2; break;
             case "placedBookY_2": placedBookY_2 = !placedBookY_2; break;
             case "placedBookZ_2": placedBookZ_2 = !placedBookZ_2; break;
+
+            case "hasMataMetalBox": hasMataMetalBox = !hasMataMetalBox; break;
+            case "hasMataWoodBox": hasMataWoodBox = !hasMataWoodBox; break;
+            case "hasMataClayBox": hasMataClayBox = !hasMataClayBox; break;
 
             case "hasMataBroom": hasMataBroom = !hasMataBroom; break;
             case "hasMataBook": hasMataBook = !hasMataBook; break;
