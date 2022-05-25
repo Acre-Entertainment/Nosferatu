@@ -12,7 +12,7 @@ public class ObjectEvent : MonoBehaviour
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
 
-    private TextBoxManager textBoxManager;
+    protected TextBoxManager textBoxManager;
     private void Start() {
         textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
     }
