@@ -25,7 +25,7 @@ public class InfoKeeper : MonoBehaviour
     public int test;
     public bool tutorialIsOver;
     public bool puzzleMulherPuraIsOver;
-    public bool puzzle2IsOver;
+    public bool puzzleComoMataOver;
     public bool puzzle3IsOver;
     public bool puzzle4IsOver;
     public bool puzzle5IsOver;
@@ -48,13 +48,15 @@ public class InfoKeeper : MonoBehaviour
     public bool hasMataBook;
     public bool hasMataOpenedDoor;
 
+    public bool hasDormeKey1, hasDormeKey2, hasDormeKey3, hasDormeKey4;
+
     public void ChangeBoolVariable(string variableName)
     {
         switch(variableName)
         {
             case "tutorialIsOver": tutorialIsOver = tutorialIsOver = true; break;
             case "puzzleMulherPuraIsOver": puzzleMulherPuraIsOver = puzzleMulherPuraIsOver = true; break;
-            case "puzzle2IsOver": puzzle2IsOver = !puzzle2IsOver; break;
+            case "puzzleComoMataOver": puzzleComoMataOver = !puzzleComoMataOver; break;
             case "puzzle3IsOver": puzzle3IsOver = !puzzle3IsOver; break;
             case "puzzle4IsOver": puzzle4IsOver = !puzzle4IsOver; break;
             case "puzzle5IsOver": puzzle5IsOver = !puzzle5IsOver; break;
@@ -96,6 +98,11 @@ public class InfoKeeper : MonoBehaviour
             case "hasMataBroom": hasMataBroom = !hasMataBroom; break;
             case "hasMataBook": hasMataBook = !hasMataBook; break;
             case "hasMataOpenedDoor": hasMataOpenedDoor = !hasMataOpenedDoor; break;
+            
+            case "hasDormeKey1": hasDormeKey1 = !hasDormeKey1; break;
+            case "hasDormeKey2": hasDormeKey2 = !hasDormeKey2; break;
+            case "hasDormeKey3": hasDormeKey3 = !hasDormeKey3; break;
+            case "hasDormeKey4": hasDormeKey4 = !hasDormeKey4; break;
 
             default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
         }
