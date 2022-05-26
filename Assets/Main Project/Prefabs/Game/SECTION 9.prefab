@@ -529,9 +529,7 @@ Transform:
   - {fileID: 5398254986524837246}
   - {fileID: 5845880035883515457}
   - {fileID: 5230917924987067209}
-  - {fileID: 4933786208936242909}
   - {fileID: 3748591675569622654}
-  - {fileID: 1624270199952988288}
   m_Father: {fileID: 4199163678574830457}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3000,6 +2998,7 @@ Transform:
   - {fileID: 3770783246709212798}
   - {fileID: 3286357783068260199}
   - {fileID: 4058477397454512020}
+  - {fileID: 6983080578779401436}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17954,6 +17953,39 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   objectTag: Player
+--- !u!1 &6043975462013020519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6983080578779401436}
+  m_Layer: 0
+  m_Name: Puzzles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6983080578779401436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043975462013020519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4933786208936242909}
+  - {fileID: 1624270199952988288}
+  - {fileID: 6453367552913552165}
+  m_Father: {fileID: 4199163678574830457}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6053682793047389740
 GameObject:
   m_ObjectHideFlags: 0
@@ -18965,11 +18997,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 9145086542046175}
+    m_TransformParent: {fileID: 6983080578779401436}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19013,7 +19045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_Name
-      value: caixao_nosferatu (1)
+      value: "Puzzle Caix\xE3o"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_IsActive
@@ -19063,7 +19095,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144066952220574266}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5964216392503912863}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
   - It seems that Nosferatu sleeps here.
@@ -19213,14 +19269,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1274785810547260452, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 2615154560244829210}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8019061105168059491 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 2615154560244829210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5502765078762041530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7500563316212497568, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 2615154560244829210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8019061105168059491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 2615154560244829210}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4445939681893218690
@@ -19337,7 +19393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalScale.z
@@ -19389,14 +19445,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
---- !u!4 &3748591675569622654 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
-  m_PrefabInstance: {fileID: 3715211555934906773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4561720808528942276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
+  m_PrefabInstance: {fileID: 3715211555934906773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3748591675569622654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
   m_PrefabInstance: {fileID: 3715211555934906773}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &681890172705330136
@@ -19490,14 +19546,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3e641c783228a4b9527bfdc57acacc, type: 3}
---- !u!1 &3840380930255148611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db3e641c783228a4b9527bfdc57acacc, type: 3}
-  m_PrefabInstance: {fileID: 4146319690039814930}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4467595806739434745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db3e641c783228a4b9527bfdc57acacc, type: 3}
+  m_PrefabInstance: {fileID: 4146319690039814930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3840380930255148611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db3e641c783228a4b9527bfdc57acacc, type: 3}
   m_PrefabInstance: {fileID: 4146319690039814930}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1795335414428497784
@@ -19634,11 +19690,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 9145086542046175}
+    m_TransformParent: {fileID: 6983080578779401436}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19682,18 +19738,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_Name
-      value: caixao_nosferatu
+      value: Tutorial Caixao
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
---- !u!4 &4933786208936242909 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
-  m_PrefabInstance: {fileID: 4896236431499905334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5707051139685282919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+  m_PrefabInstance: {fileID: 4896236431499905334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4933786208936242909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
   m_PrefabInstance: {fileID: 4896236431499905334}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &7118651348524411952
@@ -19998,14 +20054,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0315312b9c6166a44abf79b0af94a402, type: 3}
---- !u!4 &5230917924987067209 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0315312b9c6166a44abf79b0af94a402, type: 3}
-  m_PrefabInstance: {fileID: 5700797769957948578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4490633566492883242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 0315312b9c6166a44abf79b0af94a402, type: 3}
+  m_PrefabInstance: {fileID: 5700797769957948578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5230917924987067209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0315312b9c6166a44abf79b0af94a402, type: 3}
   m_PrefabInstance: {fileID: 5700797769957948578}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &5883550772431602586
@@ -20103,6 +20159,117 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 56d554c698c53164aa8a34f48d330ec3, type: 3}
+--- !u!1001 &6774626482423387342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6983080578779401436}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -121.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 154.18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 119.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50008726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49991274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50008726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49991274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_Name
+      value: "Puzzle Done Caix\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+--- !u!4 &6453367552913552165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+  m_PrefabInstance: {fileID: 6774626482423387342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5964216392503912863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+  m_PrefabInstance: {fileID: 6774626482423387342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7136174673151750237
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964216392503912863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -424076655564518938, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
+--- !u!114 &2041927078851423292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964216392503912863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - It seems that Nosferatu sleeps here.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6938437627581068988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20244,14 +20411,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
---- !u!4 &3119236301639857861 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 6938437627581068988}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8213082144169052824 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1274785810547260452, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 6938437627581068988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3119236301639857861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 6938437627581068988}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6996463512214138544
