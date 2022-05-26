@@ -13348,14 +13348,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!1 &560720342984204996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 795305346496569237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &901780416373520510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 795305346496569237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &560720342984204996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 795305346496569237}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &2527573368040801104
@@ -13410,6 +13410,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 3
   chairIsOk: 0
+--- !u!114 &7869511368419156563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560720342984204996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4041077371930194489}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &909155870831218545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13545,6 +13578,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 3
   chairIsOk: 0
+--- !u!114 &8665360290938404059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26055829041328672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6789642271087066492}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1156101579118234410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14237,6 +14303,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1328906762525507929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183465300116112498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8047748901450923368}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8047748901450923368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14639,11 +14738,133 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+--- !u!95 &4023032312925212973 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1831653177105674928, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+  m_PrefabInstance: {fileID: 3368684064328000413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &140324581596696979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3408503880178840078, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+  m_PrefabInstance: {fileID: 3368684064328000413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6434247219985922965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8643799182899157000, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+  m_PrefabInstance: {fileID: 3368684064328000413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8818008454149343052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115927562473219281, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
   m_PrefabInstance: {fileID: 3368684064328000413}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &7562878473959850960 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5065218793783517261, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+  m_PrefabInstance: {fileID: 3368684064328000413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5551874235596788773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140324581596696979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60ead0b3d810bf40a9dce9f0d388a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4023032312925212973}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  callDialogueBoxOnPuzzleSolved: 1
+  dialogueLinesOnPuzzleSolved:
+  - 'Porta abriu '
+  chair1: {fileID: 4796469325063534016}
+  chair2: {fileID: 4226727126179532463}
+  chair3: {fileID: 8463668181412408780}
+  chair4: {fileID: 26055829041328672}
+  chair5: {fileID: 6890694478855679300}
+  chair6: {fileID: 3183465300116112498}
+  chair7: {fileID: 8187033076627798381}
+  chair8: {fileID: 560720342984204996}
+  chair9: {fileID: 4882077006905152455}
+  chair10: {fileID: 4283366099671081917}
+  chairs1: {fileID: 10190305062373906}
+  chairs2: {fileID: 7836667662591703063}
+  chairs3: {fileID: 6499872314805640160}
+  chairs4: {fileID: 6789642271087066492}
+  chairs5: {fileID: 5992857680106521616}
+  chairs6: {fileID: 8047748901450923368}
+  chairs7: {fileID: 3812679364790276391}
+  chairs8: {fileID: 4041077371930194489}
+  chairs9: {fileID: 2925141915417010387}
+  chairs10: {fileID: 3075147364950088526}
+  puzzleIsSolved: 0
+--- !u!114 &2738268408112207306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434247219985922965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60ead0b3d810bf40a9dce9f0d388a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7562878473959850960}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  callDialogueBoxOnPuzzleSolved: 1
+  dialogueLinesOnPuzzleSolved:
+  - 'Porta abriu '
+  chair1: {fileID: 4796469325063534016}
+  chair2: {fileID: 4226727126179532463}
+  chair3: {fileID: 8463668181412408780}
+  chair4: {fileID: 26055829041328672}
+  chair5: {fileID: 6890694478855679300}
+  chair6: {fileID: 3183465300116112498}
+  chair7: {fileID: 8187033076627798381}
+  chair8: {fileID: 560720342984204996}
+  chair9: {fileID: 4882077006905152455}
+  chair10: {fileID: 4283366099671081917}
+  chairs1: {fileID: 10190305062373906}
+  chairs2: {fileID: 7836667662591703063}
+  chairs3: {fileID: 6499872314805640160}
+  chairs4: {fileID: 6789642271087066492}
+  chairs5: {fileID: 5992857680106521616}
+  chairs6: {fileID: 8047748901450923368}
+  chairs7: {fileID: 3812679364790276391}
+  chairs8: {fileID: 4041077371930194489}
+  chairs9: {fileID: 2925141915417010387}
+  chairs10: {fileID: 3075147364950088526}
+  puzzleIsSolved: 0
 --- !u!1001 &3487252194215454214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14873,14 +15094,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!1 &4226727126179532463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 3920717987853464574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3594867843272807445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 3920717987853464574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4226727126179532463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 3920717987853464574}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &3149318188700307442
@@ -14910,6 +15131,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7401926410577678628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226727126179532463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7836667662591703063}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7836667662591703063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15008,14 +15262,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!1 &4283366099671081917 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 4012983331738443500}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3475163082943641863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 4012983331738443500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4283366099671081917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 4012983331738443500}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1696468707971316270
@@ -15070,6 +15324,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 1
   chairIsOk: 0
+--- !u!114 &7922412623410147481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283366099671081917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3075147364950088526}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4775763397223957096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15345,6 +15632,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 1
   chairIsOk: 0
+--- !u!114 &3129002700665385517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796469325063534016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 10190305062373906}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5651060788892896043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15488,14 +15808,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &5227359235748088189 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 5693102957686566550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4882077006905152455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 5693102957686566550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5227359235748088189 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 5693102957686566550}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1342360440453750673
@@ -15550,6 +15870,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 3
   chairIsOk: 0
+--- !u!114 &5199444831200276864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882077006905152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2925141915417010387}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6008298673325019157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15660,6 +16013,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5485099402548647302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890694478855679300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5992857680106521616}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5992857680106521616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16320,14 +16706,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!1 &8463668181412408780 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 8770079194459787421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9097040292995708790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 8770079194459787421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8463668181412408780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 8770079194459787421}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &2599419229420171748
@@ -16357,6 +16743,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4336715431881368199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8463668181412408780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6499872314805640160}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6499872314805640160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16517,6 +16936,39 @@ MonoBehaviour:
   chairPosition: 1
   correctPosition: 1
   chairIsOk: 0
+--- !u!114 &7219655321496704486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187033076627798381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3812679364790276391}
+        m_TargetAssemblyTypeName: Chairs, Assembly-CSharp
+        m_MethodName: changeChair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callDialogueBox: 0
+  dialogueLines: []
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9205122703287295623
 PrefabInstance:
   m_ObjectHideFlags: 0

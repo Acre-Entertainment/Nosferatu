@@ -19,12 +19,6 @@ public class Chairs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.C))
-        {
-            changeChair();
-        }
-
         if(correctPosition == chairPosition)
         {
             chairIsOk = true;
@@ -46,19 +40,19 @@ public class Chairs : MonoBehaviour
         {
             case 1:
                 chair.transform.localPosition = new Vector3(chairPositionx1, transform.localPosition.y, chairPositionz1);
-                chair.transform.Rotate(new Vector3(x: 0, y: chairRotation1, z: 0));
+                chair.transform.eulerAngles = new Vector3(x: 0, y: chairRotation1, z: 0);
                 break;
             case 2:
                 chair.transform.localPosition = new Vector3(chairPositionx2, transform.localPosition.y, chairPositionz2);
-                chair.transform.Rotate(new Vector3(x: 0, y: chairRotation2, z: 0));
+                chair.transform.eulerAngles = new Vector3(x: 0, y: chairRotation2, z: 0);
                 break;
             case 3:
                 chair.transform.localPosition = new Vector3(chairPositionx3, transform.localPosition.y, chairPositionz3);
-                chair.transform.Rotate(new Vector3(x: 0, y: chairRotation3, z: 0));
+                chair.transform.eulerAngles = new Vector3(x: 0, y: chairRotation3, z: 0);
                 break;
             default:
                 chair.transform.localPosition = new Vector3(chairPositionx1, transform.localPosition.y, chairPositionz1);
-                chair.transform.Rotate(new Vector3(x: 0, y: chairRotation1, z: 0));
+                chair.transform.eulerAngles = new Vector3(x: 0, y: chairRotation1, z: 0);
                 break;
         }
     }
