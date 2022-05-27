@@ -26,7 +26,7 @@ public class InfoKeeper : MonoBehaviour
     public bool tutorialIsOver;
     public bool puzzleMulherPuraIsOver;
     public bool puzzleComoMataOver;
-    public bool puzzle3IsOver;
+    public bool puzzleOndeDormeIsOver;
     public bool puzzle4IsOver;
     public bool puzzle5IsOver;
     public bool puzzle6IsOver;
@@ -57,7 +57,7 @@ public class InfoKeeper : MonoBehaviour
             case "tutorialIsOver": tutorialIsOver = tutorialIsOver = true; break;
             case "puzzleMulherPuraIsOver": puzzleMulherPuraIsOver = puzzleMulherPuraIsOver = true; break;
             case "puzzleComoMataOver": puzzleComoMataOver = !puzzleComoMataOver; break;
-            case "puzzle3IsOver": puzzle3IsOver = !puzzle3IsOver; break;
+            case "puzzleOndeDormeIsOver": puzzleOndeDormeIsOver = !puzzleOndeDormeIsOver; break;
             case "puzzle4IsOver": puzzle4IsOver = !puzzle4IsOver; break;
             case "puzzle5IsOver": puzzle5IsOver = !puzzle5IsOver; break;
 
