@@ -27,7 +27,7 @@ public class InfoKeeper : MonoBehaviour
     public bool puzzleMulherPuraIsOver;
     public bool puzzleComoMataOver;
     public bool puzzleOndeDormeIsOver;
-    public bool puzzle4IsOver;
+    public bool puzzleRatosAmigos;
     public bool puzzle5IsOver;
     public bool puzzle6IsOver;
     public bool tutorialHasPlayedRat;
@@ -50,6 +50,8 @@ public class InfoKeeper : MonoBehaviour
 
     public bool hasDormeKey1, hasDormeKey2, hasDormeKey3, hasDormeKey4;
 
+    public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
+
     public void ChangeBoolVariable(string variableName)
     {
         switch(variableName)
@@ -58,7 +60,7 @@ public class InfoKeeper : MonoBehaviour
             case "puzzleMulherPuraIsOver": puzzleMulherPuraIsOver = puzzleMulherPuraIsOver = true; break;
             case "puzzleComoMataOver": puzzleComoMataOver = !puzzleComoMataOver; break;
             case "puzzleOndeDormeIsOver": puzzleOndeDormeIsOver = !puzzleOndeDormeIsOver; break;
-            case "puzzle4IsOver": puzzle4IsOver = !puzzle4IsOver; break;
+            case "puzzleRatosAmigos": puzzleRatosAmigos = !puzzleRatosAmigos; break;
             case "puzzle5IsOver": puzzle5IsOver = !puzzle5IsOver; break;
 
             case "hasMulherPuraNote": hasMulherPuraNote = hasMulherPuraNote = true; break;
@@ -103,6 +105,10 @@ public class InfoKeeper : MonoBehaviour
             case "hasDormeKey2": hasDormeKey2 = !hasDormeKey2; break;
             case "hasDormeKey3": hasDormeKey3 = !hasDormeKey3; break;
             case "hasDormeKey4": hasDormeKey4 = !hasDormeKey4; break;
+
+            case "ratoTablePosition1": ratoTablePosition1++; if(ratoTablePosition1 > 4){ratoTablePosition1 = 1;} break;
+            case "ratoTablePosition2": ratoTablePosition2++; if(ratoTablePosition2 > 4){ratoTablePosition2 = 1;} break;
+            case "ratoTablePosition3": ratoTablePosition3++; if(ratoTablePosition3 > 4){ratoTablePosition3 = 1;} break;
 
             default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
         }

@@ -27097,7 +27097,7 @@ MonoBehaviour:
   puzzleMulherPuraIsOver: 0
   puzzleComoMataOver: 0
   puzzleOndeDormeIsOver: 0
-  puzzle4IsOver: 0
+  puzzleRatosAmigos: 0
   puzzle5IsOver: 0
   puzzle6IsOver: 0
   tutorialHasPlayedRat: 0
@@ -27142,6 +27142,9 @@ MonoBehaviour:
   hasDormeKey2: 0
   hasDormeKey3: 0
   hasDormeKey4: 0
+  ratoTablePosition1: 1
+  ratoTablePosition2: 1
+  ratoTablePosition3: 1
   hasInvestigatedPuzzle_Bookcase_3: 0
   hasBookFromPuzzle_Bookcase_1: 0
   hasBookFromPuzzle_Bookcase_2: 0
@@ -52726,34 +52729,10 @@ PrefabInstance:
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
-    - target: {fileID: 4177468715482910937, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177468715482910937, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Hide, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177468715482910937, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4561014332538736121, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
-    - target: {fileID: 4561014332538736121, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4561014332538736121, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Hide, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4561014332538736121, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5438279719094913317, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
@@ -52774,18 +52753,6 @@ PrefabInstance:
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
-    - target: {fileID: 5757431544979505829, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757431544979505829, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Hide, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757431544979505829, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6078937662447572220, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
@@ -52830,18 +52797,6 @@ PrefabInstance:
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
-    - target: {fileID: 7455209278904779063, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 7455209278904779063, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Hide, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7455209278904779063, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7984522728055032982, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -52934,18 +52889,6 @@ PrefabInstance:
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
-    - target: {fileID: 8784760891795954574, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndHide
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784760891795954574, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Hide, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784760891795954574, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
-      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8831681730641043521, guid: ab44cba4eb798a94ea6994161c1cba7d, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
