@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TreeStart : MonoBehaviour
 {
+    public string lastAiPath;
     public GameObject Nosferatu;
     public GameObject player;
     public GameObject lastSeenPlayerLocation;
@@ -45,6 +46,7 @@ public class TreeStart : MonoBehaviour
             timeToSwitchFromWanderingToStill = timeToSwitchFromWanderingToStill - 1 * Time.deltaTime;
         }
 
+        lastAiPath = "Tree Start";
         TreeCheckStatus.run(this);
     }
     public void resetTimers()

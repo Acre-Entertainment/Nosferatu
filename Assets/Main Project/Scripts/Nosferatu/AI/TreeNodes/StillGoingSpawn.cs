@@ -6,6 +6,7 @@ public abstract class StillGoingSpawn : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/GoingSpawn";
         if(ts.isGoingToSpawn == true)
         {
             StillCanSpawn.run(ts);

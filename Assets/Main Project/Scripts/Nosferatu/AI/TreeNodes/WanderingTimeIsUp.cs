@@ -6,6 +6,7 @@ public class WanderingTimeIsUp : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/TimeIsUp";
         if(ts.timeToSwitchFromWanderingToStill <= 0)
         {
             SetStill.run(ts);

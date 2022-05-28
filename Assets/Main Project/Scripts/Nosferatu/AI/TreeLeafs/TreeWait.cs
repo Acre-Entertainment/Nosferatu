@@ -6,6 +6,6 @@ public class TreeWait : TreeLeaf
 {
     public static void run(TreeStart ts)
     {
-        
+        ts.lastAiPath = ts.lastAiPath + "/Wait";
     }
 }

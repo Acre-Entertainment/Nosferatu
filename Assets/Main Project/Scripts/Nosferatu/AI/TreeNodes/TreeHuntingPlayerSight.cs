@@ -6,6 +6,7 @@ public abstract class TreeHuntingPlayerSight : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/PlayerSight";
         if(ts.sightZone.nosferatuHasLineOfSight == true)
         {
             HuntingPlayerTarget.run(ts);

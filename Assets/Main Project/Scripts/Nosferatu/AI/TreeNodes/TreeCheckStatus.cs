@@ -6,6 +6,7 @@ public class TreeCheckStatus : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/CheckStatus";
         switch(ts.status)
         {
             case "HUNTING":

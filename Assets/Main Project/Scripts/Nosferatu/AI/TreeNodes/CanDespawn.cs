@@ -6,6 +6,7 @@ public class CanDespawn : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/CanDespawn";
         if(ts.timeUntilDespawn <= 0 && ts.isGoingToDespawn == true)
         {
             Despawn.run(ts);

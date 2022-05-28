@@ -6,6 +6,7 @@ public class HuntingIsInLastSeenLocation : TreeNode
 {
     public static void run(TreeStart ts)
     {
+        ts.lastAiPath = ts.lastAiPath + "/IsInLastSeenLocation";
         if(ts.nosferatuIsInLastSeenPlayerLocation == true)
         {
             SetWandering.run(ts);
