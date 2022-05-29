@@ -15178,6 +15178,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
+      propertyPath: dialogueLines.Array.data[0]
+      value: Porta Trancada
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -15337,8 +15345,9 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls: []
-  callDialogueBox: 0
-  dialogueLines: []
+  callDialogueBox: 1
+  dialogueLines:
+  - Porta Trancada.
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
