@@ -10,5 +10,6 @@ public class SetHunting : TreeLeaf
         Debug.Log(ts.lastAiPath);
         
         ts.status = "HUNTING";
+        ts.nosferatuIsInLastSeenPlayerLocation = false;
     }
 }

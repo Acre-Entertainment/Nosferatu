@@ -10,7 +10,14 @@ public class SetWandering : TreeLeaf
         Debug.Log(ts.lastAiPath);
         
         ts.status = "WANDERING";
-        ts.nosferatuMovement.setNewTarget(ts.player);
+        if(ts.player.activeSelf == true)
+        {
+            ts.nosferatuMovement.setNewTarget(ts.player);
+        }
+        else
+        {
+            ts.nosferatuMovement.setRandomTarget();
+        }
         ts.resetTimers();
     }
 }

@@ -9,12 +9,19 @@ public class Spawn : TreeLeaf
         ts.lastAiPath = ts.lastAiPath + "/Spawn";
         Debug.Log(ts.lastAiPath);
         
-        int randy = Random.Range(1, ts.spawnLocations.Count + 1);
+        int randy = Random.Range(0, ts.spawnLocations.Count + 1);
         GameObject randomSpawn = ts.spawnLocations[randy];
         ts.Nosferatu.SetActive(true);
         ts.Nosferatu.transform.position = randomSpawn.transform.position;
         ts.status = "WANDERING";
-        ts.nosferatuMovement.setNewTarget(ts.player);
+        if(ts.player.activeSelf == true)
+        {
+            ts.nosferatuMovement.setNewTarget(ts.player);
+        }
+        else
+        {
+            ts.nosferatuMovement.setRandomTarget();
+        }
         ts.resetTimers();
     }
 }

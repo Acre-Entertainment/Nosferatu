@@ -37,4 +37,8 @@ public class NosferatuMovement : MonoBehaviour
         currentTarget = possibleRandomWanderingSpots[randy];
         navMeshAgent.SetDestination(currentTarget.transform.position);
     }
+    public void setSpeed(float LeSpeed)
+    {
+        navMeshAgent.speed = LeSpeed;
+    }
 }

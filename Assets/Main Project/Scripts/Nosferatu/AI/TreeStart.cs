@@ -19,13 +19,13 @@ public class TreeStart : MonoBehaviour
     public float timeToSpawn;
     public float timeUntilSpawn;
     public bool isGoingToDespawn;
-    public float timeToDespawn;
-    public float timeUntilDespawn;
+    [HideInInspector]public float timeToDespawn;
+    [HideInInspector]public float timeUntilDespawn;
     public float timeBetweenSwitchingWanderingTargets;
     public float timeUntillNextWanderingSwitch;
-    public float timeToSwitchFromWanderingToStill;
-    public float timeUntilSwitchFromWanderingToStill;
-    public float timeToStopHunting;
+    public float timeToSwitchFromWanderingToNot;
+    public float timeUntilSwitchFromWanderingToNot;
+    //public float timeToStopHunting;
     public InfoKeeper infoKeeper;
     private void Start() {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
@@ -43,7 +43,7 @@ public class TreeStart : MonoBehaviour
         if(status == "WANDERING")
         {
             timeUntillNextWanderingSwitch = timeUntillNextWanderingSwitch - 1 * Time.deltaTime;
-            timeToSwitchFromWanderingToStill = timeToSwitchFromWanderingToStill - 1 * Time.deltaTime;
+            timeUntilSwitchFromWanderingToNot = timeUntilSwitchFromWanderingToNot - 1 * Time.deltaTime;
         }
 
         lastAiPath = "Tree Start";
@@ -54,7 +54,7 @@ public class TreeStart : MonoBehaviour
         timeUntilSpawn = timeToSpawn;
         timeUntilDespawn = timeToDespawn;
         timeUntillNextWanderingSwitch = timeBetweenSwitchingWanderingTargets;
-        timeUntilSwitchFromWanderingToStill = timeToSwitchFromWanderingToStill;
+        timeUntilSwitchFromWanderingToNot = timeToSwitchFromWanderingToNot;
     }
     public void callLeaf(string stg)
     {
