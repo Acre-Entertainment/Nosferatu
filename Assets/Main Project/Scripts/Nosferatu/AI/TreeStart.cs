@@ -56,4 +56,35 @@ public class TreeStart : MonoBehaviour
         timeUntillNextWanderingSwitch = timeBetweenSwitchingWanderingTargets;
         timeUntilSwitchFromWanderingToStill = timeToSwitchFromWanderingToStill;
     }
+    public void callLeaf(string stg)
+    {
+        switch(stg)
+        {
+            case "Despawn": Despawn.run(this); break;
+        }
+    }
+    public void addSpanwWanderLocation(GameObject go)
+    {
+        bool duplicate = false;
+        foreach (GameObject gosl in spawnLocations)
+        {
+            if(gosl == go)
+            duplicate = true;
+        }
+        if(duplicate == false)
+        {
+            spawnLocations.Add(go);
+        }
+
+        duplicate = false;
+        foreach (GameObject gows in nosferatuMovement.possibleRandomWanderingSpots)
+        {
+            if(gows == go)
+            duplicate = true;
+        }
+        if(duplicate == false)
+        {
+            nosferatuMovement.possibleRandomWanderingSpots.Add(go);
+        }
+    }
 }
