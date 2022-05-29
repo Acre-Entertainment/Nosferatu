@@ -49704,6 +49704,10 @@ PrefabInstance:
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5053076665669569147, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 5090477459956666186, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -49968,6 +49972,10 @@ PrefabInstance:
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 384255982}
+    - target: {fileID: 5521483020660846725, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 5645275809378170629, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -50120,6 +50128,22 @@ PrefabInstance:
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 384255982}
+    - target: {fileID: 7898079197200987807, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: callDialogueBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898079197200987807, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898079197200987807, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.data[0]
+      value: The door is locked.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898079197200987807, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.data[1]
+      value: Strangely, there is no keyhole.
+      objectReference: {fileID: 0}
     - target: {fileID: 7958624406624155224, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -50163,6 +50187,22 @@ PrefabInstance:
     - target: {fileID: 7958624406624155224, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013087807919834292, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: callDialogueBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013087807919834292, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013087807919834292, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.data[0]
+      value: The door is locked.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013087807919834292, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: dialogueLines.Array.data[1]
+      value: Strangely, there is no keyhole.
       objectReference: {fileID: 0}
     - target: {fileID: 8173949100041027262, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -50280,6 +50320,60 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5843773276704789066, guid: b42bc58640ab13944acdf09187f60218, type: 3}
   m_PrefabInstance: {fileID: 5090477461977208955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5090477461977208958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5521483020660846725, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+  m_PrefabInstance: {fileID: 5090477461977208955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5090477461977208959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5053076665669569147, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+  m_PrefabInstance: {fileID: 5090477461977208955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5090477461977208960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090477461977208958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - The bookshelf is empty.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5090477461977208961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090477461977208959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - The bookshelf is empty.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5499388529788906439
 PrefabInstance:
   m_ObjectHideFlags: 0
