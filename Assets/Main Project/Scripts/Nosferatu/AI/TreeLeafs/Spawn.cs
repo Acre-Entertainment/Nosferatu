@@ -13,8 +13,8 @@ public class Spawn : TreeLeaf
         GameObject randomSpawn = ts.spawnLocations[randy];
         ts.Nosferatu.SetActive(true);
         ts.Nosferatu.transform.position = randomSpawn.transform.position;
-        ts.nosferatuMovement.setRandomTarget();
         ts.status = "WANDERING";
+        ts.nosferatuMovement.setNewTarget(ts.player);
         ts.resetTimers();
     }
 }
