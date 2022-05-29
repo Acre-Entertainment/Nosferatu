@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ChairPuzzle : MonoBehaviour
+public class ChairPuzzle : ObjectEvent
 {
     public UnityEvent onPuzzleSolved;
-    public bool callDialogueBoxOnPuzzleSolved;
-    public string[] dialogueLinesOnPuzzleSolved;
     public GameObject chair1, chair2, chair3, chair4, chair5, chair6, chair7, chair8, chair9, chair10;
     public Chairs chairs1, chairs2, chairs3, chairs4, chairs5, chairs6, chairs7, chairs8, chairs9, chairs10;
-    bool puzzleIsSolved;
+    public bool puzzleIsSolved;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +26,6 @@ public class ChairPuzzle : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-    }
-
-    public void checkPuzzle()
     {
         if (chairs1.chairIsOk && chairs2.chairIsOk && chairs3.chairIsOk && chairs4.chairIsOk && chairs5.chairIsOk && chairs6.chairIsOk && chairs7.chairIsOk && chairs8.chairIsOk && chairs9.chairIsOk && chairs10.chairIsOk)
         {
