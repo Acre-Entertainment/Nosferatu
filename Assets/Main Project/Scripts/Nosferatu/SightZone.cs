@@ -26,7 +26,6 @@ public class SightZone : MonoBehaviour
             {
                 nosferatuHasLineOfSight = true;
                 lastKnowPlayerLocation.transform.position = player.transform.position;
-                Debug.Log("Something");
             }
             else
             {
