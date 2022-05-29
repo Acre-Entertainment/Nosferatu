@@ -66,7 +66,7 @@ public class BoxPlaceUI : MonoBehaviour
                 {
                     case "Metal":
                         infoKeeper.hasMataMetalBox = true;
-                        boxPlace.hasWoodBox = false;
+                        boxPlace.hasMetalBox = false;
                         switch(boxPlace.whichBoxPlace)
                         {
                             case 1: infoKeeper.metalBoxIn1 = false; break;
