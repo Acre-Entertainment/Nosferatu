@@ -7,6 +7,7 @@ public class TableUI : MonoBehaviour
     public GameObject button1, button2;
     public Table table;
     InfoKeeper InfoKeeper;
+    public ComoMata comoMata;
     private void Awake() {
         InfoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
@@ -41,11 +42,19 @@ public class TableUI : MonoBehaviour
         InfoKeeper.castInventory--;
         table.hasCast = true;
         table.cast.SetActive(true);
+        comoMata.checkAndAct1();
+
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
     public void onPress2()
     {
         InfoKeeper.bookInventory--;
         table.hasBook = true;
         table.book.SetActive(true);
+        comoMata.checkAndAct1();
+
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

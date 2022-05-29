@@ -16,6 +16,12 @@ public class Table : MonoBehaviour
 
     public void activateTable()
     {
+        if(hasBook == false && hasCast == false)
+        {
+            tableUI.GetComponent<TableUI>().table = this;
+            tableUI.SetActive(true);
+            Time.timeScale = 0;
+        }
         if(hasCast == true)
         {
             hasCast = false;
@@ -27,12 +33,6 @@ public class Table : MonoBehaviour
             hasBook = false;
             book.SetActive(false);
             InfoKeeper.bookInventory++;
-        }
-        if(hasBook == false && hasCast == false)
-        {
-            tableUI.GetComponent<TableUI>().table = this;
-            tableUI.SetActive(true);
-            Time.timeScale = 0;
         }
     }
 }
