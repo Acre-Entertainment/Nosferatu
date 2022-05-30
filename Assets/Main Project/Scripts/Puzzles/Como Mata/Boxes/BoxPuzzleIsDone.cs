@@ -7,10 +7,15 @@ public class BoxPuzzleIsDone : MonoBehaviour
 {
     public BoxPlace boxPlace1, boxPlace2, boxPlace3;
     public UnityEvent onPuzzleDone;
+    InfoKeeper infoKeeper;
+
+    private void Start() {
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+    }
 
     public void checkPuzzle()
     {
-        if(boxPlace1.hasMetalBox == true && boxPlace2.hasWoodBox == true && boxPlace2.hasClayBox)
+        if(infoKeeper.metalBoxIn1 == true && infoKeeper.woodBoxIn2 && infoKeeper.clayBoxIn3 == true)
         {
             onPuzzleDone.Invoke();
         }
