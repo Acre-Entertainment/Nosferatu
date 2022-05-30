@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class BoxPuzzleIsDone : MonoBehaviour
 {
-    BoxPlace boxPlace1, boxPlace2, boxPlace3;
+    public BoxPlace boxPlace1, boxPlace2, boxPlace3;
     public UnityEvent onPuzzleDone;
 
     public void checkPuzzle()

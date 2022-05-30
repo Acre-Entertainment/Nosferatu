@@ -6,7 +6,7 @@ public class LastKnowLocationTrigger : MonoBehaviour
 {
     public string collisionTag;
     public TreeStart treeStart;
-    private void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         if(other.tag == "Nosferatu")
         {
             treeStart.nosferatuIsInLastSeenPlayerLocation = true;
