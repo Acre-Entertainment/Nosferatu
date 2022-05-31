@@ -50,6 +50,7 @@ public class PauseGame : MonoBehaviour
     //Ir para o menu
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        Resume();
+        SceneManager.LoadScene("02_Menu");
     }
 }
