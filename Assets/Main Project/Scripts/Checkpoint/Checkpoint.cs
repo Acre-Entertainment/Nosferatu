@@ -141,7 +141,6 @@ public class Checkpoint : MonoBehaviour
     {
         seekOutScene();
         player.transform.position = point;
-        infoKeeper = savedInfokeeper;
 
         infoKeeper.tutorialIsOver = tutorialIsOver;
         infoKeeper.puzzleMulherPuraIsOver = puzzleMulherPuraIsOver;
