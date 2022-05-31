@@ -48354,6 +48354,14 @@ PrefabInstance:
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1951060949}
+    - target: {fileID: 211472115043881138, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483254084112862592, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 3334747828735457589, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -48370,6 +48378,10 @@ PrefabInstance:
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 2587887041110869039}
+    - target: {fileID: 3889243128632167652, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 4676929742344607902, guid: b42bc58640ab13944acdf09187f60218, type: 3}
       propertyPath: eventToHappen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -48758,6 +48770,87 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5843773276704789066, guid: b42bc58640ab13944acdf09187f60218, type: 3}
   m_PrefabInstance: {fileID: 5090477461977208955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5090477461977208958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3889243128632167652, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+  m_PrefabInstance: {fileID: 5090477461977208955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5090477461977208959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2483254084112862592, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+  m_PrefabInstance: {fileID: 5090477461977208955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5090477461977208960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 211472115043881138, guid: b42bc58640ab13944acdf09187f60218, type: 3}
+  m_PrefabInstance: {fileID: 5090477461977208955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5090477461977208961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090477461977208958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - The bookshelf is empty.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5090477461977208962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090477461977208959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - The bookshelf is empty.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5090477461977208963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090477461977208960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - The bookshelf is empty.
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5499388529788906439
 PrefabInstance:
   m_ObjectHideFlags: 0
