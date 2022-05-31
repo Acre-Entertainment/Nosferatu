@@ -143,7 +143,6 @@ public class  InfoKeeper : MonoBehaviour
 
 
 
-
 //TEST STUFF -----------------------------------------------------------------------------------------------------------------------
     [HideInInspector] public bool hasInvestigatedPuzzle_Bookcase_3;
     [HideInInspector]public bool hasBookFromPuzzle_Bookcase_1;

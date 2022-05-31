@@ -5,54 +5,56 @@ using UnityEngine.Events;
 
 public class Checkpoint : MonoBehaviour
 {
+    public bool hasSaved;
     public GameObject player;
-    public GameObject[] checkPoints;
+    public InfoKeeper infoKeeper;
+    InfoKeeper savedInfokeeper;
     public Vector3 point;
-    private int newCheckPoint;
-    // Start is called before the first frame update
-    void Start()
-    {        
-        Spawn();
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void Awake()
     {
-        if(newCheckPoint == 0)
+        if(GameObject.FindGameObjectWithTag("Checkpoint"))
         {
-            point = new Vector3(18.7f, 7f, -56f);
+            Destroy(gameObject);
         }
-        else if(newCheckPoint == 1)
-        {
-            point = checkPoints[0].transform.position;
-        }
-        else if(newCheckPoint == 2)
-        {
-            point = checkPoints[1].transform.position;
-        }
-        else if (newCheckPoint == 3)
-        {
-            point = checkPoints[2].transform.position;
-        }
+        else
+        gameObject.tag = "Checkpoint";
+    }
+    void Start()
+    {
+        seekOutScene();
     }
 
-    public void Spawn()
+    void onSceneStart()
+    {
+        seekOutScene();
+        if(hasSaved == true)
+        {
+            Load();
+            Spawn();
+            GameObject.FindGameObjectWithTag("GameMaster").GetComponent<SetThings>().SetThingsAccordingToSave();
+        }
+    }
+    public void seekOutScene()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+    }
+        public void Spawn()
     {
         player.transform.position = point;
     }
-
-    public void Checkpoint1()
+    public void Save()
     {
-        newCheckPoint = 1;
+        point = player.transform.position;
+        savedInfokeeper = infoKeeper;
+        hasSaved = true;
     }
-
-    public void Checkpoint2()
+    public void Load()
     {
-        newCheckPoint = 2;
-    }
-
-    public void Checkpoint3()
-    {
-        newCheckPoint = 3;
+        player.transform.position = point;
+        infoKeeper = savedInfokeeper;
     }
 }
