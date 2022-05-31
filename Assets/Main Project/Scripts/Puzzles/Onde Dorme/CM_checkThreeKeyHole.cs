@@ -5,16 +5,16 @@ using UnityEngine.Events;
 
 public class CM_checkThreeKeyHole : MonoBehaviour
 {
-    InfoKeeper InfoKeeper;
+    InfoKeeper infoKeeper;
     public UnityEvent onPuzzleSolved;
 
     private void Start() {
-        InfoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
 
     public void checkPuzzle()
     {
-        if(InfoKeeper.hasDormeKey3 == true && InfoKeeper.hasDormeKey4 == true && InfoKeeper.hasDormeKey5 == true)
+        if(infoKeeper.hasDormeKey3 == true && infoKeeper.hasDormeKey4 == true && infoKeeper.hasDormeKey5 == true)
         {
             onPuzzleSolved.Invoke();
         }
