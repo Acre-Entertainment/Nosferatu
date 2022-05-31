@@ -22,7 +22,6 @@ public class  InfoKeeper : MonoBehaviour
     }
 
 //tutorial
-    public int test;
     public bool tutorialIsOver;
     public bool puzzleMulherPuraIsOver;
     public bool puzzleComoMataOver;
