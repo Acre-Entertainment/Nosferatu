@@ -14,7 +14,7 @@ public class CM_checkThreeKeyHole : MonoBehaviour
 
     public void checkPuzzle()
     {
-        if(InfoKeeper.hasDormeKey2 == true && InfoKeeper.hasDormeKey3 == true && InfoKeeper.hasDormeKey4 == true)
+        if(InfoKeeper.hasDormeKey3 == true && InfoKeeper.hasDormeKey4 == true && InfoKeeper.hasDormeKey5 == true)
         {
             onPuzzleSolved.Invoke();
         }

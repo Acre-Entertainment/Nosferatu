@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InfoKeeper : MonoBehaviour
+public class  InfoKeeper : MonoBehaviour
 {
 //Guarda variaveis para serem usadas por outros scripts.
 
@@ -48,7 +48,7 @@ public class InfoKeeper : MonoBehaviour
     public bool hasMataBook;
     public bool hasMataOpenedDoor;
 
-    public bool hasDormeKey1, hasDormeKey2, hasDormeKey3, hasDormeKey4;
+    public bool hasDormeKey1, hasDormeKey2, hasDormeKey3, hasDormeKey4, hasDormeKey5;
 
     public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
     public bool hasRatoKey1, hasRatoKey2;
@@ -106,6 +106,7 @@ public class InfoKeeper : MonoBehaviour
             case "hasDormeKey2": hasDormeKey2 = !hasDormeKey2; break;
             case "hasDormeKey3": hasDormeKey3 = !hasDormeKey3; break;
             case "hasDormeKey4": hasDormeKey4 = !hasDormeKey4; break;
+            case "hasDormeKey5": hasDormeKey5 = !hasDormeKey5; break;
 
             case "ratoTablePosition1": ratoTablePosition1++; if(ratoTablePosition1 > 4){ratoTablePosition1 = 1;} break;
             case "ratoTablePosition2": ratoTablePosition2++; if(ratoTablePosition2 > 4){ratoTablePosition2 = 1;} break;
@@ -113,7 +114,7 @@ public class InfoKeeper : MonoBehaviour
             case "hasRatoKey1": hasRatoKey1 = !hasRatoKey1; break;
             case "hasRatoKey2": hasRatoKey2 = !hasRatoKey2; break;
 
-            default: Debug.Log("InfoKeeper tentou mudar a variavel mas não deu certo."); break;
+            default: Debug.Log(" tentou mudar a variavel mas não deu certo."); break;
         }
     }
 

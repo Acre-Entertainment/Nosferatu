@@ -20,6 +20,7 @@ public class CM_Chest : MonoBehaviour
             case 2: InfoKeeper.hasDormeKey2 = true; break;
             case 3: InfoKeeper.hasDormeKey3 = true; break;
             case 4: InfoKeeper.hasDormeKey4 = true; break;
+            case 5: InfoKeeper.hasDormeKey5 = true; break;
         }
     }
 }
