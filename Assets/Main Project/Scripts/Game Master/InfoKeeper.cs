@@ -28,6 +28,7 @@ public class  InfoKeeper : MonoBehaviour
     public bool puzzleOndeDormeIsOver;
     public bool puzzleRatosAmigosIsOver;
     public bool puzzleOQueComeIsOver;
+    
     public bool tutorialHasPlayedRat;
     public bool tutorialHasCheckedDesk;
 
