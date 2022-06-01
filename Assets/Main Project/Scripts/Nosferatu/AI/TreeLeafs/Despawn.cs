@@ -8,7 +8,8 @@ public class Despawn : TreeLeaf
     {
         ts.lastAiPath = ts.lastAiPath + "/Despawn";
         Debug.Log(ts.lastAiPath);
-        
+
+        ts.nosferatuEvents.InvokeOnDespawn();       
         ts.Nosferatu.SetActive(false);
         ts.resetTimers();
         ts.status = "NOT";

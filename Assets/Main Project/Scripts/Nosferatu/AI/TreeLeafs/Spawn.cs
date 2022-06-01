@@ -8,7 +8,8 @@ public class Spawn : TreeLeaf
     {
         ts.lastAiPath = ts.lastAiPath + "/Spawn";
         Debug.Log(ts.lastAiPath);
-        
+
+        ts.nosferatuEvents.InvokeOnSpawn();      
         int randy = Random.Range(0, ts.spawnLocations.Count + 1);
         GameObject randomSpawn = ts.spawnLocations[randy];
         ts.Nosferatu.SetActive(true);
