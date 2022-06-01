@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class ChairPuzzle : ObjectEvent
 {
     public UnityEvent onPuzzleSolved;
+    public bool callDialogueBoxOnPuzzleSolved;
+    public string[] dialogueLinesOnPuzzleSolved;
     public GameObject chair1, chair2, chair3, chair4, chair5, chair6, chair7, chair8, chair9, chair10;
     public Chairs chairs1, chairs2, chairs3, chairs4, chairs5, chairs6, chairs7, chairs8, chairs9, chairs10;
     public bool puzzleIsSolved;
@@ -34,6 +36,16 @@ public class ChairPuzzle : ObjectEvent
             puzzleIsSolved = true;
             infoKeeper.puzzleOQueComeIsOver = true;
             onPuzzleSolved.Invoke();
+            if (callDialogueBoxOnPuzzleSolved == true)
+            {
+                int x = 0;
+                foreach (string y in dialogueLinesOnPuzzleSolved)
+                {
+                    textBoxManager.followUpText[x] = y;
+                    x++;
+                }
+                textBoxManager.turnOnDialogueBox();
+            }
         }
         else
         {
