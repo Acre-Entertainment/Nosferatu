@@ -36234,6 +36234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733261261}
+  - component: {fileID: 1733261262}
   m_Layer: 0
   m_Name: NosferatuEvents
   m_TagString: NosferatuEvents
@@ -36255,6 +36256,30 @@ Transform:
   m_Father: {fileID: 1332423147}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733261262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733261260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2b34f998404be4d9b9856521ce3255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  onSetHunting:
+    m_PersistentCalls:
+      m_Calls: []
+  onLosingPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+  onDespawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!43 &1733917971
 Mesh:
   m_ObjectHideFlags: 0
@@ -41059,7 +41084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7704cf38630eb4e8e244c57a5bff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nosferatuEvents: {fileID: 0}
+  nosferatuEvents: {fileID: 1733261262}
   lastAiPath: 
   Nosferatu: {fileID: 1265385467}
   player: {fileID: 384255978}
