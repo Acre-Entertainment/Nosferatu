@@ -19,14 +19,7 @@ public class PauseGame : MonoBehaviour
         //Esc para pausar ou voltar ao jogo
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPause)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Pause();
         }
     }
 
