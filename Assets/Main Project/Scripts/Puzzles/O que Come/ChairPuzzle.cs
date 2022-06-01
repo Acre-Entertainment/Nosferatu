@@ -32,12 +32,13 @@ public class ChairPuzzle : ObjectEvent
         if (chairs1.chairIsOk && chairs2.chairIsOk && chairs3.chairIsOk && chairs4.chairIsOk && chairs5.chairIsOk && chairs6.chairIsOk && chairs7.chairIsOk && chairs8.chairIsOk && chairs9.chairIsOk && chairs10.chairIsOk)
         {
             puzzleIsSolved = true;
-            onPuzzleSolved.Invoke();
             infoKeeper.puzzleOQueComeIsOver = true;
+            onPuzzleSolved.Invoke();
         }
         else
         {
             puzzleIsSolved = false;
         }
     }
+
 }
