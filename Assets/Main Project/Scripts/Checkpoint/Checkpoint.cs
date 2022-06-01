@@ -54,8 +54,7 @@ public class Checkpoint : MonoBehaviour
     public bool puzzleComoMataOver;
     public bool puzzleOndeDormeIsOver;
     public bool puzzleRatosAmigosIsOver;
-    public bool puzzle5IsOver;
-    public bool puzzle6IsOver;
+    public bool puzzleOQueComeIsOver;
     public bool tutorialHasPlayedRat;
     public bool tutorialHasCheckedDesk;
     public bool hasMulherPuraNote;
@@ -86,8 +85,7 @@ public class Checkpoint : MonoBehaviour
         puzzleComoMataOver = infoKeeper.puzzleComoMataOver;
         puzzleOndeDormeIsOver = infoKeeper.puzzleOndeDormeIsOver;
         puzzleRatosAmigosIsOver = infoKeeper.puzzleRatosAmigosIsOver;
-        puzzle5IsOver = infoKeeper.puzzle5IsOver;
-        puzzle6IsOver = infoKeeper.puzzle6IsOver;
+        puzzleOQueComeIsOver = infoKeeper.puzzleOQueComeIsOver;
         tutorialHasPlayedRat = infoKeeper.tutorialHasPlayedRat;
         tutorialHasCheckedDesk = infoKeeper.tutorialHasCheckedDesk;
         hasMulherPuraNote = infoKeeper.hasMulherPuraNote;
@@ -147,8 +145,7 @@ public class Checkpoint : MonoBehaviour
         infoKeeper.puzzleComoMataOver = puzzleComoMataOver;
         infoKeeper.puzzleOndeDormeIsOver = puzzleOndeDormeIsOver;
         infoKeeper.puzzleRatosAmigosIsOver = puzzleRatosAmigosIsOver;
-        infoKeeper.puzzle5IsOver = puzzle5IsOver;
-        infoKeeper.puzzle6IsOver = puzzle6IsOver;
+        infoKeeper.puzzleOQueComeIsOver = puzzleOQueComeIsOver;
         infoKeeper.tutorialHasPlayedRat = tutorialHasPlayedRat;
         infoKeeper.tutorialHasCheckedDesk = tutorialHasCheckedDesk;
         infoKeeper.hasMulherPuraNote = hasMulherPuraNote;

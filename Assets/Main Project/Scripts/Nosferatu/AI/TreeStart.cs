@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TreeStart : MonoBehaviour
 {
+    public NosferatuEvents nosferatuEvents;
     public string lastAiPath;
     public GameObject Nosferatu;
     public GameObject player;

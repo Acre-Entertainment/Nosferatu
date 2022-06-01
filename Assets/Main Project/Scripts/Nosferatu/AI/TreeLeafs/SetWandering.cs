@@ -9,10 +9,12 @@ public class SetWandering : TreeLeaf
         ts.lastAiPath = ts.lastAiPath + "/SetWandering";
         Debug.Log(ts.lastAiPath);
         
+        ts.nosferatuEvents.InvokeOnLosingPlayer();    
         ts.status = "WANDERING";
         if(ts.player.activeSelf == true)
         {
-            ts.nosferatuMovement.setNewTarget(ts.player);
+            ts.lastSeenPlayerLocation.transform.position = ts.player.transform.position;
+            ts.nosferatuMovement.setNewTarget(ts.lastSeenPlayerLocation);
         }
         else
         {
