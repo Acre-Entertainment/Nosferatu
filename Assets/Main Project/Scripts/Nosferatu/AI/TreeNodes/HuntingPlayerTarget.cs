@@ -9,7 +9,8 @@ public class HuntingPlayerTarget : TreeNode
         ts.lastAiPath = ts.lastAiPath + "/PlayerTarget";
         if(ts.nosferatuMovement.currentTarget == ts.player)
         {
-            TreeWait.run(ts);
+            //TreeWait.run(ts);
+            SetTargetToPlayer.run(ts);
         }
         else
         {
