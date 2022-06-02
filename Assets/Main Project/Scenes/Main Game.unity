@@ -15096,6 +15096,8 @@ GameObject:
   - component: {fileID: 805108789}
   - component: {fileID: 805108790}
   - component: {fileID: 805108791}
+  - component: {fileID: 805108793}
+  - component: {fileID: 805108792}
   m_Layer: 0
   m_Name: TutorialScripts
   m_TagString: Untagged
@@ -15155,6 +15157,80 @@ MonoBehaviour:
   level2Height: 3
   level3Height: 4
   preassurePlateIsPressed: 0
+--- !u!114 &805108792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805108788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d907e610701418c4fafb8aa1c83e270c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  callDialogueBox: 1
+  dialogueLines:
+  - Huh... It was just a rat...
+  whenEventIsCalled: 0
+  onEventDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &805108793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805108788}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa1119f3a5c49479d4d134ca24a007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  eventToHappen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 805108792}
+        m_TargetAssemblyTypeName: ObjectEvent, Assembly-CSharp
+        m_MethodName: callEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108793}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 805108793}
+        m_TargetAssemblyTypeName: PressEnterToEvent, Assembly-CSharp
+        m_MethodName: switchActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &820077956
 GameObject:
   m_ObjectHideFlags: 0
@@ -38169,6 +38245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efa1119f3a5c49479d4d134ca24a007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   eventToHappen:
     m_PersistentCalls:
       m_Calls:
@@ -48473,6 +48550,14 @@ PrefabInstance:
       value: -45.382
       objectReference: {fileID: 0}
     - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1332423149}
@@ -48480,6 +48565,30 @@ PrefabInstance:
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 805108790}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 805108793}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709956262204813876, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3230942043858852466, guid: 07f11f2967cda8241aeac1b671c1df86, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -51508,6 +51617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efa1119f3a5c49479d4d134ca24a007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   eventToHappen:
     m_PersistentCalls:
       m_Calls:

@@ -5,13 +5,21 @@ using UnityEngine.Events;
 
 public class PressEnterToEvent : MonoBehaviour
 {
+    public bool active;
     //aperte enter e o evento sera chamado
     public UnityEvent eventToHappen;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        if(active == true)
         {
-            eventToHappen.Invoke();
+            if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+            {
+                eventToHappen.Invoke();
+            }
         }
+    }
+    public void switchActive()
+    {
+        active = !active;
     }
 }
