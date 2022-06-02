@@ -24908,7 +24908,6 @@ GameObject:
   - component: {fileID: 1265385469}
   - component: {fileID: 1265385471}
   - component: {fileID: 1265385472}
-  - component: {fileID: 1265385473}
   m_Layer: 0
   m_Name: Nosferatu
   m_TagString: Nosferatu
@@ -24930,6 +24929,7 @@ Transform:
   - {fileID: 905934309}
   - {fileID: 521990523}
   - {fileID: 844900594}
+  - {fileID: 1559352546}
   m_Father: {fileID: 1267472418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.112, z: 0}
@@ -25020,23 +25020,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1265385473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265385467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: debbd1ce4305d3d438a1ce166407a5a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 384255978}
-  lastKnowPlayerLocation: {fileID: 122063067}
-  nosferatuSightRange: 20
-  nosferatuHasLineOfSight: 0
-  hittingthing: {fileID: 0}
 --- !u!1 &1267472417
 GameObject:
   m_ObjectHideFlags: 0
@@ -26445,7 +26428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2155ac8016d424d87431dc3ee45a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightZone: {fileID: 1265385473}
+  sightZone: {fileID: 0}
   player: {fileID: 384255978}
   hidingText: {fileID: 7755349934021745385}
   noHidingText: {fileID: 1502472361}
@@ -32002,6 +31985,54 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1559352545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559352546}
+  - component: {fileID: 1559352547}
+  m_Layer: 0
+  m_Name: Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559352546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559352545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.182, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1265385468}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559352547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559352545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debbd1ce4305d3d438a1ce166407a5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 384255978}
+  lastKnowPlayerLocation: {fileID: 122063067}
+  nosferatuSightRange: 20
+  nosferatuHasLineOfSight: 0
+  hittingthing: {fileID: 0}
 --- !u!43 &1560424258
 Mesh:
   m_ObjectHideFlags: 0
@@ -41694,7 +41725,7 @@ MonoBehaviour:
   lastSeenPlayerLocation: {fileID: 122063067}
   nosferatuIsInLastSeenPlayerLocation: 0
   nearZone: {fileID: 844900592}
-  sightZone: {fileID: 1265385473}
+  sightZone: {fileID: 1559352547}
   nosferatuMovement: {fileID: 1265385471}
   status: WANDERING
   spawnLocations: []
