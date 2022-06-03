@@ -17184,7 +17184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -17248,7 +17248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -17682,11 +17682,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: callDialogueBox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -18032,6 +18032,14 @@ PrefabInstance:
     - target: {fileID: 5458084787594808205, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
       propertyPath: m_Name
       value: Bau 1 notPicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785245282243358755, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785245282243358755, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: dialogueLines.Array.data[0]
+      value: Key collected
       objectReference: {fileID: 0}
     - target: {fileID: 6785245282243358755, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
@@ -19591,7 +19599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6533925427872953437, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -19816,6 +19824,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CheckIfTheGameEnded, Assembly-CSharp
+        m_MethodName: activateThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
   - '"Don''t forget to feed them and let them breed. The lack of them can harm your
@@ -19969,7 +19989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -21868,8 +21888,7 @@ MonoBehaviour:
         m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
-  - Inside the chest is a key.
-  - You take it.
+  - Key collected
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
@@ -22688,11 +22707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: callDialogueBox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -22700,11 +22719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: callDialogueBox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]

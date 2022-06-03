@@ -1107,6 +1107,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &4216607713894278322
 GameObject:
@@ -13658,6 +13670,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &8750208190421395577
 GameObject:
@@ -17373,7 +17397,7 @@ MonoBehaviour:
         m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
-  - Inside the chest there is another key.
+  - Key collected
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
@@ -18409,11 +18433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: callDialogueBox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
@@ -18879,7 +18903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]

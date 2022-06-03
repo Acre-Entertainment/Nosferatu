@@ -12,10 +12,12 @@ public class ChairPuzzle : ObjectEvent
     public Chairs chairs1, chairs2, chairs3, chairs4, chairs5, chairs6, chairs7, chairs8, chairs9, chairs10;
     public bool puzzleIsSolved;
     InfoKeeper infoKeeper;
+    CheckIfTheGameEnded checkIfTheGameEnded;
     // Start is called before the first frame update
     void Start()
     {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+        checkIfTheGameEnded = GameObject.FindGameObjectWithTag("Ending").GetComponent<CheckIfTheGameEnded>();
         chairs1 = chair1.GetComponent<Chairs>();
         chairs2 = chair2.GetComponent<Chairs>();
         chairs3 = chair3.GetComponent<Chairs>();
@@ -34,7 +36,10 @@ public class ChairPuzzle : ObjectEvent
         if (chairs1.chairIsOk && chairs2.chairIsOk && chairs3.chairIsOk && chairs4.chairIsOk && chairs5.chairIsOk && chairs6.chairIsOk && chairs7.chairIsOk && chairs8.chairIsOk && chairs9.chairIsOk && chairs10.chairIsOk)
         {
             puzzleIsSolved = true;
+
             infoKeeper.puzzleOQueComeIsOver = true;
+            checkIfTheGameEnded.activateThis();
+
             onPuzzleSolved.Invoke();
             if (callDialogueBoxOnPuzzleSolved == true)
             {

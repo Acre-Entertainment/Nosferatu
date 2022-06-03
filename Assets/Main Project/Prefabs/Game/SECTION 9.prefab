@@ -19709,6 +19709,18 @@ MonoBehaviour:
           m_StringArgument: puzzleOndeDormeIsOver
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CheckIfTheGameEnded, Assembly-CSharp
+        m_MethodName: activateThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
   - '"From the ancient lands of the Black Death, here is comfort for the still pure
@@ -19738,11 +19750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The door is locked.
+      value: Door is locked and has three key holes
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -20008,19 +20020,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 99.999985
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.93607
+      value: -122.945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20028,7 +20040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 117.84
+      value: 118.414
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6172a950db0e3e1449b733890cfd407e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20187,19 +20199,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalScale.z
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -122.277
+      value: -122.928
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ceff91195d23bc64db97b75e2fc3d4ff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20860,11 +20872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: callDialogueBox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
