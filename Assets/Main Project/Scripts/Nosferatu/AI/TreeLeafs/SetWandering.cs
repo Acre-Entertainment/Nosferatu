@@ -11,15 +11,15 @@ public class SetWandering : TreeLeaf
         
         ts.nosferatuEvents.InvokeOnLosingPlayer();    
         ts.status = "WANDERING";
-        if(ts.player.activeSelf == true)
-        {
-            ts.lastSeenPlayerLocation.transform.position = ts.player.transform.position;
-            ts.nosferatuMovement.setNewTarget(ts.lastSeenPlayerLocation);
-        }
-        else
-        {
+        //if(ts.player.activeSelf == true)
+        //{
+        //    ts.lastSeenPlayerLocation.transform.position = ts.player.transform.position;
+        //    ts.nosferatuMovement.setNewTarget(ts.lastSeenPlayerLocation);
+        //}
+        //else
+        //{
             ts.nosferatuMovement.setRandomTarget();
-        }
+        //}
         ts.resetTimers();
     }
 }
