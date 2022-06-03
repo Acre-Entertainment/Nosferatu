@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Spawn : TreeLeaf
 {
@@ -13,7 +14,8 @@ public class Spawn : TreeLeaf
         int randy = Random.Range(0, ts.spawnLocations.Count);
         GameObject randomSpawn = ts.spawnLocations[randy];
         ts.Nosferatu.SetActive(true);
-        ts.Nosferatu.transform.position = randomSpawn.transform.position + new Vector3(0, ts.spawnOffset, 0);
+        ts.Nosferatu.GetComponent<NavMeshAgent>().Warp(randomSpawn.transform.position);
+        Debug.Log("Nosferatu Spawned in: " + randomSpawn.transform.position.x + "/" + randomSpawn.transform.position.y + "/" + randomSpawn.transform.position.z);
         ts.status = "WANDERING";
         if(ts.player.activeSelf == true)
         {

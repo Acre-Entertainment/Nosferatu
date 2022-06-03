@@ -15,7 +15,6 @@ public class TreeStart : MonoBehaviour
     public NosferatuMovement nosferatuMovement;
     public string status = "NOT";
     //o Nosferatu pode estar HUNTING WANDERING STILL NOT
-    public float spawnOffset;
     public List<GameObject> spawnLocations = new List<GameObject>();
     public bool isGoingToSpawn;
     public float timeToSpawn;
