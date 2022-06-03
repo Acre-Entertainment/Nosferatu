@@ -13561,6 +13561,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &8712916637120566620
 GameObject:
@@ -17401,7 +17413,19 @@ MonoBehaviour:
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &7437736796859141912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18711,43 +18735,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00019276323
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00031888724
+      value: 0.0063
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.011500016
+      value: 0.0184
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99999475
+      value: -0.9259975
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0001684539
+      value: 0.37751547
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000045746565
+      value: 0.0012693515
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0032512844
+      value: 0.0030307514
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.028
+      value: -135.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 179.995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 32.009995
+      value: 179.627
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_Name
@@ -18907,7 +18931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The door is locked.
+      value: '"The door is locked."'
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[1]

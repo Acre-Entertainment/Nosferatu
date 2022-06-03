@@ -610,6 +610,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
   objectTag: Player
@@ -704,6 +716,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 2555494993614035567}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -805,6 +829,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   objectTag: Player
 --- !u!1 &3012533740658251004
@@ -15491,6 +15527,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &5679057723223068257
 GameObject:
@@ -17188,7 +17236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The door is locked.
+      value: '"The door is locked."'
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -17252,7 +17300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The door is locked.
+      value: '"The door is locked."'
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -17694,7 +17742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -17713,8 +17761,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -18877,6 +18933,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00011
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0062
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01847
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9284535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.37144879
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475819981178356258, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -43.61
+      objectReference: {fileID: 0}
     - target: {fileID: 6785245282243358755, guid: b27b437167a62a5489b1e38db15ad7aa, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 1
@@ -19490,35 +19578,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00007
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00022
+      value: 0.0068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01162
+      value: 0.0178
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9003188
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.43523106
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -51.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b5a1cc7558ae9e4a99f548ef1255714, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -19840,14 +19928,26 @@ MonoBehaviour:
   dialogueLines:
   - '"Don''t forget to feed them and let them breed. The lack of them can harm your
     life, as people can start to distrust."'
-  - Apparently rats are important companions for Count Orlok... I don't know for
+  - '"Apparently rats are important companions for Count Orlok... I don''t know for
     sure what their role is, but it is possible that these plagues cover up the actions
     of the count, being used as an excuse for the death of people by an incomprehensible
-    disease, but in reality it's not because of the rats.
+    disease, but in reality it''s not because of the rats."'
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &4739231761975267774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19993,7 +20093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The door is locked.
+      value: '"The door is locked."'
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -20936,11 +21036,28 @@ MonoBehaviour:
         m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
-  - '""Ratos Amigos Puzzle End""'
+  - '"Don''t forget to feed them and let them breed. The lack of them can harm your
+    life, as people can start to distrust."'
+  - '"Apparently rats are important companions for Count Orlok... I don''t know for
+    sure what their role is, but it is possible that these plagues cover up the actions
+    of the count, being used as an excuse for the death of people by an incomprehensible
+    disease, but in reality it''s not because of the rats."'
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &5658855478681219342
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -202,6 +202,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &1149405189354287809
 GameObject:
@@ -23403,6 +23415,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   objectTag: Player
 --- !u!1 &8015596414770264750
 GameObject:
@@ -25398,8 +25422,7 @@ MonoBehaviour:
         m_CallState: 2
   callDialogueBox: 1
   dialogueLines:
-  - There is a broom next to the bookstand
-  - Henry Take it
+  - '"There is a broom next to the bookstand, I will take it!"'
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
@@ -26428,7 +26451,7 @@ MonoBehaviour:
       m_Calls: []
   callDialogueBox: 1
   dialogueLines:
-  - There is a book missing in the collection displayed here
+  - '"There is a book missing in the collection displayed here"'
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
@@ -27933,7 +27956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: Door is locked and there are no key holes
+      value: '"Door is locked and there are no key holes"'
       objectReference: {fileID: 0}
     - target: {fileID: 3052339638951135141, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -28651,7 +28674,19 @@ MonoBehaviour:
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &5685136122147248635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29152,7 +29187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: Door is locked and there are no key holes
+      value: '"Door is locked and there are no key holes"'
       objectReference: {fileID: 0}
     - target: {fileID: 3873022756247905037, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -29172,7 +29207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: Door is locked and there are no key holes
+      value: '"Door is locked and there are no key holes"'
       objectReference: {fileID: 0}
     - target: {fileID: 3967693699448262950, guid: f83b0205647b15f40ac985dcdae4d457, type: 3}
       propertyPath: dialogueLines.Array.data[1]
@@ -30851,7 +30886,8 @@ MonoBehaviour:
       m_Calls: []
   callDialogueBox: 1
   dialogueLines:
-  - There is a book deep withing the chimney, but it's too far to reach it
+  - '"There is a book deep withing the chimney, but it''s too far for me to reach
+    it"'
   whenEventIsCalled: 0
   onEventDialogue:
     m_PersistentCalls:
