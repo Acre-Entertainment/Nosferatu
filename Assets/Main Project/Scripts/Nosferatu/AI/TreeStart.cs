@@ -29,7 +29,9 @@ public class TreeStart : MonoBehaviour
     public bool lastHunt;
     //public float timeToStopHunting;
     public InfoKeeper infoKeeper;
-    private void Start() {
+
+    private void Start()
+    {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
     }
     void Update()
@@ -100,5 +102,9 @@ public class TreeStart : MonoBehaviour
         {
             nosferatuMovement.possibleRandomWanderingSpots.Add(go);
         }
+    }
+    public void setUntilSpawnTime(float f)
+    {
+        timeUntilSpawn = f;
     }
 }
