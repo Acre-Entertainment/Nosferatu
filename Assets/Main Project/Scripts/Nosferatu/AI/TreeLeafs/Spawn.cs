@@ -13,7 +13,7 @@ public class Spawn : TreeLeaf
         int randy = Random.Range(0, ts.spawnLocations.Count);
         GameObject randomSpawn = ts.spawnLocations[randy];
         ts.Nosferatu.SetActive(true);
-        ts.Nosferatu.transform.position = ts.randomSpawn.transform.position;
+        ts.Nosferatu.transform.position = randomSpawn.transform.position;
         ts.status = "WANDERING";
         if(ts.player.activeSelf == true)
         {
