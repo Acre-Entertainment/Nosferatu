@@ -26,6 +26,7 @@ public class TreeStart : MonoBehaviour
     public float timeUntillNextWanderingSwitch;
     public float timeToSwitchFromWanderingToNot;
     public float timeUntilSwitchFromWanderingToNot;
+    public bool lastHunt;
     //public float timeToStopHunting;
     public InfoKeeper infoKeeper;
     private void Start() {
@@ -62,7 +63,19 @@ public class TreeStart : MonoBehaviour
         switch(stg)
         {
             case "Despawn": Despawn.run(this); break;
+            case "Spawn": Spawn.run(this); break;
         }
+    }
+    public void changeBool(string stg)
+    {
+        switch(stg)
+        {
+            case "isGoingToDespawn": isGoingToDespawn = !isGoingToDespawn; break;
+        }
+    }
+    public void setStatus(string stg)
+    {
+        status = stg;
     }
     public void addSpanwWanderLocation(GameObject go)
     {

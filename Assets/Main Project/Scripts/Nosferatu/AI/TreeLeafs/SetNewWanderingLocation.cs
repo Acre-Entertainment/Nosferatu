@@ -8,8 +8,8 @@ public class SetNewWanderingLocation : TreeLeaf
     {
         ts.lastAiPath = ts.lastAiPath + "/SetNewWanderingLocation";
         Debug.Log(ts.lastAiPath);
-        
         ts.nosferatuMovement.setRandomTarget();
+
         ts.timeUntillNextWanderingSwitch = ts.timeBetweenSwitchingWanderingTargets;
     }
 }
