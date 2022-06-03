@@ -37,8 +37,8 @@ public class ChairPuzzle : ObjectEvent
         {
             puzzleIsSolved = true;
 
-            infoKeeper.puzzleOQueComeIsOver = true;
-            checkIfTheGameEnded.activateThis();
+            //infoKeeper.puzzleOQueComeIsOver = true;
+            //checkIfTheGameEnded.activateThis();
 
             onPuzzleSolved.Invoke();
             if (callDialogueBoxOnPuzzleSolved == true)

@@ -22,7 +22,7 @@ public class SightZone : MonoBehaviour
         if(Physics.Raycast(ray, out hit))
         {
             hittingthing = hit.collider.gameObject;
-            if(hit.collider.gameObject.tag == "Player")
+            if(hit.collider.gameObject.tag == "Player" && Vector3.Distance(origin, target) <= nosferatuSightRange)
             {
                 nosferatuHasLineOfSight = true;
                 lastKnowPlayerLocation.transform.position = player.transform.position;
