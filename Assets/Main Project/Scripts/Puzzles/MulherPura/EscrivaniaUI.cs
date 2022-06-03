@@ -78,23 +78,23 @@ public class EscrivaniaUI : MonoBehaviour
         {
             x = 0;
             quantityOfBooksInTheTable = 0;
-            if(infoKeeper.placedBookA_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "A"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookB_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "B"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookC_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "C"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookX_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "X"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookY_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Y"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookZ_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Z"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookA_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "A"; otherButtonsText[x].text = bookAName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookB_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "B"; otherButtonsText[x].text = bookBName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookC_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "C"; otherButtonsText[x].text = bookCName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookX_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "X"; otherButtonsText[x].text = bookXName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookY_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Y"; otherButtonsText[x].text = bookYName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookZ_1 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Z"; otherButtonsText[x].text = bookZName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
         }
         if(qualEscrivania == 2)
         {
             x = 0;
             quantityOfBooksInTheTable = 0;
-            if(infoKeeper.placedBookA_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "A"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookB_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "B"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookC_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "C"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookX_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "X"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookY_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Y"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
-            if(infoKeeper.placedBookZ_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Z"; otherButtonsText[x].text = currentBooksInTheTable[x]; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookA_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "A"; otherButtonsText[x].text = bookAName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookB_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "B"; otherButtonsText[x].text = bookBName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookC_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "C"; otherButtonsText[x].text = bookCName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookX_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "X"; otherButtonsText[x].text = bookXName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookY_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Y"; otherButtonsText[x].text = bookYName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
+            if(infoKeeper.placedBookZ_2 == true && quantityOfBooksInTheTable < 3){currentBooksInTheTable[x] = "Z"; otherButtonsText[x].text = bookZName; otherButtons[x].SetActive(true); x++; quantityOfBooksInTheTable++;}
         }
         if(qualEscrivania != 1 && qualEscrivania != 2)
         {
