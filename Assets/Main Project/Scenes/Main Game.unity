@@ -3285,7 +3285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763437721654697358, guid: fd534deaa69e0234d9defc693b2f8745, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3763437721903846364, guid: fd534deaa69e0234d9defc693b2f8745, type: 3}
       propertyPath: m_text
@@ -32819,6 +32819,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1579341266}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1579341264
 Transform:
   m_ObjectHideFlags: 0
@@ -32862,18 +32874,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1951060949}
         m_TargetAssemblyTypeName: TreeStart, Assembly-CSharp
-        m_MethodName: callLeaf
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Spawn
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1951060949}
-        m_TargetAssemblyTypeName: TreeStart, Assembly-CSharp
         m_MethodName: changeBool
         m_Mode: 5
         m_Arguments:
@@ -32882,6 +32882,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: isGoingToDespawn
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1951060949}
+        m_TargetAssemblyTypeName: TreeStart, Assembly-CSharp
+        m_MethodName: callLeaf
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Spawn
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
@@ -32898,7 +32910,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579341262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12203fd25912134c9968068ff64b5bf, type: 3}
   m_Name: 
