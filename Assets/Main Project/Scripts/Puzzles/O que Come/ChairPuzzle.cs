@@ -17,7 +17,7 @@ public class ChairPuzzle : ObjectEvent
     void Start()
     {
         infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
-        checkIfTheGameEnded = GameObject.FindGameObjectWithTag("Ending").GetComponent<CheckIfTheGameEnded>();
+        //checkIfTheGameEnded = GameObject.FindGameObjectWithTag("Ending").GetComponent<CheckIfTheGameEnded>();
         chairs1 = chair1.GetComponent<Chairs>();
         chairs2 = chair2.GetComponent<Chairs>();
         chairs3 = chair3.GetComponent<Chairs>();
