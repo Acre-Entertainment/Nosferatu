@@ -7,6 +7,7 @@ public class ObjectEventTriggerPlayerEntry : MonoBehaviour
 {
     public UnityEvent onTriggerEnter;
     public bool callDialogueBox;
+    public int whichBox;
     public string[] dialogueLines;
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
@@ -23,6 +24,7 @@ public class ObjectEventTriggerPlayerEntry : MonoBehaviour
             if(callDialogueBox == true)
             {
                 textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
+                textBoxManager.setWhichDialogue(whichBox);
                 int x = 0;
                 foreach(string y in dialogueLines)
                 {

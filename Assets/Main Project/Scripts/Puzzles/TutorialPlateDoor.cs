@@ -7,6 +7,7 @@ public class TutorialPlateDoor : ObjectEvent
 {
     public UnityEvent onPuzzleSolved;
     public bool callDialogueBoxOnPuzzleSolved;
+    public int whichDialogueBoxOnSolved;
     public string[] dialogueLinesOnPuzzleSolved;
     public TutorialWallPlatePuzzle tutorialWallPlatePuzzle;
     bool puzzleIsSolved;
@@ -18,6 +19,7 @@ public class TutorialPlateDoor : ObjectEvent
             onPuzzleSolved.Invoke();
             if(callDialogueBoxOnPuzzleSolved == true)
             {
+                textBoxManager.setWhichDialogue(whichDialogueBoxOnSolved);
                 int x = 0;
                 foreach(string y in dialogueLinesOnPuzzleSolved)
                 {

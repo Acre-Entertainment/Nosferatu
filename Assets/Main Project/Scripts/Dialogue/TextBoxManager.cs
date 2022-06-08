@@ -11,8 +11,14 @@ public class TextBoxManager : MonoBehaviour
     //Se o dialogue box tiver desligado, o liga. Se os dialogos acabarem, desliga o dialogue box
     //A contagem começa no 0
     //geralmente, esse script sera chamado pelo CallAction no GameMaster
-    public GameObject textBox;
-    public TextMeshProUGUI text;
+    [HideInInspector] public GameObject textBox;
+    [HideInInspector] public TextMeshProUGUI text;
+    public GameObject textBox0;
+    public TextMeshProUGUI text0;
+    public GameObject textBox1;
+    public TextMeshProUGUI text1;
+    public GameObject textBox2;
+    public TextMeshProUGUI text2;
     private InfoKeeper infoKeeper;
     public string[] followUpText;
     public int currentTextNumber = -1;
@@ -24,6 +30,9 @@ public class TextBoxManager : MonoBehaviour
     public GameObject playerDetectArea;
     void Start()
     {
+        textBox = textBox0;
+        text = text0;
+
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
         foreach(string y in followUpText)
@@ -65,5 +74,16 @@ public class TextBoxManager : MonoBehaviour
         infoKeeper.gameIsBlockingInteraction = true;
         currentTextNumber = -1;
         callnextText();
+    }
+    public void setWhichDialogue(int whc)
+    {
+        switch (whc)
+        {
+            case 0: textBox = textBox0; text = text0; break;
+            case 1: textBox = textBox1; text = text1; break;
+            case 2: textBox = textBox2; text = text2; break;
+
+            default: break;
+        }
     }
 }
