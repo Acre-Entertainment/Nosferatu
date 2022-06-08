@@ -28,6 +28,7 @@ public class Hide : MonoBehaviour
     }
     public void Unhide()
     {
+        //Debug.Log("Unhid");
         noHidingText.SetActive(false);
         hidingText.SetActive(false);
         player.SetActive(true);

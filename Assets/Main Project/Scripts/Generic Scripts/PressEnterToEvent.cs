@@ -5,21 +5,16 @@ using UnityEngine.Events;
 
 public class PressEnterToEvent : MonoBehaviour
 {
-    public bool active;
+    private bool blockFirstFrame;
     //aperte enter e o evento sera chamado
     public UnityEvent eventToHappen;
+
     void Update()
     {
-        if(active == true)
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
-            if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
-            {
-                eventToHappen.Invoke();
-            }
+            //Debug.Log("This POS is " + gameObject);
+            eventToHappen.Invoke();
         }
-    }
-    public void switchActive()
-    {
-        active = !active;
     }
 }

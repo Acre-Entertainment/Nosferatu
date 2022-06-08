@@ -26,6 +26,7 @@ public class InteractWithObject : MonoBehaviour
             //Debug.Log("Player interagiu com" + detectNearbyObjects.detectedGameObject.name);
             if(objectEvent.callDialogueBox == true)
             {
+                textBoxManager.setWhichDialogue(objectEvent.whichBox);
                 int x = 0;
                 foreach(string y in objectEvent.dialogueLines)
                 {
