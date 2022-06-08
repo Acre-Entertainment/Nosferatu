@@ -30058,6 +30058,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -31176,6 +31177,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - Book "Villette" collected
   whenEventIsCalled: 0
@@ -31325,8 +31327,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5843773277152162920}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -32235,6 +32250,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - Book "Persuasion" collected
   whenEventIsCalled: 0
@@ -32848,6 +32864,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -33922,6 +33939,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -34242,6 +34260,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - Book "Jane Eyre" collected
   whenEventIsCalled: 0
@@ -34453,6 +34472,10 @@ PrefabInstance:
       value: escrivaninha
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 48f90b699d5025f4f8ebc7bfa072c6ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48f90b699d5025f4f8ebc7bfa072c6ec, type: 3}
       propertyPath: m_TagString
       value: Interact
       objectReference: {fileID: 0}
@@ -34557,7 +34580,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2352328466698243874}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - "\"Passion... treacherous passion. I am not free to have the blood I want, I
     am obliged to live with great care. Any carelessness can melt me \u200B\u200Bby
@@ -35127,8 +35163,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5843773276748205885}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -35330,6 +35379,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -35363,6 +35413,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -35571,6 +35622,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -36041,6 +36093,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -36192,6 +36245,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -36551,6 +36605,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -36681,6 +36736,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37242,6 +37298,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37543,6 +37600,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37765,7 +37823,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5843773276704789066}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -38303,6 +38374,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -38525,7 +38597,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5843773276949012400}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -38592,7 +38677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6533925427872953437, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -39144,6 +39229,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - Book "Pride and Prejudice" collected
   whenEventIsCalled: 0
@@ -40647,6 +40733,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -41644,6 +41731,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -42027,6 +42115,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - Checkpoint Saved
   whenEventIsCalled: 0
@@ -42526,6 +42615,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:

@@ -24606,8 +24606,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939553726954251090}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -24828,6 +24841,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 1924644183494089013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &939553726163267551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 1924644183494089013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1924644183887962066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24902,6 +24920,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 1924644183887962066}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &939553726456998200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 1924644183887962066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1924644184030710755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24971,14 +24994,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!4 &939553725838515481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 1924644184030710755}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &939553726699994377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 1924644184030710755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &939553725838515481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 1924644184030710755}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1924644184329049528
@@ -25197,6 +25220,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The bookshelf has one book.
   whenEventIsCalled: 0
@@ -25275,6 +25299,11 @@ PrefabInstance:
 --- !u!4 &939553726586803726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 1924644185425182964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &939553725842650654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 1924644185425182964}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1990829430129700927
@@ -25436,14 +25465,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
---- !u!4 &1815626976166840073 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
-  m_PrefabInstance: {fileID: 2213763720779653346}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331297139556015539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
+  m_PrefabInstance: {fileID: 2213763720779653346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1815626976166840073 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
   m_PrefabInstance: {fileID: 2213763720779653346}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8623651107580048379
@@ -25576,6 +25605,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"There is a broom next to the bookstand, I will take it!"'
   whenEventIsCalled: 0
@@ -25733,14 +25763,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &2598749714313084681 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 2565402957499209954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5969106053585198442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 2565402957499209954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2598749714313084681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 2565402957499209954}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &3894282152369954029
@@ -26421,14 +26451,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
---- !u!4 &3802079733461644217 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
-  m_PrefabInstance: {fileID: 3695496114373137490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4578018916718160131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
+  m_PrefabInstance: {fileID: 3695496114373137490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3802079733461644217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
   m_PrefabInstance: {fileID: 3695496114373137490}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &495588621857870692
@@ -26473,6 +26503,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -26563,14 +26594,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
---- !u!4 &3714840938690701170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
-  m_PrefabInstance: {fileID: 3749103047507280025}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4090979895676288456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
+  m_PrefabInstance: {fileID: 3749103047507280025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3714840938690701170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
   m_PrefabInstance: {fileID: 3749103047507280025}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &7359612933689327505
@@ -26619,6 +26650,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"There is a book missing in the collection displayed here"'
   whenEventIsCalled: 0
@@ -26842,14 +26874,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
---- !u!4 &3710089979919829887 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
-  m_PrefabInstance: {fileID: 3816337048775093396}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4050763025755132357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
+  m_PrefabInstance: {fileID: 3816337048775093396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3710089979919829887 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9601b5db1a454614192b0269d73113d7, type: 3}
   m_PrefabInstance: {fileID: 3816337048775093396}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &7932320086016814126
@@ -26894,6 +26926,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -27066,14 +27099,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f368808efd6d5bc49bcdc9bff8dea00a, type: 3}
---- !u!4 &3528234999851806139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f368808efd6d5bc49bcdc9bff8dea00a, type: 3}
-  m_PrefabInstance: {fileID: 3998200812017355344}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4304631613992744705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f368808efd6d5bc49bcdc9bff8dea00a, type: 3}
+  m_PrefabInstance: {fileID: 3998200812017355344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3528234999851806139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f368808efd6d5bc49bcdc9bff8dea00a, type: 3}
   m_PrefabInstance: {fileID: 3998200812017355344}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8077792605269492859
@@ -27120,8 +27153,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939553726699994377}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -27296,7 +27342,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3725468013112705350}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -27661,7 +27720,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4420950389993591120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -27962,14 +28034,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
---- !u!4 &5183690773960165323 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
-  m_PrefabInstance: {fileID: 4646186726646145056}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5529289941343657329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
+  m_PrefabInstance: {fileID: 4646186726646145056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5183690773960165323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
   m_PrefabInstance: {fileID: 4646186726646145056}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &3980746707125960552
@@ -28102,6 +28174,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"It appears this book fits perfectly"'
   whenEventIsCalled: 0
@@ -28229,16 +28302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
---- !u!64 &3227396966939616910 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 7919601768237428612, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 4693339772226308362}
-  m_PrefabAsset: {fileID: 0}
---- !u!208 &1199266974110638399 stripped
-NavMeshObstacle:
-  m_CorrespondingSourceObject: {fileID: 5874577778878965813, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 4693339772226308362}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1768499685111467503 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6460676173624411365, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
@@ -28247,6 +28310,16 @@ Animator:
 --- !u!4 &730039475955059059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 4693339772226308362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3227396966939616910 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 7919601768237428612, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 4693339772226308362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1199266974110638399 stripped
+NavMeshObstacle:
+  m_CorrespondingSourceObject: {fileID: 5874577778878965813, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 4693339772226308362}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4723595762288028152
@@ -28323,6 +28396,34 @@ PrefabInstance:
     - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 939553726163267551}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1934706760522952622, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
       propertyPath: m_Enabled
@@ -28757,14 +28858,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dd57a2891a50c74fbdd23538d621cce, type: 3}
---- !u!4 &5316211314492795094 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dd57a2891a50c74fbdd23538d621cce, type: 3}
-  m_PrefabInstance: {fileID: 5641958630258118461}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4795536091038954092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dd57a2891a50c74fbdd23538d621cce, type: 3}
+  m_PrefabInstance: {fileID: 5641958630258118461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5316211314492795094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dd57a2891a50c74fbdd23538d621cce, type: 3}
   m_PrefabInstance: {fileID: 5641958630258118461}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &6194918231773741995
@@ -28836,7 +28937,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 939553725842650654}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"I found Thomas He is lying in one of the castle rooms, totally pale, and hard
     as stone. I analysed his corpse and discovered the cause of his death: excessive
@@ -28989,6 +29103,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -29079,6 +29194,34 @@ PrefabInstance:
         I don''t think I can take it, and I know that if anyone is reading all these
         letters I''ve scattered around the castle, it''s you Henry, so please, tell
         Rosie that I love her! Goodbye My friend."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 939553726456998200}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454485909136147080, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2810844848441278815, guid: 5518a9694b9c2d9489bb747dd9d09837, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30667,6 +30810,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"To open this door, simply place the metal box on the first desk, the wooden
     box on the second, and the clay box on the third"'
@@ -30927,14 +31071,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a6e9fa70e23244784e72e41f9707ec, type: 3}
---- !u!1 &5852256772667958457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4468097493549437414, guid: 69a6e9fa70e23244784e72e41f9707ec, type: 3}
-  m_PrefabInstance: {fileID: 8013797613154121055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6520284460247629315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3839897385394473820, guid: 69a6e9fa70e23244784e72e41f9707ec, type: 3}
+  m_PrefabInstance: {fileID: 8013797613154121055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5852256772667958457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4468097493549437414, guid: 69a6e9fa70e23244784e72e41f9707ec, type: 3}
   m_PrefabInstance: {fileID: 8013797613154121055}
   m_PrefabAsset: {fileID: 0}
 --- !u!208 &7700796361679441026
@@ -31096,8 +31240,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939553726699994377}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"There is a book deep withing the chimney, but it''s too far for me to reach
     it"'
@@ -31274,7 +31431,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1890455800146563748}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -31420,7 +31590,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9164009275993909477}
+      - m_Target: {fileID: 939553726699994377}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -31505,6 +31675,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"There is a book deep withing the chimney, but it''s too far for me to reach
     it"'
@@ -31892,6 +32063,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
+  whichBox: 0
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
