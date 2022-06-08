@@ -18099,18 +18099,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   objectTag: Player
 --- !u!1 &6043975462013020519
 GameObject:
@@ -19560,6 +19548,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - The door is locked.
   whenEventIsCalled: 0
@@ -19735,6 +19724,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - '"From the ancient lands of the Black Death, here is comfort for the still pure
     ground. Embrace the divinity provided by the will of your bed, lest it perish
@@ -19747,9 +19737,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20944,6 +20934,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
+  whichBox: 0
   dialogueLines:
   - It seems that Nosferatu sleeps here.
   whenEventIsCalled: 0
