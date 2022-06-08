@@ -31,4 +31,8 @@ public class DetectNearbyObjects : MonoBehaviour
             onObjectEnter.Invoke();
         }
     }
+    public void resetObject()
+    {
+        detectedGameObject = null;
+    }
 }

@@ -37,6 +37,7 @@ public class InteractWithObject : MonoBehaviour
                 textBoxManager.whenIsEventCalled = objectEvent.whenEventIsCalled;
                 textBoxManager.turnOnDialogueBox();
             }
+            detectNearbyObjects.resetObject();
         }
     }
 }
