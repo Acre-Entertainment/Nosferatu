@@ -7,7 +7,7 @@ public class ObjectEventTriggerPlayerEntry : MonoBehaviour
 {
     public UnityEvent onTriggerEnter;
     public bool callDialogueBox;
-    public int whichBox;
+    public int[] whichBox;
     public string[] dialogueLines;
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
@@ -23,14 +23,33 @@ public class ObjectEventTriggerPlayerEntry : MonoBehaviour
             onTriggerEnter.Invoke();
             if(callDialogueBox == true)
             {
-                textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
-                textBoxManager.setWhichDialogue(whichBox);
                 int x = 0;
                 foreach(string y in dialogueLines)
+                    {
+                        textBoxManager.followUpText[x] = y;
+                        x++;
+                    }
+                x = 0;
+                if(whichBox.Length > 0)
                 {
-                    textBoxManager.followUpText[x] = y;
-                    x++;
+                    foreach(int z in whichBox)
+                    {
+                        textBoxManager.followUpBox[x] = z;
+                        x++;
+                    }
                 }
+                else
+                {
+                    textBoxManager.setWhichDialogue(0);
+
+                    foreach(int z in textBoxManager.followUpBox)
+                    {
+                        textBoxManager.followUpBox[x] = 0;
+                        x++;
+                    }
+                }
+
+
                 textBoxManager.pendingEvent = onEventDialogue;
                 textBoxManager.whenIsEventCalled = whenEventIsCalled;
                 textBoxManager.turnOnDialogueBox();

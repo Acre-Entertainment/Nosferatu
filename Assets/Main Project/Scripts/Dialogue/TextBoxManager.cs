@@ -13,6 +13,7 @@ public class TextBoxManager : MonoBehaviour
     //geralmente, esse script sera chamado pelo CallAction no GameMaster
     [HideInInspector] public GameObject textBox;
     [HideInInspector] public TextMeshProUGUI text;
+    public int startingBox;
     public GameObject textBox0;
     public TextMeshProUGUI text0;
     public GameObject textBox1;
@@ -31,8 +32,7 @@ public class TextBoxManager : MonoBehaviour
     public GameObject playerDetectArea;
     void Start()
     {
-        textBox = textBox0;
-        text = text0;
+        setWhichDialogue(startingBox);
 
         infoKeeper = gameObject.GetComponent<InfoKeeper>();
         callAction = gameObject.GetComponent<CallAction>();
