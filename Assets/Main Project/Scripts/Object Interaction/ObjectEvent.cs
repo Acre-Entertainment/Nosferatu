@@ -31,8 +31,6 @@ public class ObjectEvent : MonoBehaviour
             x = 0;
             if(whichBox.Length > 0)
             {
-                textBoxManager.setWhichDialogue(whichBox[0]);
-
                 foreach(int z in whichBox)
                 {
                     textBoxManager.followUpBox[x] = z;
