@@ -21,6 +21,7 @@ public class TextBoxManager : MonoBehaviour
     public TextMeshProUGUI text2;
     private InfoKeeper infoKeeper;
     public string[] followUpText;
+    public int[] followUpBox;
     public int currentTextNumber = -1;
     [HideInInspector]public int whenIsEventCalled = -1; //definide quando o evento sera chamado
     public UnityEvent pendingEvent; //Defino o evento que sera chamado
@@ -47,6 +48,15 @@ public class TextBoxManager : MonoBehaviour
     public void callnextText()
     {
         currentTextNumber++;
+
+        if(followUpBox[currentTextNumber] > 0)
+        {
+            if(followUpBox[currentTextNumber] != followUpBox[currentTextNumber - 1])
+            {
+                tradeWhichDialogue(followUpBox[currentTextNumber]);
+            }
+        }
+
         if(whenIsEventCalled == currentTextNumber)
         {
             whenIsEventCalled = -1;
@@ -68,6 +78,7 @@ public class TextBoxManager : MonoBehaviour
     }
     public void turnOnDialogueBox()
     {
+        setWhichDialogue(followUpBox[0]);
         textBox.SetActive(true);
         Time.timeScale = 0;
         isActive = true;
@@ -83,7 +94,22 @@ public class TextBoxManager : MonoBehaviour
             case 1: textBox = textBox1; text = text1; break;
             case 2: textBox = textBox2; text = text2; break;
 
-            default: break;
+            default: Debug.Log("There is no dialogue box above 3"); break;
+        }
+    }
+    public void tradeWhichDialogue(int whc)
+    {
+        textBox0.SetActive(false);
+        textBox1.SetActive(false);
+        textBox2.SetActive(false);
+
+        setWhichDialogue(whc);
+
+        switch(whc)
+        {
+            case 0: textBox0.SetActive(true); break;
+            case 1: textBox1.SetActive(true); break;
+            case 2: textBox2.SetActive(true); break;
         }
     }
 }

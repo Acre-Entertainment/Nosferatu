@@ -8,7 +8,7 @@ public class ObjectEvent : MonoBehaviour
     //o evento do objeto a ser chamado. Isso deve estar localizado dentro de um objeto com colider e rigidbody
     public UnityEvent onInteraction;
     public bool callDialogueBox;
-    public int whichBox;
+    public int[] whichBox = new int[20];
     public string[] dialogueLines;
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
@@ -22,13 +22,35 @@ public class ObjectEvent : MonoBehaviour
         onInteraction.Invoke();
         if(callDialogueBox == true)
         {
-            textBoxManager.setWhichDialogue(whichBox);
             int x = 0;
             foreach(string y in dialogueLines)
                 {
                     textBoxManager.followUpText[x] = y;
                     x++;
                 }
+            x = 0;
+            if(whichBox.Length > 0)
+            {
+                textBoxManager.setWhichDialogue(whichBox[0]);
+
+                foreach(int z in whichBox)
+                {
+                    textBoxManager.followUpBox[x] = z;
+                    x++;
+                }
+            }
+            else
+            {
+                textBoxManager.setWhichDialogue(0);
+                
+                foreach(int z in textBoxManager.followUpBox)
+                {
+                    textBoxManager.followUpBox[x] = 0;
+                    x++;
+                }
+            }
+
+            
             textBoxManager.pendingEvent = onEventDialogue;
             textBoxManager.whenIsEventCalled = whenEventIsCalled;
             textBoxManager.turnOnDialogueBox();
