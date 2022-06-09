@@ -51,10 +51,8 @@ public class TextBoxManager : MonoBehaviour
 
         if(followUpBox[currentTextNumber] > 0)
         {
-            if(followUpBox[currentTextNumber] != followUpBox[currentTextNumber - 1])
-            {
-                tradeWhichDialogue(followUpBox[currentTextNumber]);
-            }
+            tradeWhichDialogue(followUpBox[currentTextNumber]);
+
         }
 
         if(whenIsEventCalled == currentTextNumber)
