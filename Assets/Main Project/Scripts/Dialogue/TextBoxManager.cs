@@ -49,7 +49,7 @@ public class TextBoxManager : MonoBehaviour
     {
         currentTextNumber++;
 
-        if(followUpBox[currentTextNumber] > 0)
+        if(followUpBox[currentTextNumber] > -1)
         {
             tradeWhichDialogue(followUpBox[currentTextNumber]);
 

@@ -12,13 +12,11 @@ public class ObjectEvent : MonoBehaviour
     public string[] dialogueLines;
     public int whenEventIsCalled;
     public UnityEvent onEventDialogue;
-
     protected TextBoxManager textBoxManager;
-    private void Start() {
-        textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
-    }
+    
     public void callEvent()
     {
+        textBoxManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<TextBoxManager>();
         onInteraction.Invoke();
         if(callDialogueBox == true)
         {
