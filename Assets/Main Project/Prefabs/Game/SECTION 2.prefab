@@ -2737,6 +2737,99 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &4598546934976397987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086388366306917324}
+  - component: {fileID: 2351911063729228747}
+  m_Layer: 0
+  m_Name: Point Light (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 1
+  m_IsActive: 1
+--- !u!4 &1086388366306917324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4598546934976397987}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.78, y: -8.643, z: 3.9500008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5090477460195101351}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &2351911063729228747
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4598546934976397987}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.764151, g: 0.66408515, b: 0.44335175, a: 1}
+  m_Intensity: 1
+  m_Range: 15
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: 0
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0
+    m_NormalBias: 0.4
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &4715310083959525997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4943,6 +5036,7 @@ Transform:
   - {fileID: 4901441334833427873}
   - {fileID: 7492727572823371876}
   - {fileID: 1485654417839707272}
+  - {fileID: 1086388366306917324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29584,7 +29678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4901441334833427873
 Transform:
   m_ObjectHideFlags: 0
@@ -29970,14 +30064,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
---- !u!4 &488967777011234360 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
-  m_PrefabInstance: {fileID: 91075740394623443}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &973614482572815490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
+  m_PrefabInstance: {fileID: 91075740394623443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &488967777011234360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
   m_PrefabInstance: {fileID: 91075740394623443}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2600247652853241891
@@ -30022,7 +30116,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -31141,7 +31235,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - Book "Villette" collected
   whenEventIsCalled: 0
@@ -31305,7 +31399,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -31789,14 +31883,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
---- !u!4 &1647543178154764641 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
-  m_PrefabInstance: {fileID: 1249615545925701258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132154695051391963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
+  m_PrefabInstance: {fileID: 1249615545925701258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1647543178154764641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
   m_PrefabInstance: {fileID: 1249615545925701258}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8680449298526658190
@@ -32054,14 +32148,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
---- !u!4 &1297772141765612685 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
-  m_PrefabInstance: {fileID: 1551531433974772582}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1822071428848422455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
+  m_PrefabInstance: {fileID: 1551531433974772582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1297772141765612685 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d799fd4d77659fd47a9704b1b076beae, type: 3}
   m_PrefabInstance: {fileID: 1551531433974772582}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2790914633949622063
@@ -32214,7 +32308,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - Book "Persuasion" collected
   whenEventIsCalled: 0
@@ -32542,14 +32636,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
---- !u!4 &2212450448490456312 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
-  m_PrefabInstance: {fileID: 1819043618503000851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1585235566924742210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
+  m_PrefabInstance: {fileID: 1819043618503000851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2212450448490456312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
   m_PrefabInstance: {fileID: 1819043618503000851}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &3644294341856301949
@@ -32828,7 +32922,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -33746,14 +33840,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86418a85eff69644db64575c2f010079, type: 3}
---- !u!1 &2963930990499008742 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86418a85eff69644db64575c2f010079, type: 3}
-  m_PrefabInstance: {fileID: 2729346685992578487}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2479846380139924060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86418a85eff69644db64575c2f010079, type: 3}
+  m_PrefabInstance: {fileID: 2729346685992578487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2963930990499008742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86418a85eff69644db64575c2f010079, type: 3}
   m_PrefabInstance: {fileID: 2729346685992578487}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &5834172568189954428
@@ -33903,7 +33997,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -34224,7 +34318,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - Book "Jane Eyre" collected
   whenEventIsCalled: 0
@@ -34320,14 +34414,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &3303066724329940761 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 3052421102705049842}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6561958940082062714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 3052421102705049842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3303066724329940761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 3052421102705049842}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &4663465199298851625
@@ -34557,7 +34651,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - "\"Passion... treacherous passion. I am not free to have the blood I want, I
     am obliged to live with great care. Any carelessness can melt me \u200B\u200Bby
@@ -35141,7 +35235,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -35343,7 +35437,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -35377,7 +35471,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -35586,7 +35680,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -35810,14 +35904,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &4603698335584876134 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 4064822211493138829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5270764566127891461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 4064822211493138829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4603698335584876134 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 4064822211493138829}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8491778947688213010
@@ -36001,14 +36095,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
---- !u!4 &4517830230249805406 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
-  m_PrefabInstance: {fileID: 4123106847147356597}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3889243128632167652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
+  m_PrefabInstance: {fileID: 4123106847147356597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4517830230249805406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
   m_PrefabInstance: {fileID: 4123106847147356597}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &4989830902822609449
@@ -36057,7 +36151,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -36141,14 +36235,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
---- !u!4 &4472493795832339902 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
-  m_PrefabInstance: {fileID: 4151127072905165397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3844576296252851972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
+  m_PrefabInstance: {fileID: 4151127072905165397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4472493795832339902 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
   m_PrefabInstance: {fileID: 4151127072905165397}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2974566042226271230
@@ -36209,7 +36303,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -36569,7 +36663,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -36700,7 +36794,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37262,7 +37356,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37564,7 +37658,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -37731,14 +37825,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
---- !u!1 &4028927770492709145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
-  m_PrefabInstance: {fileID: 5090477460529802385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4697178797823200122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
+  m_PrefabInstance: {fileID: 5090477460529802385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4028927770492709145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
   m_PrefabInstance: {fileID: 5090477460529802385}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5360527749541777856 stripped
@@ -37800,7 +37894,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -37954,14 +38048,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!1 &5843773276949012400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 5090477460781508954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5843773275679784864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 5090477460781508954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5843773276949012400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 5090477460781508954}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5090477460997784194
@@ -38112,14 +38206,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!4 &5843773276536811360 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 5090477461002942874}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5843773275116834672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 5090477461002942874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5843773276536811360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 5090477461002942874}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5090477461075693541
@@ -38338,7 +38432,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -38574,7 +38668,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -39193,7 +39287,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - Book "Pride and Prejudice" collected
   whenEventIsCalled: 0
@@ -40101,14 +40195,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
---- !u!1 &4864208561981116787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
-  m_PrefabInstance: {fileID: 5710645947961273378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5245272201237367753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
+  m_PrefabInstance: {fileID: 5710645947961273378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4864208561981116787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
   m_PrefabInstance: {fileID: 5710645947961273378}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &5894390116299661460
@@ -40629,14 +40723,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
---- !u!1 &6824794627001885610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
-  m_PrefabInstance: {fileID: 5942468218344709883}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6196207761550833936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
+  m_PrefabInstance: {fileID: 5942468218344709883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6824794627001885610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 505f4f9842dc236429d7ba09743b9790, type: 3}
   m_PrefabInstance: {fileID: 5942468218344709883}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &9116689533266902537
@@ -40697,7 +40791,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -41382,14 +41476,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86418a85eff69644db64575c2f010079, type: 3}
---- !u!4 &6415239374457140850 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86418a85eff69644db64575c2f010079, type: 3}
-  m_PrefabInstance: {fileID: 6813166982060347801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5930205605572488392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86418a85eff69644db64575c2f010079, type: 3}
+  m_PrefabInstance: {fileID: 6813166982060347801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6415239374457140850 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86418a85eff69644db64575c2f010079, type: 3}
   m_PrefabInstance: {fileID: 6813166982060347801}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &4092471622339098222
@@ -41638,6 +41732,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
+--- !u!4 &7261400789297146034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
+  m_PrefabInstance: {fileID: 7155961383592480601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8038499991418597896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
@@ -41646,11 +41745,6 @@ GameObject:
 --- !u!1 &1298082084679518929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
-  m_PrefabInstance: {fileID: 7155961383592480601}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7261400789297146034 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 455922202d9e18c478515be0121b6ccd, type: 3}
   m_PrefabInstance: {fileID: 7155961383592480601}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &5602689139824279703
@@ -41695,7 +41789,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -41778,14 +41872,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!1 &1355062885390169012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 7170439458478716476}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7208079163287933399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 7170439458478716476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1355062885390169012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 7170439458478716476}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &2196027821305367229
@@ -42091,7 +42185,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 0
+  whichBox: 
   dialogueLines:
   - Checkpoint Saved
   whenEventIsCalled: 0
@@ -42434,14 +42528,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
---- !u!1 &6949979907996086730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
-  m_PrefabInstance: {fileID: 7832358121341734043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7726093711486298992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
+  m_PrefabInstance: {fileID: 7832358121341734043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6949979907996086730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
   m_PrefabInstance: {fileID: 7832358121341734043}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1339007288141150968
@@ -42539,14 +42633,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
---- !u!1 &7082386576416036842 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
-  m_PrefabInstance: {fileID: 7964854263728368315}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7566717791197564240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
+  m_PrefabInstance: {fileID: 7964854263728368315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7082386576416036842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d7aaf80a1cc50b4a93b5a148725fb3f, type: 3}
   m_PrefabInstance: {fileID: 7964854263728368315}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &5545454109449211524
@@ -42591,7 +42685,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 0
-  whichBox: 0
+  whichBox: 
   dialogueLines: []
   whenEventIsCalled: 0
   onEventDialogue:
@@ -42809,14 +42903,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &8426882075554546348 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 8320670674845984071}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158848461198467279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 8320670674845984071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8426882075554546348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 8320670674845984071}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &3001624290710382617
