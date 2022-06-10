@@ -24,4 +24,9 @@ public class MenuManager : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false; //Comentar quando for Buildar
         Application.Quit(); //Descomentar quando for Buildar
     }
+
+    public void SetFullscreen (bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
 }
