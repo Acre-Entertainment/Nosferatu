@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float rotationOffset;
     public float rotationOffsetSprint;
+    public float rotationOffsetCarrying;
 
     private Vector3 movimentoInput;
     private Vector3 velocity;
@@ -131,18 +132,26 @@ public class PlayerMovement : MonoBehaviour
                 if(currentCameraDirection < 0){currentCameraDirection += 360;}
             }
         }
+
+
+
         if(isCarrying == true)
         {
             if(velocidade > 1 && !animator.GetBool("Push"))
             {
                 animator.SetBool("Push", true);
-                henryFix.ChangeValues(0, -0.4f, 0, 0, 0, 0);
+                henryFix.ChangeValues(0, -0.5f, 0, 0, 0, 0);
             }
             if(velocidade < 1 && animator.GetBool("Push"))
             {
                 animator.SetBool("Push", false);
-                henryFix.ChangeValues(0, 0.4f, 0, 0, 0, 0);
+                henryFix.ChangeValues(0, 0.5f, 0, 0, 0, 0);
             }
+        }
+        else if(animator.GetBool("Push"))
+        {
+            animator.SetBool("Push", false);
+            henryFix.ChangeValues(0, 0.5f, 0, 0, 0, 0);
         }
 
         Movimento();
@@ -168,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
 
+
         if(MoveVectorWithRotation != blankVector && isCarrying == false)
         {
             float rotationAngle = Vector3.Angle(new Vector2(-1, 0), MoveVectorWithRotation);
@@ -187,6 +197,12 @@ public class PlayerMovement : MonoBehaviour
             if(rotationAngle < 0){rotationAngle += 360;}
             gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
         }
+        if(isCarrying == true)
+        {
+            Vector3 facingVector = Quaternion.AngleAxis(gameObject.transform.localEulerAngles.y - rotationOffsetCarrying, Vector3.up) * new Vector3(-1, 0, 0);
+            float pushIntensity = Vector3.Angle(facingVector, MoveVectorWithRotation);
+            animator.SetFloat("PushDirection", pushIntensity/180);
+        }
     }
     public void setFutureDirection(float mov)
     {
@@ -196,8 +212,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 vectionDirection = vec - gameObject.transform.position;
         float rotationAngle = Vector3.Angle(new Vector2(-1, 0), vectionDirection);
+        if(vectionDirection.z < 0)
+        {
+            rotationAngle = 360 - rotationAngle;
+        }
         if(rotationAngle > 360){rotationAngle -= 360;}
         if(rotationAngle < 0){rotationAngle += 360;}
-        gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
+        gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle + rotationOffsetCarrying, 0);
+
+        Debug.Log("vec:" + vec + "/position:" + gameObject.transform.position + "/rotationAngle:" + rotationAngle);
     }
 }
