@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class HenryFix : MonoBehaviour
 {
-    Vector3 position = new Vector3(0, -1, 0);
-    Vector3 rotation = new Vector3(0, -80, 0);
+    public float posX, posY, posZ, rotX, rotY, rotZ;
+    Vector3 position;
+    Vector3 rotation;
+    private void Start()
+    {
+        position = new Vector3(posX, posY, posZ);
+        rotation = new Vector3(rotX, rotY, rotZ);
+    }
     private void Update() {
         gameObject.transform.localPosition = position;
         gameObject.transform.localEulerAngles = rotation;
+    }
+    public void ChangeValues(float px, float py, float pz, float rx, float ry, float rz)
+    {
+        posX = posX + px;
+        posY = posY + py;
+        posZ = posZ + pz;
+        rotX = rotX + rx;
+        rotY = rotY + ry;
+        rotZ = rotZ + rz;
+
+        position = new Vector3(posX, posY, posZ);
+        rotation = new Vector3(rotX, rotY, rotZ);
     }
 }

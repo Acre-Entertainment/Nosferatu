@@ -9,6 +9,7 @@ public class MovableObject : MonoBehaviour
     private GameObject originalParent;
     private Vector3 positionRelativeToParent;
     public float parentBuffer;
+    private PlayerMovement playerMovement;
     //bounds usa a posição local, n global
     //public float XLowerBound, XUpperBound, YLowerBound, YUpperBound, ZLowerBound, ZUpperBound, boundCorrection;
     private void Start() {
@@ -37,7 +38,11 @@ public class MovableObject : MonoBehaviour
         carrier = CR;
         active = true;
         carrier.GetComponent<InteractWithObject>().enabled = false;
-        carrier.GetComponent<PlayerMovement>().isCarrying = true;
+        playerMovement = carrier.GetComponent<PlayerMovement>();
+        playerMovement.isCarrying = true;
+        playerMovement.animator.SetBool("Push", true);
+        playerMovement.setDirectionToPosition(gameObject.transform.position);
+        playerMovement.henryFix.ChangeValues(0, -0.5f, 0, 0, 0, 0);
 
         gameObject.transform.parent = carrier.transform;
         positionRelativeToParent = gameObject.transform.localPosition;
@@ -50,7 +55,10 @@ public class MovableObject : MonoBehaviour
     {
         active = false;
         carrier.GetComponent<InteractWithObject>().enabled = true;
-        carrier.GetComponent<PlayerMovement>().isCarrying = false;
+        playerMovement = carrier.GetComponent<PlayerMovement>();
+        playerMovement.isCarrying = false;
+        playerMovement.animator.SetBool("Push", false);
+        playerMovement.henryFix.ChangeValues(0, 0.5f, 0, 0, 0, 0);
 
         gameObject.transform.parent = originalParent.transform;
     }

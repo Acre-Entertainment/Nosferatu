@@ -8,6 +8,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private CharacterController controller;
 
+    [Header("Animator")]
+    public Animator animator;
+
+    [Header("HenryFix")]
+    public HenryFix henryFix;
+
     [Header("Velocidade")]
     public float velocidade = 0;
     public float acceleration;
@@ -172,5 +178,13 @@ public class PlayerMovement : MonoBehaviour
     public void setFutureDirection(float mov)
     {
         futureCameraDirection = mov;
+    }
+    public void setDirectionToPosition(Vector3 vec)
+    {
+        Vector3 vectionDirection = vec - gameObject.transform.position;
+        float rotationAngle = Vector3.Angle(new Vector2(-1, 0), vectionDirection);
+        if(rotationAngle > 360){rotationAngle -= 360;}
+        if(rotationAngle < 0){rotationAngle += 360;}
+        gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
     }
 }
