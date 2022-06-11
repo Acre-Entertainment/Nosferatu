@@ -219,7 +219,5 @@ public class PlayerMovement : MonoBehaviour
         if(rotationAngle > 360){rotationAngle -= 360;}
         if(rotationAngle < 0){rotationAngle += 360;}
         gameObject.transform.localEulerAngles = new Vector3(0, rotationAngle + rotationOffsetCarrying, 0);
-
-        Debug.Log("vec:" + vec + "/position:" + gameObject.transform.position + "/rotationAngle:" + rotationAngle);
     }
 }
