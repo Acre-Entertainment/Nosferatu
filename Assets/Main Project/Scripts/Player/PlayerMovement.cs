@@ -136,12 +136,12 @@ public class PlayerMovement : MonoBehaviour
             if(velocidade > 1 && !animator.GetBool("Push"))
             {
                 animator.SetBool("Push", true);
-                henryFix.ChangeValues(0, -0.5f, 0, 0, 0, 0);
+                henryFix.ChangeValues(0, -0.4f, 0, 0, 0, 0);
             }
             if(velocidade < 1 && animator.GetBool("Push"))
             {
                 animator.SetBool("Push", false);
-                henryFix.ChangeValues(0, 0.5f, 0, 0, 0, 0);
+                henryFix.ChangeValues(0, 0.4f, 0, 0, 0, 0);
             }
         }
 
