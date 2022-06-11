@@ -40,9 +40,7 @@ public class MovableObject : MonoBehaviour
         carrier.GetComponent<InteractWithObject>().enabled = false;
         playerMovement = carrier.GetComponent<PlayerMovement>();
         playerMovement.isCarrying = true;
-        playerMovement.animator.SetBool("Push", true);
         playerMovement.setDirectionToPosition(gameObject.transform.position);
-        playerMovement.henryFix.ChangeValues(0, -0.5f, 0, 0, 0, 0);
 
         gameObject.transform.parent = carrier.transform;
         positionRelativeToParent = gameObject.transform.localPosition;
@@ -57,8 +55,6 @@ public class MovableObject : MonoBehaviour
         carrier.GetComponent<InteractWithObject>().enabled = true;
         playerMovement = carrier.GetComponent<PlayerMovement>();
         playerMovement.isCarrying = false;
-        playerMovement.animator.SetBool("Push", false);
-        playerMovement.henryFix.ChangeValues(0, 0.5f, 0, 0, 0, 0);
 
         gameObject.transform.parent = originalParent.transform;
     }
