@@ -12,6 +12,7 @@ public class GameData
     public bool puzzleOndeDorme;
     public bool puzzleRatosAmigos;
     public bool oQueCome;
+    public bool section1;
     public GameData()
     {
         tutorial = false;

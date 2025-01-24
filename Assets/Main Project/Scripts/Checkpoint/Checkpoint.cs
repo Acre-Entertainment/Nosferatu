@@ -35,8 +35,26 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
     public bool hasRatoKey1, hasRatoKey2;
 
+    [Header("Sections")]
+    public bool tutorialSection;
+    public bool section1;
+    public bool section2;
+    public bool section3;
+    public bool section4;
+    public bool section5;
+    public bool section6;
+    public bool section7;
+    public bool section8;
+    public bool section9;
+    public bool section10;
+    public bool section11;
+    public bool section12;
+
+    public GameObject[] section;
+
     public void LoadData(GameData data)
     {
+        section1 = data.section1;
         tutorialIsOver = data.tutorial;
         puzzleMulherPuraIsOver = data.puzzleMulherPura;
         puzzleComoMataOver = data.puzzleComoMata;
@@ -53,6 +71,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public void SaveData(GameData data)
     {
+        data.section1 = section1;
         data.tutorial = tutorialIsOver;
         data.puzzleMulherPura = puzzleMulherPuraIsOver;
         data.puzzleComoMata = puzzleComoMataOver;
@@ -216,5 +235,25 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         //infoKeeper.ratoTablePosition3 = ratoTablePosition3;
         //infoKeeper.hasRatoKey1 = hasRatoKey1;
         //infoKeeper.hasRatoKey2 = hasRatoKey2;
+    }
+
+    public void ActiveSection(string section)
+    {
+        switch (section)
+        {
+            case "section1":
+                section1 = true;
+                break;
+        }
+    }
+
+    public void DeactiveSection(string section)
+    {
+        switch (section)
+        {
+            case "section1":
+                section1 = false;
+                break;
+        }
     }
 }
