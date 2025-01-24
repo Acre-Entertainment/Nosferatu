@@ -54,7 +54,22 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public void LoadData(GameData data)
     {
+        tutorialSection = data.tutorialSection;
         section1 = data.section1;
+        section2 = data.section2;
+        section3 = data.section3;
+        section4 = data.section4;
+        section5 = data.section5;
+        section6 = data.section6;
+        section7 = data.section7;
+        section8 = data.section8;
+        section9 = data.section9;
+        section10 = data.section10;
+        section11 = data.section11;
+        section12 = data.section12;
+
+        CheckSections();
+
         tutorialIsOver = data.tutorial;
         puzzleMulherPuraIsOver = data.puzzleMulherPura;
         puzzleComoMataOver = data.puzzleComoMata;
@@ -71,7 +86,20 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public void SaveData(GameData data)
     {
+        data.tutorialSection = tutorialSection;
         data.section1 = section1;
+        data.section2 = section2;
+        data.section3 = section3;
+        data.section4 = section4;
+        data.section5 = section5;
+        data.section6 = section6;
+        data.section7 = section7;
+        data.section8 = section8;
+        data.section9 = section9;
+        data.section10 = section10;
+        data.section11 = section11;
+        data.section12 = section12;
+
         data.tutorial = tutorialIsOver;
         data.puzzleMulherPura = puzzleMulherPuraIsOver;
         data.puzzleComoMata = puzzleComoMataOver;
@@ -241,8 +269,44 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     {
         switch (section)
         {
+            case "tutorialSection":
+                tutorialSection = true;
+                break;
             case "section1":
                 section1 = true;
+                break;
+            case "section2":
+                section2 = true;
+                break;
+            case "section3":
+                section3 = true;
+                break;
+            case "section4":
+                section4 = true;
+                break;
+            case "section5":
+                section5 = true;
+                break;
+            case "section6":
+                section6 = true;
+                break;
+            case "section7":
+                section7 = true;
+                break;
+            case "section8":
+                section8 = true;
+                break;
+            case "section9":
+                section9 = true;
+                break;
+            case "section10":
+                section10 = true;
+                break;
+            case "section11":
+                section11 = true;
+                break;
+            case "section12":
+                section12 = true;
                 break;
         }
     }
@@ -251,9 +315,62 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     {
         switch (section)
         {
+            case "tutorialSection":
+                tutorialSection = true;
+                break;
             case "section1":
                 section1 = false;
                 break;
+            case "section2":
+                section2 = false;
+                break;
+            case "section3":
+                section3 = false;
+                break;
+            case "section4":
+                section4 = false;
+                break;
+            case "section5":
+                section5 = false;
+                break;
+            case "section6":
+                section6 = false;
+                break;
+            case "section7":
+                section7 = false;
+                break;
+            case "section8":
+                section8 = false;
+                break;
+            case "section9":
+                section9 = false;
+                break;
+            case "section10":
+                section10 = false;
+                break;
+            case "section11":
+                section11 = false;
+                break;
+            case "section12":
+                section12 = false;
+                break;
         }
+    }
+
+    private void CheckSections()
+    {
+        section[0].SetActive(tutorialSection);
+        section[1].SetActive(section1);
+        section[2].SetActive(section2);
+        section[3].SetActive(section3);
+        section[4].SetActive(section4);
+        section[5].SetActive(section5);
+        section[6].SetActive(section6);
+        section[7].SetActive(section7);
+        section[8].SetActive(section8);
+        section[9].SetActive(section9);
+        section[10].SetActive(section10);
+        section[11].SetActive(section11);
+        section[12].SetActive(section12);
     }
 }
