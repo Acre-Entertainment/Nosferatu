@@ -3,50 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Checkpoint : MonoBehaviour
+public class Checkpoint : MonoBehaviour, IDataPersistance
 {
-    public bool hasSaved;
+    //public bool hasSaved;
     public GameObject player;
     public InfoKeeper infoKeeper;
     public Vector3 point;
-
-
-
-    void Awake()
-    {
-        if(GameObject.FindGameObjectWithTag("Checkpoint"))
-        {
-            Destroy(gameObject);
-        }
-        else
-        gameObject.tag = "Checkpoint";
-        DontDestroyOnLoad(gameObject);
-    }
-    void Start()
-    {
-        seekOutScene();
-    }
-
-    void onSceneStart()
-    {
-        seekOutScene();
-        if(hasSaved == true)
-        {
-            Load();
-            Spawn();
-            GameObject.FindGameObjectWithTag("GameMaster").GetComponent<SetThings>().SetThingsAccordingToSave();
-        }
-    }
-    public void seekOutScene()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
-    }
-    public void Spawn()
-    {
-        player.transform.position = point;
-    }
-
 
 
     public bool tutorialIsOver;
@@ -73,13 +35,74 @@ public class Checkpoint : MonoBehaviour
     public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
     public bool hasRatoKey1, hasRatoKey2;
 
+    public void LoadData(GameData data)
+    {
+        tutorialIsOver = data.tutorial;
+        puzzleMulherPuraIsOver = data.puzzleMulherPura;
+        puzzleComoMataOver = data.puzzleComoMata;
+        puzzleOndeDormeIsOver = data.puzzleOndeDorme;
+        puzzleRatosAmigosIsOver = data.puzzleRatosAmigos;
+        puzzleOQueComeIsOver = data.oQueCome;
+        if (data.playerPosition != Vector3.zero)
+        {
+            point = data.playerPosition;
+        }
+        Load();
+        Spawn();
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.tutorial = tutorialIsOver;
+        data.puzzleMulherPura = puzzleMulherPuraIsOver;
+        data.puzzleComoMata = puzzleComoMataOver;
+        data.puzzleOndeDorme = puzzleOndeDormeIsOver;
+        data.puzzleRatosAmigos = puzzleRatosAmigosIsOver;
+        data.oQueCome = puzzleOQueComeIsOver;
+        data.playerPosition = point;
+    }
+
+    void Awake()
+    {
+        if (GameObject.FindGameObjectWithTag("Checkpoint"))
+        {
+            Destroy(gameObject);
+        }
+        else
+            gameObject.tag = "Checkpoint";
+        DontDestroyOnLoad(gameObject);
+    }
+    void Start()
+    {
+        seekOutScene();
+    }
+
+    //void onSceneStart()
+    //{
+    //    seekOutScene();
+    //    //if(hasSaved == true)
+    //    //{
+    //        Load();
+    //        Spawn();
+    //        GameObject.FindGameObjectWithTag("GameMaster").GetComponent<SetThings>().SetThingsAccordingToSave();
+    //    //}
+    //}
+    public void seekOutScene()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+    }
+    public void Spawn()
+    {
+        player.transform.position = point;
+    }
+
 
 
     public void Save()
     {
-        point = player.transform.position;
-        hasSaved = true;
-
+        //point = player.transform.position;
+        //hasSaved = true;
         tutorialIsOver = infoKeeper.tutorialIsOver;
         puzzleMulherPuraIsOver = infoKeeper.puzzleMulherPuraIsOver;
         puzzleComoMataOver = infoKeeper.puzzleComoMataOver;
@@ -138,61 +161,60 @@ public class Checkpoint : MonoBehaviour
     public void Load()
     {
         seekOutScene();
-        player.transform.position = point;
-
-        infoKeeper.tutorialIsOver = tutorialIsOver;
-        infoKeeper.puzzleMulherPuraIsOver = puzzleMulherPuraIsOver;
-        infoKeeper.puzzleComoMataOver = puzzleComoMataOver;
-        infoKeeper.puzzleOndeDormeIsOver = puzzleOndeDormeIsOver;
-        infoKeeper.puzzleRatosAmigosIsOver = puzzleRatosAmigosIsOver;
-        infoKeeper.puzzleOQueComeIsOver = puzzleOQueComeIsOver;
-        infoKeeper.tutorialHasPlayedRat = tutorialHasPlayedRat;
-        infoKeeper.tutorialHasCheckedDesk = tutorialHasCheckedDesk;
-        infoKeeper.hasMulherPuraNote = hasMulherPuraNote;
-        infoKeeper.hasBookA = hasBookA;
-        infoKeeper.hasBookB = hasBookB;
-        infoKeeper.hasBookC = hasBookC;
-        infoKeeper.hasBookX = hasBookX;
-        infoKeeper.hasBookY = hasBookY;
-        infoKeeper.hasBookZ = hasBookZ;
-        infoKeeper.placedBookA_1 = placedBookA_1;
-        infoKeeper.placedBookB_1 = placedBookB_1;
-        infoKeeper.placedBookC_1 = placedBookC_1;
-        infoKeeper.placedBookX_1 = placedBookX_1;
-        infoKeeper.placedBookY_1 = placedBookY_1;
-        infoKeeper.placedBookZ_1 = placedBookZ_1;
-        infoKeeper.placedBookA_2 = placedBookA_2;
-        infoKeeper.placedBookB_2 = placedBookB_2;
-        infoKeeper.placedBookC_2 = placedBookC_2;
-        infoKeeper.placedBookX_2 = placedBookX_2;
-        infoKeeper.placedBookY_2 = placedBookY_2;
-        infoKeeper.placedBookZ_2 = placedBookZ_2;
-        infoKeeper.castInventory = castInventory;
-        infoKeeper.bookInventory = bookInventory;
-        infoKeeper.hasMataMetalBox = hasMataMetalBox;
-        infoKeeper.metalBoxIn1 = metalBoxIn1;
-        infoKeeper.metalBoxIn2 = metalBoxIn2;
-        infoKeeper.metalBoxIn3 = metalBoxIn3;
-        infoKeeper.hasMataWoodBox = hasMataWoodBox;
-        infoKeeper.woodBoxIn1 = woodBoxIn1;
-        infoKeeper.woodBoxIn2 = woodBoxIn2;
-        infoKeeper.woodBoxIn3 = woodBoxIn3;
-        infoKeeper.hasMataClayBox = hasMataClayBox;
-        infoKeeper.clayBoxIn1 = clayBoxIn1;
-        infoKeeper.clayBoxIn2 = clayBoxIn2;
-        infoKeeper.clayBoxIn3 = clayBoxIn3;
-        infoKeeper.hasMataBroom = hasMataBroom;
-        infoKeeper.hasMataBook = hasMataBook;
-        infoKeeper.hasMataOpenedDoor = hasMataOpenedDoor;
-        infoKeeper.hasDormeKey1 = hasDormeKey1;
-        infoKeeper.hasDormeKey2 = hasDormeKey2;
-        infoKeeper.hasDormeKey3 = hasDormeKey3;
-        infoKeeper.hasDormeKey4 = hasDormeKey4;
-        infoKeeper.hasDormeKey5 = hasDormeKey5;
-        infoKeeper.ratoTablePosition1 = ratoTablePosition1;
-        infoKeeper.ratoTablePosition2 = ratoTablePosition2;
-        infoKeeper.ratoTablePosition3 = ratoTablePosition3;
-        infoKeeper.hasRatoKey1 = hasRatoKey1;
-        infoKeeper.hasRatoKey2 = hasRatoKey2;
+        //player.transform.position = point;
+        //infoKeeper.tutorialIsOver = tutorialIsOver;
+        //infoKeeper.puzzleMulherPuraIsOver = puzzleMulherPuraIsOver;
+        //infoKeeper.puzzleComoMataOver = puzzleComoMataOver;
+        //infoKeeper.puzzleOndeDormeIsOver = puzzleOndeDormeIsOver;
+        //infoKeeper.puzzleRatosAmigosIsOver = puzzleRatosAmigosIsOver;
+        //infoKeeper.puzzleOQueComeIsOver = puzzleOQueComeIsOver;
+        //infoKeeper.tutorialHasPlayedRat = tutorialHasPlayedRat;
+        //infoKeeper.tutorialHasCheckedDesk = tutorialHasCheckedDesk;
+        //infoKeeper.hasMulherPuraNote = hasMulherPuraNote;
+        //infoKeeper.hasBookA = hasBookA;
+        //infoKeeper.hasBookB = hasBookB;
+        //infoKeeper.hasBookC = hasBookC;
+        //infoKeeper.hasBookX = hasBookX;
+        //infoKeeper.hasBookY = hasBookY;
+        //infoKeeper.hasBookZ = hasBookZ;
+        //infoKeeper.placedBookA_1 = placedBookA_1;
+        //infoKeeper.placedBookB_1 = placedBookB_1;
+        //infoKeeper.placedBookC_1 = placedBookC_1;
+        //infoKeeper.placedBookX_1 = placedBookX_1;
+        //infoKeeper.placedBookY_1 = placedBookY_1;
+        //infoKeeper.placedBookZ_1 = placedBookZ_1;
+        //infoKeeper.placedBookA_2 = placedBookA_2;
+        //infoKeeper.placedBookB_2 = placedBookB_2;
+        //infoKeeper.placedBookC_2 = placedBookC_2;
+        //infoKeeper.placedBookX_2 = placedBookX_2;
+        //infoKeeper.placedBookY_2 = placedBookY_2;
+        //infoKeeper.placedBookZ_2 = placedBookZ_2;
+        //infoKeeper.castInventory = castInventory;
+        //infoKeeper.bookInventory = bookInventory;
+        //infoKeeper.hasMataMetalBox = hasMataMetalBox;
+        //infoKeeper.metalBoxIn1 = metalBoxIn1;
+        //infoKeeper.metalBoxIn2 = metalBoxIn2;
+        //infoKeeper.metalBoxIn3 = metalBoxIn3;
+        //infoKeeper.hasMataWoodBox = hasMataWoodBox;
+        //infoKeeper.woodBoxIn1 = woodBoxIn1;
+        //infoKeeper.woodBoxIn2 = woodBoxIn2;
+        //infoKeeper.woodBoxIn3 = woodBoxIn3;
+        //infoKeeper.hasMataClayBox = hasMataClayBox;
+        //infoKeeper.clayBoxIn1 = clayBoxIn1;
+        //infoKeeper.clayBoxIn2 = clayBoxIn2;
+        //infoKeeper.clayBoxIn3 = clayBoxIn3;
+        //infoKeeper.hasMataBroom = hasMataBroom;
+        //infoKeeper.hasMataBook = hasMataBook;
+        //infoKeeper.hasMataOpenedDoor = hasMataOpenedDoor;
+        //infoKeeper.hasDormeKey1 = hasDormeKey1;
+        //infoKeeper.hasDormeKey2 = hasDormeKey2;
+        //infoKeeper.hasDormeKey3 = hasDormeKey3;
+        //infoKeeper.hasDormeKey4 = hasDormeKey4;
+        //infoKeeper.hasDormeKey5 = hasDormeKey5;
+        //infoKeeper.ratoTablePosition1 = ratoTablePosition1;
+        //infoKeeper.ratoTablePosition2 = ratoTablePosition2;
+        //infoKeeper.ratoTablePosition3 = ratoTablePosition3;
+        //infoKeeper.hasRatoKey1 = hasRatoKey1;
+        //infoKeeper.hasRatoKey2 = hasRatoKey2;
     }
 }
