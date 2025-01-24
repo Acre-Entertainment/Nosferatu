@@ -101,7 +101,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public void Save()
     {
-        //point = player.transform.position;
+        point = player.transform.position;
         //hasSaved = true;
         tutorialIsOver = infoKeeper.tutorialIsOver;
         puzzleMulherPuraIsOver = infoKeeper.puzzleMulherPuraIsOver;
