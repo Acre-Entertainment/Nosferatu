@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &72010419600695428
 BoxCollider:
@@ -1195,7 +1195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &6250156304461081304
 BoxCollider:
@@ -1449,7 +1449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &5529066828347705127
 BoxCollider:
@@ -1717,151 +1717,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &2696300347285296446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5711971030726050208}
-  - component: {fileID: 7052541153464060912}
-  - component: {fileID: 4673564836880772431}
-  m_Layer: 0
-  m_Name: 10.4/Tutorial respawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5711971030726050208
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696300347285296446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.100988, y: 10.020356, z: -1.5106897}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7052541153464060912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696300347285296446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4673564836880772431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696300347285296446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538c4f3f5c2a3934aabf561d37c61dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToHappen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DeactivateAllButOneUponEntry, Assembly-CSharp
-        m_MethodName: deactivateAllButOne
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: setFutureDirection
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 270
-          m_FloatArgument: 90
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6030338556320309512}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  objectTag: Player
 --- !u!1 &2928388373927340879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +1938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1262758571890527485
 BoxCollider:
@@ -2192,7 +2047,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 20.1, z: 0}
 --- !u!65 &1490443910830141786
 BoxCollider:
@@ -2290,7 +2145,6 @@ Transform:
   - {fileID: 3773403606578505193}
   - {fileID: 959407470738707157}
   - {fileID: 7534401269822087656}
-  - {fileID: 5711971030726050208}
   - {fileID: 1621355439721033425}
   - {fileID: 9011892819826976544}
   - {fileID: 2478259699636450360}
@@ -2475,7 +2329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &8558798395020848145
 BoxCollider:
@@ -2773,7 +2627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &3215049328455687290
 BoxCollider:
@@ -2882,7 +2736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &4147225397089443699
 BoxCollider:
@@ -19966,7 +19820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &2087309596194965732
 BoxCollider:
@@ -20075,7 +19929,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &2594993718962264534
 BoxCollider:
@@ -20620,7 +20474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1532215280284570696
 BoxCollider:
@@ -20826,7 +20680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3832606278983542350}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 12, z: 0}
 --- !u!65 &2931332530780595798
 BoxCollider:
@@ -21903,7 +21757,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -22560,7 +22414,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -23847,7 +23701,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -24201,7 +24055,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - The bookshelf is empty.
   whenEventIsCalled: 0
@@ -24601,14 +24455,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
---- !u!4 &2997913292826112910 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
-  m_PrefabInstance: {fileID: 3319156485512959077}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6871544209824895469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
+  m_PrefabInstance: {fileID: 3319156485512959077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2997913292826112910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d7f3e96fd59ef4888525b0e33f422c, type: 3}
   m_PrefabInstance: {fileID: 3319156485512959077}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &4063686032948960943
@@ -24787,14 +24641,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
---- !u!4 &2908180573939817420 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
-  m_PrefabInstance: {fileID: 3445631601644583975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2526588103971275126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
+  m_PrefabInstance: {fileID: 3445631601644583975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2908180573939817420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
   m_PrefabInstance: {fileID: 3445631601644583975}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &542362582991808670
@@ -24963,7 +24817,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - Book "The Awakening" collected
   whenEventIsCalled: 0
@@ -26382,24 +26236,24 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6460676173624411365, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
---- !u!1 &6030338556320309512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1274785810547260452, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 4756049727516106028}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &649480033930550613 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
-  m_PrefabInstance: {fileID: 4756049727516106028}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3033095870864892300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7500563316212497568, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 4756049727516106028}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6030338556320309512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1274785810547260452, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 4756049727516106028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!208 &1406903580648748313 stripped
 NavMeshObstacle:
   m_CorrespondingSourceObject: {fileID: 5874577778878965813, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
+  m_PrefabInstance: {fileID: 4756049727516106028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &649480033930550613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405314203274920057, guid: 22310ab0a0bf46248883bc52c7916e90, type: 3}
   m_PrefabInstance: {fileID: 4756049727516106028}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &4903877177124332950
@@ -27183,14 +27037,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
---- !u!1 &5327625664835129350 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
-  m_PrefabInstance: {fileID: 4985184076786675031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4802059843239201468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
+  m_PrefabInstance: {fileID: 4985184076786675031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5327625664835129350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46de547c97e759d478fe76f7350f0cf6, type: 3}
   m_PrefabInstance: {fileID: 4985184076786675031}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8915091874006858214
@@ -28225,14 +28079,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!4 &4913364408707045575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 6022302774951415357}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4913364407978883287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 6022302774951415357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4913364408707045575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 6022302774951415357}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6022302775448073235
@@ -28304,14 +28158,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!1 &4913364408540496633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 6022302775448073235}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4913364409289384681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 6022302775448073235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4913364408540496633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 6022302775448073235}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6045786026782604546
@@ -29366,7 +29220,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - Book "Little Women" collected
   whenEventIsCalled: 0
@@ -29458,14 +29312,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
---- !u!4 &6680461369822744438 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
-  m_PrefabInstance: {fileID: 6575111719960209565}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6340527952323761612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
+  m_PrefabInstance: {fileID: 6575111719960209565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6680461369822744438 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
   m_PrefabInstance: {fileID: 6575111719960209565}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1698292676674406095
@@ -29539,7 +29393,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - '"I''m thinking about buying a house in Wisborg, it''s getting empty here and
     people are getting suspicious, remember to contact Knock"'
@@ -29760,14 +29614,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
---- !u!1 &5396991541686814073 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
-  m_PrefabInstance: {fileID: 6726607237410927507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5396991540421780841 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1710315155873847034, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
+  m_PrefabInstance: {fileID: 6726607237410927507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5396991541686814073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1710315156605826794, guid: c7bd1e3188923da45800974d1d3c4b83, type: 3}
   m_PrefabInstance: {fileID: 6726607237410927507}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6816690360290779748
@@ -31826,7 +31680,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - '"there are some cramped rooms with desks that seem to be safe"'
   whenEventIsCalled: 0
@@ -32596,14 +32450,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
---- !u!4 &8944148307498700858 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
-  m_PrefabInstance: {fileID: 8905100813142226897}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8598550175137352320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
+  m_PrefabInstance: {fileID: 8905100813142226897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8944148307498700858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c83c10669519784a8ed1b245a7c1c93, type: 3}
   m_PrefabInstance: {fileID: 8905100813142226897}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &6030052425849678990
@@ -32664,7 +32518,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callDialogueBox: 1
-  whichBox: 
+  whichBox: 0
   dialogueLines:
   - '"Normal people walk in pairs, unlike mice, remember Orlok... it''s easy to spot
     them when they run."'
