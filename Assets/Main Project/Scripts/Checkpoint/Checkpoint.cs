@@ -121,17 +121,6 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
         data.nosferatu = nosferatuEnabled;
     }
-
-    void Awake()
-    {
-        if (GameObject.FindGameObjectWithTag("Checkpoint"))
-        {
-            Destroy(gameObject);
-        }
-        else
-            gameObject.tag = "Checkpoint";
-        DontDestroyOnLoad(gameObject);
-    }
     void Start()
     {
         seekOutScene();
