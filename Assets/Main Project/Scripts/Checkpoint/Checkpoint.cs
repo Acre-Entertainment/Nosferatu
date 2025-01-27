@@ -451,22 +451,42 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         if (camera1)
         {
             cameras[0].SetActive(true);
+            cameras[1].SetActive(false);
+            cameras[2].SetActive(false);
+            cameras[3].SetActive(false);
+            cameras[4].SetActive(false);
         }
         else if (camera2)
         {
+            cameras[0].SetActive(false);
             cameras[1].SetActive(true);
+            cameras[2].SetActive(false);
+            cameras[3].SetActive(false);
+            cameras[4].SetActive(false);
         }
         else if (camera3)
         {
+            cameras[0].SetActive(false);
             cameras[2].SetActive(true);
+            cameras[1].SetActive(false);
+            cameras[3].SetActive(false);
+            cameras[4].SetActive(false);
         }
         else if (camera4)
         {
+            cameras[0].SetActive(false);
             cameras[3].SetActive(true);
+            cameras[1].SetActive(false);
+            cameras[2].SetActive(false);
+            cameras[4].SetActive(false);
         }
         else if (camera5)
         {
+            cameras[0].SetActive(false);
             cameras[4].SetActive(true);
+            cameras[1].SetActive(false);
+            cameras[2].SetActive(false);
+            cameras[3].SetActive(false);
         }
     }
 }
