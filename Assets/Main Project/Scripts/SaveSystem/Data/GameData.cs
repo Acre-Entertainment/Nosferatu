@@ -26,6 +26,8 @@ public class GameData
     public bool section10;
     public bool section11;
     public bool section12;
+
+    public bool nosferatu;
     public GameData()
     {
         tutorial = false;
@@ -48,5 +50,6 @@ public class GameData
         section10 = false;
         section11 = false;
         section12 = false;
+        nosferatu = false;
     }
 }

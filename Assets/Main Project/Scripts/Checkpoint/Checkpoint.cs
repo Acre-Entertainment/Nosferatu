@@ -52,6 +52,10 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public GameObject[] section;
 
+    [Header("Nosferatu")]
+    public GameObject[] nosferatu;
+    public bool nosferatuEnabled;
+
     public void LoadData(GameData data)
     {
         tutorialSection = data.tutorialSection;
@@ -80,6 +84,13 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         {
             point = data.playerPosition;
         }
+
+        nosferatuEnabled = data.nosferatu;
+        if (nosferatuEnabled)
+        {
+            EnableNosferatu();
+        }
+
         Load();
         Spawn();
     }
@@ -107,6 +118,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.puzzleRatosAmigos = puzzleRatosAmigosIsOver;
         data.oQueCome = puzzleOQueComeIsOver;
         data.playerPosition = point;
+
+        data.nosferatu = nosferatuEnabled;
     }
 
     void Awake()
@@ -372,5 +385,12 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         section[10].SetActive(section10);
         section[11].SetActive(section11);
         section[12].SetActive(section12);
+    }
+
+    public void EnableNosferatu()
+    {
+        nosferatuEnabled = true;
+        nosferatu[0].SetActive(nosferatuEnabled);
+        nosferatu[1].SetActive(nosferatuEnabled);
     }
 }
