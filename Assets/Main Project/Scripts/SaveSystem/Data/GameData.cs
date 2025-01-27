@@ -27,6 +27,12 @@ public class GameData
     public bool section11;
     public bool section12;
 
+    public bool camera1 = true;
+    public bool camera2;
+    public bool camera3;
+    public bool camera4;
+    public bool camera5;
+
     public bool nosferatu;
     public GameData()
     {
@@ -51,5 +57,10 @@ public class GameData
         section11 = false;
         section12 = false;
         nosferatu = false;
+        camera1 = true;
+        camera2 = false;
+        camera3 = false;
+        camera4 = false;
+        camera5 = false;
     }
 }

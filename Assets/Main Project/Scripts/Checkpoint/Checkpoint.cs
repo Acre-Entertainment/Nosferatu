@@ -56,6 +56,14 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject[] nosferatu;
     public bool nosferatuEnabled;
 
+    [Header("Cameras")]
+    public GameObject[] cameras;
+    public bool camera1 = true;
+    public bool camera2;
+    public bool camera3;
+    public bool camera4;
+    public bool camera5;
+
     public void LoadData(GameData data)
     {
         tutorialSection = data.tutorialSection;
@@ -72,7 +80,14 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         section11 = data.section11;
         section12 = data.section12;
 
+        camera1 = data.camera1;
+        camera2 = data.camera2;
+        camera3 = data.camera3;
+        camera4 = data.camera4;
+        camera5 = data.camera5;
+
         CheckSections();
+        CheckCameras();
 
         tutorialIsOver = data.tutorial;
         puzzleMulherPuraIsOver = data.puzzleMulherPura;
@@ -110,6 +125,12 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.section10 = section10;
         data.section11 = section11;
         data.section12 = section12;
+
+        data.camera1 = camera1;
+        data.camera2 = camera2;
+        data.camera3 = camera3;
+        data.camera4 = camera4;
+        data.camera5 = camera5;
 
         data.tutorial = tutorialIsOver;
         data.puzzleMulherPura = puzzleMulherPuraIsOver;
@@ -318,7 +339,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         switch (section)
         {
             case "tutorialSection":
-                tutorialSection = true;
+                tutorialSection = false;
                 break;
             case "section1":
                 section1 = false;
@@ -381,5 +402,71 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         nosferatuEnabled = true;
         nosferatu[0].SetActive(nosferatuEnabled);
         nosferatu[1].SetActive(nosferatuEnabled);
+    }
+
+    public void ChangeCamera(string cameraName)
+    {
+        switch (cameraName)
+        {
+            case "camera1":
+                camera1 = true;
+                camera2 = false;
+                camera3 = false;
+                camera4 = false;
+                camera5 = false;
+                break;
+            case "camera2":
+                camera1 = false;
+                camera2 = true;
+                camera3 = false;
+                camera4 = false;
+                camera5 = false;
+                break;
+            case "camera3":
+                camera1 = false;
+                camera2 = false;
+                camera3 = true;
+                camera4 = false;
+                camera5 = false;
+                break;
+            case "camera4":
+                camera1 = false;
+                camera2 = false;
+                camera3 = false;
+                camera4 = true;
+                camera5 = false;
+                break;
+            case "camera5":
+                camera1 = false;
+                camera2 = false;
+                camera3 = false;
+                camera4 = false;
+                camera5 = true;
+                break;
+        }
+    }
+
+    public void CheckCameras()
+    {
+        if (camera1)
+        {
+            cameras[0].SetActive(true);
+        }
+        else if (camera2)
+        {
+            cameras[1].SetActive(true);
+        }
+        else if (camera3)
+        {
+            cameras[2].SetActive(true);
+        }
+        else if (camera4)
+        {
+            cameras[3].SetActive(true);
+        }
+        else if (camera5)
+        {
+            cameras[4].SetActive(true);
+        }
     }
 }
