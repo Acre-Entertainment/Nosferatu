@@ -71,7 +71,7 @@ public class DataPersistanceManager : MonoBehaviour
 
     public void OnSceneUnloaded(Scene scene)
     {
-        //SaveGame();
+        SaveGame();
     }
 
     public void ChangeSelectedProfileId(string newProfileId)
@@ -128,8 +128,6 @@ public class DataPersistanceManager : MonoBehaviour
         }
 
         dataHandler.Save(gameData, selectedProfileId);
-
-        Debug.Log("Game Salvo");
     }
 
     private List<IDataPersistance> FindAllDataPersistanceObjects()
