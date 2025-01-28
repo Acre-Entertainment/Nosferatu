@@ -112,6 +112,8 @@ public class DataPersistanceManager : MonoBehaviour
         {
             dataPersistancesObj.LoadData(gameData);
         }
+
+        Debug.Log("LoadComplete");
     }
 
     public void SaveGame()
