@@ -53,7 +53,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject[] section;
 
     [Header("Nosferatu")]
-    public GameObject[] nosferatu;
+    public GameObject nosferatu;
     public bool nosferatuEnabled;
 
     [Header("Cameras")]
@@ -86,28 +86,29 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         camera4 = data.camera4;
         camera5 = data.camera5;
 
-        CheckSections();
-        CheckCameras();
-
         tutorialIsOver = data.tutorial;
         puzzleMulherPuraIsOver = data.puzzleMulherPura;
         puzzleComoMataOver = data.puzzleComoMata;
         puzzleOndeDormeIsOver = data.puzzleOndeDorme;
         puzzleRatosAmigosIsOver = data.puzzleRatosAmigos;
         puzzleOQueComeIsOver = data.oQueCome;
+
         if (data.playerPosition != Vector3.zero)
         {
             point = data.playerPosition;
         }
 
         nosferatuEnabled = data.nosferatu;
+
+        seekOutScene();
+        CheckSections();
+        CheckCameras();
+        Spawn();
+        
         if (nosferatuEnabled)
         {
             EnableNosferatu();
         }
-
-        Load();
-        Spawn();
     }
 
     public void SaveData(GameData data)
@@ -142,10 +143,6 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
         data.nosferatu = nosferatuEnabled;
     }
-    void Start()
-    {
-        seekOutScene();
-    }
 
     //void onSceneStart()
     //{
@@ -165,6 +162,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public void Spawn()
     {
         player.transform.position = point;
+        Debug.Log("Player Spawnado");
     }
 
 
@@ -400,8 +398,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public void EnableNosferatu()
     {
         nosferatuEnabled = true;
-        nosferatu[0].SetActive(nosferatuEnabled);
-        nosferatu[1].SetActive(nosferatuEnabled);
+        nosferatu.SetActive(nosferatuEnabled);
     }
 
     public void ChangeCamera(string cameraName)
