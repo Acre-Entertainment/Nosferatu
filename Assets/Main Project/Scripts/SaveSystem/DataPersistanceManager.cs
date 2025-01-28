@@ -34,14 +34,14 @@ public class DataPersistanceManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null)
-        {
-            Debug.Log("Encontrou mais do que um DataPersistanceManager na cena, destruindo o novo");
-            Destroy(this.gameObject);
-            return;
-        }
+        //if(instance != null)
+        //{
+        //    Debug.Log("Encontrou mais do que um DataPersistanceManager na cena, destruindo o novo");
+        //    Destroy(this.gameObject);
+        //    return;
+        //}
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
 
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
@@ -71,7 +71,7 @@ public class DataPersistanceManager : MonoBehaviour
 
     public void OnSceneUnloaded(Scene scene)
     {
-        SaveGame();
+        //SaveGame();
     }
 
     public void ChangeSelectedProfileId(string newProfileId)
@@ -128,6 +128,8 @@ public class DataPersistanceManager : MonoBehaviour
         }
 
         dataHandler.Save(gameData, selectedProfileId);
+
+        Debug.Log("GameSalvo");
     }
 
     private List<IDataPersistance> FindAllDataPersistanceObjects()
