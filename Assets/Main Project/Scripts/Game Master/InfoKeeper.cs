@@ -56,12 +56,12 @@ public class  InfoKeeper : MonoBehaviour
     {
         switch(variableName)
         {
-            case "tutorialIsOver": tutorialIsOver = tutorialIsOver = true; break;
-            case "puzzleMulherPuraIsOver": puzzleMulherPuraIsOver = puzzleMulherPuraIsOver = true; break;
-            case "puzzleComoMataOver": puzzleComoMataOver = !puzzleComoMataOver; break;
-            case "puzzleOndeDormeIsOver": puzzleOndeDormeIsOver = !puzzleOndeDormeIsOver; break;
-            case "puzzleRatosAmigosIsOver": puzzleRatosAmigosIsOver = !puzzleRatosAmigosIsOver; break;
-            case "puzzleOQueComeIsOver": puzzleOQueComeIsOver = !puzzleOQueComeIsOver; break;
+            case "tutorialIsOver": tutorialIsOver = true; break;
+            case "puzzleMulherPuraIsOver": puzzleMulherPuraIsOver = true; break;
+            case "puzzleComoMataOver": puzzleComoMataOver = true; break;
+            case "puzzleOndeDormeIsOver": puzzleOndeDormeIsOver = true; break;
+            case "puzzleRatosAmigosIsOver": puzzleRatosAmigosIsOver = true; break;
+            case "puzzleOQueComeIsOver": puzzleOQueComeIsOver = true; break;
 
             case "hasMulherPuraNote": hasMulherPuraNote = hasMulherPuraNote = true; break;
             
