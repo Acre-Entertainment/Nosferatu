@@ -34,6 +34,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public bool hasDormeKey1, hasDormeKey2, hasDormeKey3, hasDormeKey4, hasDormeKey5;
     public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
     public bool hasRatoKey1, hasRatoKey2;
+    public bool chest3, chest4;
 
     [Header("Sections")]
     public bool tutorialSection;
@@ -67,6 +68,33 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     [Header("Doors")]
     public GameObject oQueComeDoor;
     public GameObject oQueComeDoor2;
+    public MulherPura mulherPura;
+    public ComoMata comoMata;
+    public CM_checkThreeKeyHole ondeDorme;
+    public Animator doorOndeDorme;
+    public CheckMesaTable ratosCompanheiros;
+
+    [Header("Bau")]
+    public GameObject bauRato1;
+    public GameObject bau2Rato1;
+    public GameObject doorRato1;
+    public GameObject door2Rato1;
+    public GameObject bau1;
+    public GameObject bau2;
+    public GameObject doorBau1;
+    public GameObject doorBau2;
+    public GameObject bau3;
+    public GameObject bau32;
+    public GameObject doorbau3;
+    public GameObject door2bau3;
+    public Animator doorBau3;
+    public GameObject bau4;
+    public GameObject bau42;
+    public GameObject doorbau4;
+    public GameObject door2bau4;
+    public Animator doorBau4;
+    public Animator door2Bau4;
+
 
     public void LoadData(GameData data)
     {
@@ -97,11 +125,75 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         puzzleOndeDormeIsOver = data.puzzleOndeDorme;
         puzzleRatosAmigosIsOver = data.puzzleRatosAmigos;
         puzzleOQueComeIsOver = data.oQueCome;
+        hasRatoKey1 = data.hasRatoKey1;
+        hasRatoKey2 = data.hasRatoKey2;
+        chest3 = data.chest3;
+        chest4 = data.chest4;
 
         if (puzzleOQueComeIsOver)
         {
             oQueComeDoor.SetActive(false);
             oQueComeDoor2.SetActive(true);
+        }
+
+        if (puzzleMulherPuraIsOver)
+        {
+            mulherPura.GetComponent<MulherPura>();
+            mulherPura.hasFinishedPuzzle.Invoke();
+        }
+
+        if (puzzleComoMataOver)
+        {
+            comoMata.GetComponent<ComoMata>();
+            comoMata.onPuzzleComplete2.Invoke();
+        }
+
+        if (puzzleOndeDormeIsOver)
+        {
+            ondeDorme.GetComponent<CM_checkThreeKeyHole>();
+            ondeDorme.onPuzzleSolved.Invoke();
+            doorOndeDorme.GetComponent<Animator>().enabled = true;
+        }
+
+        if (puzzleRatosAmigosIsOver)
+        {
+            ratosCompanheiros.GetComponent<CheckMesaTable>();
+            ratosCompanheiros.onPuzzleComplete.Invoke();
+        }
+
+        if (hasRatoKey1)
+        {
+            bauRato1.SetActive(false);
+            bau2Rato1.SetActive(true);
+            doorRato1.SetActive(false);
+            door2Rato1.SetActive(true);
+        }
+
+        if (hasRatoKey2)
+        {
+            bau1.SetActive(false);
+            bau2.SetActive(true);
+            doorBau1.SetActive(false);
+            doorBau2.SetActive(true);
+        }
+
+        if (chest3)
+        {
+            bau3.SetActive(false);
+            bau32.SetActive(true);
+            doorbau3.SetActive(false);
+            door2bau3.SetActive(true);
+            doorBau3.GetComponent<Animator>().enabled = true;
+        }
+
+        if (chest4)
+        {
+            bau4.SetActive(false);
+            bau42.SetActive(true);
+            doorbau4.SetActive(false);
+            door2bau4.SetActive(true);
+            doorBau4.GetComponent<Animator>().enabled = true;
+            door2Bau4.GetComponent<Animator>().enabled = true;
         }
 
         if (data.playerPosition != Vector3.zero)
@@ -152,6 +244,11 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.puzzleRatosAmigos = puzzleRatosAmigosIsOver;
         data.oQueCome = puzzleOQueComeIsOver;
         data.playerPosition = point;
+
+        data.hasRatoKey1 = hasRatoKey1;
+        data.hasRatoKey2 = hasRatoKey2;
+        data.chest3 = chest3;
+        data.chest4 = chest4;
 
         data.nosferatu = nosferatuEnabled;
     }
@@ -501,5 +598,15 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(false);
             cameras[3].SetActive(false);
         }
+    }
+
+    public void Chest3()
+    {
+        chest3 = true;
+    }
+
+    public void Chest4()
+    {
+        chest4 = true;
     }
 }

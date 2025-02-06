@@ -11,7 +11,8 @@ public class CheckIfTheGameEnded : MonoBehaviour
 
     private void Start()
     {
-        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>(); 
+        infoKeeper = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<InfoKeeper>();
+        activateThis();
     }
 
     public void activateThis()
