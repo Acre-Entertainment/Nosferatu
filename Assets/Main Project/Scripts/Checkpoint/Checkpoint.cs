@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class Checkpoint : MonoBehaviour, IDataPersistance
@@ -35,6 +36,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public int ratoTablePosition1, ratoTablePosition2, ratoTablePosition3;
     public bool hasRatoKey1, hasRatoKey2;
     public bool chest3, chest4;
+    public GameObject tutorialKeys;
+    public GameObject colliderTutorial;
 
     [Header("Sections")]
     public bool tutorialSection;
@@ -56,6 +59,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     [Header("Nosferatu")]
     public GameObject nosferatu;
     public bool nosferatuEnabled;
+    public NavMeshAgent nosferatuAgent;
 
     [Header("Cameras")]
     public GameObject[] cameras;
@@ -73,6 +77,9 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public CM_checkThreeKeyHole ondeDorme;
     public Animator doorOndeDorme;
     public CheckMesaTable ratosCompanheiros;
+    public bool doorSection1;
+    public GameObject lockedDoorSection1;
+    public GameObject openedDoorSection1;
 
     [Header("Bau")]
     public GameObject bauRato1;
@@ -129,6 +136,14 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         hasRatoKey2 = data.hasRatoKey2;
         chest3 = data.chest3;
         chest4 = data.chest4;
+
+        doorSection1 = data.doorSection1;
+
+        if(tutorialIsOver)
+        {
+            tutorialKeys.SetActive(false);
+            colliderTutorial.SetActive(false);
+        }
 
         if (puzzleOQueComeIsOver)
         {
@@ -196,6 +211,12 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             door2Bau4.GetComponent<Animator>().enabled = true;
         }
 
+        if (data.doorSection1)
+        {
+            lockedDoorSection1.SetActive(false);
+            openedDoorSection1.SetActive(true);
+        }
+
         if (data.playerPosition != Vector3.zero)
         {
             point = data.playerPosition;
@@ -249,6 +270,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.hasRatoKey2 = hasRatoKey2;
         data.chest3 = chest3;
         data.chest4 = chest4;
+
+        data.doorSection1 = doorSection1;
 
         data.nosferatu = nosferatuEnabled;
     }
@@ -512,6 +535,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     {
         nosferatuEnabled = true;
         nosferatu.SetActive(nosferatuEnabled);
+        nosferatuAgent.speed = 5;
     }
 
     public void ChangeCamera(string cameraName)
@@ -608,5 +632,10 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public void Chest4()
     {
         chest4 = true;
+    }
+
+    public void DoorSection1()
+    {
+        doorSection1 = true;
     }
 }

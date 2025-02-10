@@ -38,6 +38,8 @@ public class GameData
     public bool chest3;
     public bool chest4;
 
+    public bool doorSection1;
+
     public bool nosferatu;
     public GameData()
     {
@@ -71,5 +73,6 @@ public class GameData
         hasRatoKey2 = false;
         chest3 = false;
         chest4 = false;
+        doorSection1 = false;
     }
 }
