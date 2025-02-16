@@ -78,7 +78,10 @@ public class TextBoxManager : MonoBehaviour
     {
         setWhichDialogue(followUpBox[0]);
         textBox.SetActive(true);
-        Time.timeScale = 0;
+        if (!infoKeeper.playerIsDead)
+        {
+            Time.timeScale = 0;
+        }
         isActive = true;
         infoKeeper.gameIsBlockingInteraction = true;
         currentTextNumber = -1;

@@ -80,6 +80,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public bool doorSection1;
     public GameObject lockedDoorSection1;
     public GameObject openedDoorSection1;
+    public GameObject doorTutorial;
 
     [Header("Bau")]
     public GameObject bauRato1;
@@ -105,6 +106,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
     public void LoadData(GameData data)
     {
+        PauseGame.isPause = true;
+
         tutorialSection = data.tutorialSection;
         section1 = data.section1;
         section2 = data.section2;
@@ -143,6 +146,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         {
             tutorialKeys.SetActive(false);
             colliderTutorial.SetActive(false);
+            doorTutorial.SetActive(true);
         }
 
         if (puzzleOQueComeIsOver)
@@ -234,6 +238,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         {
             EnableNosferatu();
         }
+
+        StartCoroutine(StartGame());
     }
 
     public void SaveData(GameData data)
@@ -275,10 +281,6 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
         data.nosferatu = nosferatuEnabled;
     }
-    //void Start()
-    //{
-    //    seekOutScene();
-    //}
 
     //void onSceneStart()
     //{
@@ -300,6 +302,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     {
         player.transform.position = point;
         Debug.Log("Spawnado");
+        player.GetComponent<PlayerMovement>().enabled = false;
     }
 
 
@@ -601,26 +604,26 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         else if (camera3)
         {
             cameras[0].SetActive(false);
-            cameras[2].SetActive(true);
-            cameras[1].SetActive(false);
+            cameras[2].SetActive(false);
+            cameras[1].SetActive(true);
             cameras[3].SetActive(false);
             cameras[4].SetActive(false);
         }
         else if (camera4)
         {
             cameras[0].SetActive(false);
-            cameras[3].SetActive(true);
+            cameras[3].SetActive(false);
             cameras[1].SetActive(false);
-            cameras[2].SetActive(false);
+            cameras[2].SetActive(true);
             cameras[4].SetActive(false);
         }
         else if (camera5)
         {
             cameras[0].SetActive(false);
-            cameras[4].SetActive(true);
+            cameras[4].SetActive(false);
             cameras[1].SetActive(false);
             cameras[2].SetActive(false);
-            cameras[3].SetActive(false);
+            cameras[3].SetActive(true);
         }
     }
 
@@ -637,5 +640,11 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public void DoorSection1()
     {
         doorSection1 = true;
+    }
+
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 }

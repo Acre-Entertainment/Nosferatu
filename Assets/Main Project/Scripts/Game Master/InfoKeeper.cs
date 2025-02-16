@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class  InfoKeeper : MonoBehaviour
 {
-//Guarda variaveis para serem usadas por outros scripts.
+    //Guarda variaveis para serem usadas por outros scripts.
+
+    public bool playerIsDead = false;
 
 
 //tecnico
@@ -115,6 +117,11 @@ public class  InfoKeeper : MonoBehaviour
 
             default: Debug.Log(" tentou mudar a variavel mas não deu certo."); break;
         }
+    }
+
+    public void PlayerIsDead()
+    {
+        playerIsDead = true;
     }
 
 

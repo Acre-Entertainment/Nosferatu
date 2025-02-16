@@ -10,7 +10,10 @@ public class PauseGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isPause)
+        {
+            Pause();
+        }
     }
 
     // Update is called once per frame
