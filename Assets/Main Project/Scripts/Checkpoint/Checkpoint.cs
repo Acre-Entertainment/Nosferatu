@@ -11,7 +11,6 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public InfoKeeper infoKeeper;
     public Vector3 point;
 
-
     public bool tutorialIsOver;
     public bool puzzleMulherPuraIsOver;
     public bool puzzleComoMataOver;
@@ -38,6 +37,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public bool chest3, chest4;
     public GameObject tutorialKeys;
     public GameObject colliderTutorial;
+    public GameObject tutorialScreen;
+    public GameObject posTutorial;
 
     [Header("Sections")]
     public bool tutorialSection;
@@ -147,6 +148,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             tutorialKeys.SetActive(false);
             colliderTutorial.SetActive(false);
             doorTutorial.SetActive(true);
+            tutorialScreen.SetActive(false);
+            posTutorial.SetActive(true);
         }
 
         if (puzzleOQueComeIsOver)
