@@ -39,6 +39,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject colliderTutorial;
     public GameObject tutorialScreen;
     public GameObject posTutorial;
+    public TextBoxManager textBoxManager;
 
     [Header("Sections")]
     public bool tutorialSection;
@@ -69,6 +70,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public bool camera3;
     public bool camera4;
     public bool camera5;
+    public bool cameraPuzzleoqueCome;
 
     [Header("Doors")]
     public GameObject oQueComeDoor;
@@ -128,6 +130,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         camera3 = data.camera3;
         camera4 = data.camera4;
         camera5 = data.camera5;
+        cameraPuzzleoqueCome = data.cameraoqueCome;
 
 
         tutorialIsOver = data.tutorial;
@@ -150,6 +153,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             doorTutorial.SetActive(true);
             tutorialScreen.SetActive(false);
             posTutorial.SetActive(true);
+            textBoxManager.followUpText[1] = "";
         }
 
         if (puzzleOQueComeIsOver)
@@ -266,6 +270,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.camera3 = camera3;
         data.camera4 = camera4;
         data.camera5 = camera5;
+        data.cameraoqueCome = cameraPuzzleoqueCome;
 
         data.tutorial = tutorialIsOver;
         data.puzzleMulherPura = puzzleMulherPuraIsOver;
@@ -554,6 +559,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
                 camera3 = false;
                 camera4 = false;
                 camera5 = false;
+                cameraPuzzleoqueCome = false;
                 break;
             case "camera2":
                 camera1 = false;
@@ -561,6 +567,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
                 camera3 = false;
                 camera4 = false;
                 camera5 = false;
+                cameraPuzzleoqueCome = false;
                 break;
             case "camera3":
                 camera1 = false;
@@ -568,6 +575,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
                 camera3 = true;
                 camera4 = false;
                 camera5 = false;
+                cameraPuzzleoqueCome = false;
                 break;
             case "camera4":
                 camera1 = false;
@@ -575,6 +583,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
                 camera3 = false;
                 camera4 = true;
                 camera5 = false;
+                cameraPuzzleoqueCome = false;
                 break;
             case "camera5":
                 camera1 = false;
@@ -582,6 +591,15 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
                 camera3 = false;
                 camera4 = false;
                 camera5 = true;
+                cameraPuzzleoqueCome = false;
+                break;
+            case "camera6":
+                camera1 = false;
+                camera2 = false;
+                camera3 = false;
+                camera4 = false;
+                camera5 = false;
+                cameraPuzzleoqueCome = true;
                 break;
         }
     }
@@ -595,6 +613,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(false);
             cameras[3].SetActive(false);
             cameras[4].SetActive(false);
+            cameras[5].SetActive(false);
         }
         else if (camera2)
         {
@@ -603,6 +622,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(false);
             cameras[3].SetActive(false);
             cameras[4].SetActive(false);
+            cameras[5].SetActive(false);
         }
         else if (camera3)
         {
@@ -611,6 +631,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(true);
             cameras[3].SetActive(false);
             cameras[4].SetActive(false);
+            cameras[5].SetActive(false);
         }
         else if (camera4)
         {
@@ -619,6 +640,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(false);
             cameras[3].SetActive(true);
             cameras[4].SetActive(false);
+            cameras[5].SetActive(false);
         }
         else if (camera5)
         {
@@ -627,6 +649,16 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
             cameras[2].SetActive(false);
             cameras[3].SetActive(false);
             cameras[4].SetActive(true);
+            cameras[5].SetActive(false);
+        }
+        else if (cameraPuzzleoqueCome)
+        {
+            cameras[0].SetActive(false);
+            cameras[1].SetActive(false);
+            cameras[2].SetActive(false);
+            cameras[3].SetActive(false);
+            cameras[4].SetActive(false);
+            cameras[5].SetActive(true);
         }
     }
 

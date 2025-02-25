@@ -32,6 +32,7 @@ public class GameData
     public bool camera3;
     public bool camera4;
     public bool camera5;
+    public bool cameraoqueCome;
 
     public bool hasRatoKey1;
     public bool hasRatoKey2;
