@@ -33,6 +33,10 @@ public class GameData
     public bool camera4;
     public bool camera5;
     public bool cameraoqueCome;
+    public bool cameraComoMata;
+    public bool cameraMulherPura;
+    public bool cameraRatosAmigos;
+    public bool cameraOndeDorme;
 
     public bool hasRatoKey1;
     public bool hasRatoKey2;
@@ -70,6 +74,11 @@ public class GameData
         camera3 = false;
         camera4 = false;
         camera5 = false;
+        cameraoqueCome = false;
+        cameraComoMata = false;
+        cameraMulherPura = false;
+        cameraRatosAmigos = false;
+        cameraOndeDorme = false;
         hasRatoKey1 = false;
         hasRatoKey2 = false;
         chest3 = false;
