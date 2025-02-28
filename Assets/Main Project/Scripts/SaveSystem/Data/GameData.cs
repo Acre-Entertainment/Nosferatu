@@ -46,6 +46,8 @@ public class GameData
     public bool doorSection1;
 
     public bool nosferatu;
+
+    public float playerDirection;
     public GameData()
     {
         tutorial = false;
@@ -84,5 +86,6 @@ public class GameData
         chest3 = false;
         chest4 = false;
         doorSection1 = false;
+        playerDirection = 270;
     }
 }

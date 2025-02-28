@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 public class Checkpoint : MonoBehaviour, IDataPersistance
 {
     //public bool hasSaved;
     public GameObject player;
+    public PlayerMovement playerMovement;
     public InfoKeeper infoKeeper;
     public Vector3 point;
 
@@ -158,7 +157,9 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
         doorSection1 = data.doorSection1;
 
-        if(tutorialIsOver)
+        playerMovement.futureCameraDirection = data.playerDirection;
+
+        if (tutorialIsOver)
         {
             tutorialKeys.SetActive(false);
             colliderTutorial.SetActive(false);
@@ -304,6 +305,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         data.doorSection1 = doorSection1;
 
         data.nosferatu = nosferatuEnabled;
+
+        data.playerDirection = playerMovement.futureCameraDirection;
     }
 
     //void onSceneStart()
