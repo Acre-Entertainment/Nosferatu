@@ -62,6 +62,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject nosferatu;
     public bool nosferatuEnabled;
     public NavMeshAgent nosferatuAgent;
+    public TreeStart nosferatuTreeStart;
 
     [Header("Cameras")]
     public GameObject[] cameras;
@@ -88,6 +89,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject lockedDoorSection1;
     public GameObject openedDoorSection1;
     public GameObject doorTutorial;
+    public Animator doorComoMata;
 
     [Header("Bau")]
     public GameObject bauRato1;
@@ -183,7 +185,9 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
 
         if (puzzleComoMataOver)
         {
+            doorComoMata.GetComponent<Animator>().enabled = true;
             comoMata.GetComponent<ComoMata>();
+            comoMata.onPuzzleComplete1.Invoke();
             comoMata.onPuzzleComplete2.Invoke();
         }
 
@@ -566,6 +570,9 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         nosferatuEnabled = true;
         nosferatu.SetActive(nosferatuEnabled);
         nosferatuAgent.speed = 5;
+        nosferatuTreeStart.timeToSpawn = 60f;
+        nosferatuTreeStart.timeUntilSpawn = 60f;
+        nosferatuTreeStart.timeUntilDespawn = 30f;
     }
 
     public void ChangeCamera(string cameraName)
