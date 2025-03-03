@@ -90,6 +90,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
     public GameObject openedDoorSection1;
     public GameObject doorTutorial;
     public Animator doorComoMata;
+    public Animator doorComoMata2;
+    public Animator doorComoMata3;
 
     [Header("Bau")]
     public GameObject bauRato1;
@@ -186,6 +188,8 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         if (puzzleComoMataOver)
         {
             doorComoMata.GetComponent<Animator>().enabled = true;
+            doorComoMata2.GetComponent<Animator>().enabled = true;
+            doorComoMata3.GetComponent<Animator>().enabled = true;
             comoMata.GetComponent<ComoMata>();
             //comoMata.onPuzzleComplete1.Invoke();
             comoMata.onPuzzleComplete2.Invoke();
