@@ -187,7 +187,7 @@ public class Checkpoint : MonoBehaviour, IDataPersistance
         {
             doorComoMata.GetComponent<Animator>().enabled = true;
             comoMata.GetComponent<ComoMata>();
-            comoMata.onPuzzleComplete1.Invoke();
+            //comoMata.onPuzzleComplete1.Invoke();
             comoMata.onPuzzleComplete2.Invoke();
         }
 
